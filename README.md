@@ -14,3 +14,11 @@
 1. [Azure Data Explorer KQL cheat sheets](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/azure-data-explorer-kql-cheat-sheets/ba-p/1057404)
 2. [Microsoft Threat Protection advanced hunting cheat sheet](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/microsoft-threat-protection-advanced-hunting-cheat-sheet/ba-p/1505100)
 #### https://github.com/marcusbakker/KQL/blob/master/kql_cheat_sheet_v01.pdf <br> https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries
+
+## KC7
+#### In KC7, uou will be able to learn KQL with real hunting experience.
+KC7 website (https://kc7cyber.com/) <br>
+Github (https://github.com/kkneomis/kc7) <br>
+KC7 setup video [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) 
+
+
