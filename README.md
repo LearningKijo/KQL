@@ -18,7 +18,7 @@
 ## KC7
 #### In KC7, you will be able to learn KQL with real hunting experience.
 KC7 website (https://kc7cyber.com/) <br>
-KC7 Github (https://github.com/kkneomis/kc7) <br>
+KC7 github (https://github.com/kkneomis/kc7) <br>
 KC7 setup video [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) 
 
 
