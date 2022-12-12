@@ -10,3 +10,7 @@
 4. [M365 Defender (MTP) webinar: Tracking the Adversary E4 Let’s hunt! Applying KQL to incident tracking](https://www.youtube.com/watch?v=2EUxOc_LNd8&list=RDCMUCGTUbqE3SJiLgtvWjIkSQuQ&index=3).
 #### https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts/TrackingTheAdversary
 
+## KQL cheat sheet
+1. [Azure Data Explorer KQL cheat sheets](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/azure-data-explorer-kql-cheat-sheets/ba-p/1057404)
+2. [Microsoft Threat Protection advanced hunting cheat sheet](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/microsoft-threat-protection-advanced-hunting-cheat-sheet/ba-p/1505100)
+#### https://github.com/marcusbakker/KQL/blob/master/kql_cheat_sheet_v01.pdf <br> https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries
