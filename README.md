@@ -16,7 +16,7 @@
 #### https://github.com/marcusbakker/KQL/blob/master/kql_cheat_sheet_v01.pdf <br> https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries
 
 ## KC7
-#### In KC7, uou will be able to learn KQL with real hunting experience.
+#### In KC7, you will be able to learn KQL with real hunting experience.
 KC7 website (https://kc7cyber.com/) <br>
 Github (https://github.com/kkneomis/kc7) <br>
 KC7 setup video [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) 
