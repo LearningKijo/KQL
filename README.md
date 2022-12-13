@@ -1,5 +1,5 @@
 # KQL - learning resources
-KQL stands for "Kusto Query Language" When I have started learning KQL, I had no idea how to begin as learning process. Throughout my KQL journeey, I would like to share some of the best resources for learning KQL. At the same time, I would like to share some sample queries in this KQL repository.
+KQL stands for "Kusto Query Language" When I have started learning KQL, I had no idea how to begin as a learning process. Throughout my KQL journey, I would like to share some of the best resources for learning KQL. At the same time, I would like to share some sample queries in this KQL repository.
 
 
 ## Microsoft 365 Defender / Webcast 
