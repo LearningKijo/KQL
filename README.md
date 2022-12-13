@@ -21,7 +21,7 @@ https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/
 3. [Query best practices - Azure Data Explorer | Microsoft Learn](https://learn.microsoft.com/en-us/azure/data-explorer/kql-quick-reference)
 
 ## KC7
-In KC7, you will be able to learn KQL with real hunting experience.
+In KC7, you will be able to learn KQL step by step. After the initial training, you will be a member of SOC team and take a first case with real hunting experience. In the end of this KC7, you will be confident how you are going to hunt some suspicious activities by KQL.
 1. KC7 Website (https://kc7cyber.com/) 
 2. KC7 GitHub (https://github.com/kkneomis/kc7)
 3. KC7 setup video : [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) 
