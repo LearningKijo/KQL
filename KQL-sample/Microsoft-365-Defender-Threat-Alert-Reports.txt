@@ -3,12 +3,16 @@
 // Case2 - Org report & MITRE ATT&CK technique for past 30 days
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+//Case1
 AlertInfo
 | where Timestamp > ago(30d)
 | where ServiceSource == "Microsoft Defender for Endpoint"
 | summarize AlertNum = count() by Severity, bin(Timestamp, 1d)
 | render timechart 
 
+
+//Case2
 AlertInfo
 | where Timestamp > ago(30d)
 | where ServiceSource in ("Microsoft Defender for Endpoint", "Microsoft Defender for Office 365", "Microsoft Defender for Identity", "Microsoft Defender for Cloud Apps", "Microsoft 365 Defender")
