@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // Case1 - Microsoft Defender Antivirus, daily "Quick scan" summary
-// Case3 - Microsoft Defender Antivirus, daily "Full scan" summary
-// Case2 - Device : Malware, threatname list detected by Microsoft Defender Antivirus 
+// Case2 - Microsoft Defender Antivirus, daily "Full scan" summary
+// Case3 - Microsoft Defender Antivirus, weekly malware detection names list 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Case1
@@ -24,6 +24,7 @@ DeviceEvents
 
 //Case3
 DeviceEvents
+| where Timestamp > ago(7d)
 | where ActionType == "AntivirusDetection"
 | extend DetectionType =parse_json(AdditionalFields)
 | project Timestamp, DeviceId, DeviceName, ActionType, DetectionType.ReportSource, DetectionType.ThreatName
