@@ -1,8 +1,7 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Case1 - Daily alert & severity number in Microsoft Defender for Endpoint for past 30 days
 // Case2 - Org report & MITRE ATT&CK technique for past 30 days
-// Case3 - Daily mail detection by phishing activity for past 30 days
-// Case4 - Daily mail detection by spam activity for past 30 days
-// Case5 - Daily mail detection by malware activity past 30 days
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 AlertInfo
 | where Timestamp > ago(30d)
@@ -18,23 +17,3 @@ AlertInfo
 | summarize MITRE_ATTACK_list = count() by tostring(DetailedAttackTechniques)
 | render columnchart
 
-EmailEvents
-| where Timestamp > ago(30d)
-| where isnotempty(ThreatTypes)
-| where ThreatTypes has "Phish"
-| summarize count() by ThreatTypes, bin(Timestamp, 1d)
-| render linechart 
-
-EmailEvents
-| where Timestamp > ago(30d)
-| where isnotempty(ThreatTypes)
-| where ThreatTypes has "Spam"
-| summarize count() by ThreatTypes, bin(Timestamp, 1d)
-| render linechart 
-
-EmailEvents
-| where Timestamp > ago(30d)
-| where isnotempty(ThreatTypes)
-| where ThreatTypes has "Malware"
-| summarize count() by ThreatTypes, bin(Timestamp, 1d)
-| render linechart 
