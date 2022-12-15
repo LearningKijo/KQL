@@ -1,0 +1,51 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Email based threat investigation
+//
+// Case1 - Email, Weekly malware detection names list 
+// Case2 - Email, Weekly deivered mails("Malware" or "Phish") + User account list 
+// Case3 - Url List by ThreatTypes such as Malware and Phish
+// Case4 - "NonClickedThrough" malicious url list by SafeLinks - Blocked and user cannot click the original url
+// Case5 - "ClickedThrough" malicious url list by SafeLinks - Blocked but user can click the original url
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Case1
+EmailEvents
+| where Timestamp > ago(7d)
+| where isnotempty(ThreatNames)
+| extend ThreatName = split(ThreatNames, ",")
+| mv-expand ThreatName
+| summarize ThreatNumber = count() by tostring(ThreatName)
+| sort by ThreatNumber desc 
+
+
+//Case2
+EmailEvents
+| where Timestamp > ago(7d)
+| where ThreatTypes has "Phish" or ThreatTypes has "Malware"
+| where DeliveryAction !~ "Blocked"
+| summarize DeliveredEmailNumber = count() by RecipientEmailAddress
+
+
+//Case3
+UrlClickEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ClickBlocked"
+| summarize BlockedUrlBumber = count() by ThreatTypes, Url
+
+
+//Case4
+UrlClickEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ClickBlocked"
+| where IsClickedThrough == 0
+| summarize NonClickedThroughNumber = count() by AccountUpn, Url
+
+
+//Case5
+UrlClickEvents
+| where Timestamp > ago(1d)
+| where ActionType == "ClickBlocked"
+| where IsClickedThrough == 1
+| summarize ClickedThroughNumber = count() by AccountUpn, Url
+
