@@ -40,3 +40,5 @@ DeviceEvents
 | where ActionType == "AntivirusDetection"
 | extend DetectionType =parse_json(AdditionalFields)
 | summarize MalwareFamilyList = make_list(DetectionType.ThreatName) by DeviceName, DeviceId
+
+
