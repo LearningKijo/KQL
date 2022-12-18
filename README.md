@@ -5,11 +5,14 @@ KQL stands for "Kusto Query Language" and this is very effective when you want t
 > https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/
 
 ## Microsoft 365 Defender / Webcast 
+This webinar was definitely helpful for people who are going to start learning KQL. Each series of webinar covers the fundamental KQL and the great use case.
+
 Webcast 1 - 4 series 
 1. [M365 Defender (MTP) webinar: Tracking the Adversary E1: KQL Fundamentals](https://www.youtube.com/watch?v=0D9TkGjeJwM).
 2. [M365 Defender (MTP) webinar: Tracking the Adversary E2: Joins](https://www.youtube.com/watch?v=LMrO6K5TWOU).
 3. [M365 Defender (MTP) webinar: Tracking the Adversary, E3: Summarizing, Pivoting, and Visualizing Data](https://www.youtube.com/watch?v=UKnk9U1NH6Y).
-4. [M365 Defender (MTP) webinar: Tracking the Adversary E4 Let’s hunt! Applying KQL to incident tracking](https://www.youtube.com/watch?v=2EUxOc_LNd8&list=RDCMUCGTUbqE3SJiLgtvWjIkSQuQ&index=3). <br><br>
+4. [M365 Defender (MTP) webinar: Tracking the Adversary E4 Let’s hunt! Applying KQL to incident tracking](https://www.youtube.com/watch?v=2EUxOc_LNd8&list=RDCMUCGTUbqE3SJiLgtvWjIkSQuQ&index=3). <br>
+
 GitHub Microsoft-365-Defender-Hunting-Queries <br>
 https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts/TrackingTheAdversary
 
