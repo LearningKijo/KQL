@@ -32,7 +32,8 @@ In KC7, you will be able to learn KQL step by step. After the initial training, 
 3. KC7 setup video : [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) 
 
 ## Kusto Detective Agency
+Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detective in the team and deal with(find out the answer) missions by using KQL.
 1. Kusto Detective Agency website (https://detective.kusto.io/)
 2. Kusto Detective Agency short video : [Kusto Detective Agency - an interactive big data contest](https://www.youtube.com/watch?v=BaW0qsxxYRc)
-
+> Welcome to the Kusto Detective agency, rookie!  Be prepared to flex your investigative muscles as you use your big data skills to solve our most challenging cases.  Prizes and awards are up for grabs if you are successful!
 
