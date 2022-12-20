@@ -61,13 +61,14 @@ let IoC_FileName = "mimikatz";
 let IoC_SHA256 = "92804faaab2175dc501d73e814663058c78c0a042675a8937266357bcfb96c50";
 let IoC_SHA1 = "d1f7832035c3e8a73cc78afd28cfd7f4cece6d20";
 let IoC_MD5 = "e930b05efe23891d19bc354a4209be3e";
-let StartTimestamp = datetime(2022-10-10);
-let EndTimestamp = datetime(2022-11-01);
-search in (DeviceProcessEvents,DeviceNetworkEvents,DeviceFileEvents,DeviceRegistryEvents,DeviceLogonEvents,DeviceImageLoadEvents,DeviceEvents)
+let StartTimestamp = datetime(2022-12-01);
+let EndTimestamp = datetime(2022-12-17);
+search in (DeviceProcessEvents,DeviceFileEvents,DeviceRegistryEvents,DeviceImageLoadEvents,DeviceEvents)
 Timestamp between ((StartTimestamp) .. (EndTimestamp))
 and 
 (FileName has IoC_FileName
 or MD5 == IoC_MD5
 or SHA1 == IoC_SHA1
-or SHA256 == IoC_SHA256)
+or SHA256 == IoC_SHA256
+or InitiatingProcessSHA256 == IoC_SHA256)
 ```
