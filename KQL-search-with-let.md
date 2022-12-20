@@ -7,6 +7,8 @@ If you have ever used advanced hunting in Microsoft 365 Defender and selected "G
 However, the question is that I haven't ever seen the search scenario with let. Even if I looked at MS docs, [search operator](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer), I didn't find anything at all. 
 Therefore, at this time, I´m going to focus on the use case : seach operator with let statement. 
 
+#### Question... when do we really use this query ? 
+If you would like to search something with "specific tables" and "timeline", then the query - let & search would be a great way to use !!
 
 #### Ex) "Go hunt" from a device page in Microsoft 365 Defender <br>
 This query hunts "DeviceA" with time range by filtering some tables such as DeviceEvent, DeviceInfo and so on.
