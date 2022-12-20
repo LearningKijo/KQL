@@ -67,8 +67,12 @@ search in (DeviceProcessEvents,DeviceFileEvents,DeviceRegistryEvents,DeviceImage
 Timestamp between ((StartTimestamp) .. (EndTimestamp))
 and 
 (FileName has IoC_FileName
+or InitiatingProcessFileName has IoC_FileName
 or MD5 == IoC_MD5
 or SHA1 == IoC_SHA1
 or SHA256 == IoC_SHA256
-or InitiatingProcessSHA256 == IoC_SHA256)
+or InitiatingProcessMD5 == IoC_MD5
+or InitiatingProcessSHA1 == IoC_SHA1
+or InitiatingProcessSHA256 == IoC_SHA256
+)
 ```
