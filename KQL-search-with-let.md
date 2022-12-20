@@ -8,7 +8,7 @@ However, the question is that I haven't ever seen the search scenario with let. 
 Therefore, at this time, I´m going to focus on the use case : seach operator with let statement. 
 
 
-#### Ex) "Go hunt from" a device page in Microsoft 365 Defender <br>
+#### Ex) "Go hunt" from a device page in Microsoft 365 Defender <br>
 This query hunts "DeviceA" with time range by filtering some tables such as DeviceEvent, DeviceInfo and so on.
 
 ```
