@@ -1,6 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-// Email based threat investigation
-//
+// --- Email based threat investigation ---
 // Case1 - Email, Weekly malware detection names list 
 // Case2 - Email, Weekly deivered mails("Malware" or "Phish") + User account list 
 // Case3 - Url List by ThreatTypes such as Malware and Phish
