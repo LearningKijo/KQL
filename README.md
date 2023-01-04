@@ -5,7 +5,7 @@ KQL stands for "Kusto Query Language" and this is very effective when you want t
 > https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/
 
 ## Microsoft 365 Defender / Webcast 
-This webinar was definitely helpful for people who are going to start learning KQL. Each series of webinar covers the fundamental KQL and the great use case.
+This webinar was definitely helpful for people who are going to start learning KQL in Microsoft 365 Defender. Each series of webinar covers the fundamental KQL and the great use case. As I mostly focus on XDR in Microsoft 365 Defender in my work, I started watching these webinars initially.
 
 Webcast 1 - 4 series 
 1. [M365 Defender (MTP) webinar: Tracking the Adversary E1: KQL Fundamentals](https://www.youtube.com/watch?v=0D9TkGjeJwM).
@@ -15,6 +15,13 @@ Webcast 1 - 4 series
 
 GitHub Microsoft-365-Defender-Hunting-Queries <br>
 https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts/TrackingTheAdversary
+
+## Microsoft Sentinel webinar / KQL part 1-3 
+After Microsoft 365 Defender / Webcast, I also continued to explore more deeper about KQL. For people using Microsoft Sentinel and Azure Data Explorer, these webinars may be an excellent starting point for learning KQL.
+
+1. [Azure Sentinel webinar: KQL part 1 of 3 - Learn the KQL you need for Azure Sentinel!](https://www.youtube.com/watch?v=EDCBLULjtCM)
+2. [Azure Sentinel webinar: KQL part 2 of 3 - KQL hands-on lab exercises!](https://www.youtube.com/watch?v=YKD_OFLMpf8)
+3. [Azure Sentinel webinar: KQL part 3 of 3 - Optimizing Azure Sentinel KQL queries performance!](https://www.youtube.com/watch?v=jN1Cz0JcLYU)
 
 ## KQL cheat sheet
 1. [Azure Data Explorer KQL cheat sheets](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/azure-data-explorer-kql-cheat-sheets/ba-p/1057404)
