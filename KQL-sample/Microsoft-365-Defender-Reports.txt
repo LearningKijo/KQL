@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Alert tables
-// Case1 - Daily alert & severity number in Microsoft Defender for Endpoint for past 30 days
-// Case2 - Org report & MITRE ATT&CK technique for past 30 days
-//
+// Case1 - Daily alert & severity for MDE/AV 
+// Case2 - Org based MITRE ATT&CK technique for past 30 days
+// Case3 - Org based high/medium alerts for MDE/AV/MDO/MDI/MDA/XDR
 // Email & collaboration tables
 // Case1 - Daily mail detection by phishing activity for past 30 days
 // Case2 - Daily mail detection by spam activity for past 30 days
@@ -10,7 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//Case1
+//Alert tables - Case1
 AlertInfo
 | where Timestamp > ago(30d)
 | where ServiceSource == "Microsoft Defender for Endpoint"
@@ -18,7 +18,7 @@ AlertInfo
 | render timechart 
 
 
-//Case2
+//Alert tables - Case2
 AlertInfo
 | where Timestamp > ago(30d)
 | where ServiceSource in ("Microsoft Defender for Endpoint", "Microsoft Defender for Office 365", "Microsoft Defender for Identity", "Microsoft Defender for Cloud Apps", "Microsoft 365 Defender")
@@ -28,7 +28,21 @@ AlertInfo
 | render columnchart
 
 
-//Case3
+//Alert tables - Case3
+AlertInfo
+| where Timestamp > ago(30d)
+| where Severity in ("Medium", "High")
+| summarize 
+    Endpoints = countif(ServiceSource == "Microsoft Defender for Endpoint"),
+    Identities = countif(ServiceSource == "Microsoft Defender for Identity" or ServiceSource == "AAD Identity Protection"),
+    Emails = countif(ServiceSource == "Microsoft Defender for Office 365"),
+    Applications = countif(ServiceSource == "Microsoft Cloud App Security"),
+    M365D_XDR = countif(ServiceSource == "Microsoft 365 Defender")
+    by bin(Timestamp, 1d)
+| render timechart 
+
+
+//Email & collaboration tables - Case1
 EmailEvents
 | where Timestamp > ago(30d)
 | where isnotempty(ThreatTypes)
@@ -37,7 +51,7 @@ EmailEvents
 | render linechart 
 
 
-//Case4
+//Email & collaboration tables - Case2
 EmailEvents
 | where Timestamp > ago(30d)
 | where isnotempty(ThreatTypes)
@@ -46,7 +60,7 @@ EmailEvents
 | render linechart 
 
 
-//Case5
+//Email & collaboration tables - Case3
 EmailEvents
 | where Timestamp > ago(30d)
 | where isnotempty(ThreatTypes)
