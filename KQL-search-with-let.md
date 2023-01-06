@@ -3,7 +3,7 @@ Firstly, "search" is very useful and effective operator in KQL when you look for
 > Searches a text pattern in multiple tables and columns.<br>
 [search operator - Azure Data Explorer | Microsoft Learn!](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer)
 
-If you have ever used advanced hunting in Microsoft 365 Defender and selected "Go hunt" option in a device page, you might be seen KQL - seeking a device with let statement and seach operator. 
+If you have ever used advanced hunting in Microsoft 365 Defender and selected "Go hunt" option in a device page, you might be seen KQL - seeking a device with let statement and search operator. 
 However, the question is that I haven't ever seen the search scenario with let. I looked at MS docs, [Search operator](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer), and [Let statement](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement#create-a-view-or-virtual-table). These were slightly covered the example, but not fully the use case, especially in Microsoft 365 Defender. Therefore, at this time, I´m going to focus on the use case : seach operator with let statement. 
 
 #### Question: When do we use this query? 
