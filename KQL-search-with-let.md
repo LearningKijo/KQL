@@ -1,4 +1,4 @@
-## KQL - search operator with let statement 
+## KQL - search operator with let statement
 Firstly, "search" is very useful and effective operator in KQL when you look for some key word or data. <br>
 > Searches a text pattern in multiple tables and columns.<br>
 [search operator - Azure Data Explorer | Microsoft Learn!](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer)
