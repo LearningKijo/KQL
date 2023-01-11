@@ -36,7 +36,9 @@ After Microsoft 365 Defender / Webcast, I also continued to explore more deeper 
 In KC7, you will be able to learn KQL step by step. After the initial training, you will be a member of SOC team and take a first case with real hunting experience. At the end of this KC7, you will be confident how you are going to hunt some suspicious activities by KQL.
 1. KC7 Website (https://kc7cyber.com/) 
 2. KC7 GitHub (https://github.com/kkneomis/kc7)
-3. KC7 setup video : [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) 
+3. KC7 setup video : [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) <br>
+
+For importing data, you can get it from here (https://github.com/kkneomis/kc7_data/tree/main/envolvelabs)
 
 ## Kusto Detective Agency
 Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detectives in the team and deal with (find out the answer) missions by using KQL.
