@@ -1,0 +1,54 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// --- Microsoft Defender Antivirus ---
+// Case1 - Daily "Quick scan" by count list 
+// Case2 - Daily "Full scan" count list 
+// Case3 - Daily "Quick" or "Full" scan time list
+// Case4 - Weekly malware detection names & number list 
+// Case5 - Weekly malware detection names & device list 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//Case1
+DeviceEvents
+| where Timestamp > ago(1d)
+| where ActionType == "AntivirusScanCompleted"
+| extend ScanType =parse_json(AdditionalFields)
+| where ScanType.ScanTypeIndex == "Quick"
+| summarize count() by tostring(DeviceName)
+
+
+//Case2
+DeviceEvents
+| where Timestamp > ago(1d)
+| where ActionType == "AntivirusScanCompleted"
+| extend ScanType =parse_json(AdditionalFields)
+| where ScanType.ScanTypeIndex == "Full"
+| summarize count() by tostring(DeviceName)
+
+//Case3
+DeviceEvents
+| where Timestamp > ago(1d)
+| where ActionType == "AntivirusScanCompleted"
+| extend ScanType =parse_json(AdditionalFields)
+| where ScanType.ScanTypeIndex == "Quick"
+//| where ScanType.ScanTypeIndex == "Full"
+| summarize make_list(Timestamp) by tostring(DeviceName)
+
+//Case4
+DeviceEvents
+| where Timestamp > ago(7d)
+| where ActionType == "AntivirusDetection"
+| extend DetectionType =parse_json(AdditionalFields)
+| project Timestamp, DeviceId, DeviceName, ActionType, DetectionType.ReportSource, DetectionType.ThreatName
+| summarize ThreatNumber= count() by tostring(DetectionType_ThreatName)
+| sort by ThreatNumber desc 
+
+
+//Case5
+DeviceEvents
+| where Timestamp > ago(7d)
+| where ActionType == "AntivirusDetection"
+| extend DetectionType =parse_json(AdditionalFields)
+| summarize MalwareFamilyList = make_list(DetectionType.ThreatName) by DeviceName, DeviceId
+
+
