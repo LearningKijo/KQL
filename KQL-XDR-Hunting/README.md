@@ -13,6 +13,8 @@ let MicrosoftProducts = datatable(id: int, value: string)
       5, "Microsoft Defender Antivirus", 
       6, "Microsoft 365 Defender"
 ];
+MicrosoftProducts
+| project id, value
 ```
 
 #### Disclaimer
