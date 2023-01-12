@@ -1,4 +1,5 @@
-## Hi there 👋 Thank you for visiting @LearningKijo
+## KQL-XDR Threat Hunting
+Hi there 👋 Thank you for visiting @LearningKijo <br>
 I received a number of feedback about threat hunting in Microsoft 365 Defender.<br>
 Therefore, I wrote KQL samples based on the feedback!!
 
