@@ -2,7 +2,7 @@
 // Email & collaboration tables
 // Case1 - Daily mail detection by phishing activity for past 30 days
 // Case2 - Daily mail detection by spam activity for past 30 days
-// Case3 - Daily mail detection by malware activity past 30 days
+// Case3 - Daily mail detection by malware activity for past 30 days
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
