@@ -1,8 +1,8 @@
 name : XDR alert reports 
 description : 
-  - Case1 : Daily alert & severity for MDE/AV 
-  - Case2 : Org based MITRE ATT&CK technique for past 30 days
-  - Case3 : Org based high/medium alerts for MDE/AV/MDO/MDI/MDA/XDR
+  - Case1 - Daily alert & severity for MDE/AV 
+  - Case2 - Org based MITRE ATT&CK technique for past 30 days
+  - Case3 - Org based high/medium alerts for MDE/AV/MDO/MDI/MDA/XDR
 table : 
   - AlertInfo
   - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-alertinfo-table?view=o365-worldwide
