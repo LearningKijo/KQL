@@ -1,8 +1,8 @@
 name : Email threat reports
 description : 
-  - Case1 : Daily mail detection by phishing activity for past 30 days
-  - Case2 : Daily mail detection by spam activity for past 30 days
-  - Case3 : Daily mail detection by malware activity for past 30 days
+  - Case1 - Daily mail detection by phishing activity for past 30 days
+  - Case2 - Daily mail detection by spam activity for past 30 days
+  - Case3 - Daily mail detection by malware activity for past 30 days
 table : 
   - EmailEvents
   - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
