@@ -46,5 +46,8 @@ Kusto Detective Agency is an interactive big data contest and gives you 5 missio
 2. Kusto Detective Agency short video : [Kusto Detective Agency - an interactive big data contest](https://www.youtube.com/watch?v=BaW0qsxxYRc)
 > Welcome to the Kusto Detective agency, rookie!  Be prepared to flex your investigative muscles as you use your big data skills to solve our most challenging cases.  Prizes and awards are up for grabs if you are successful!
 
+## Microsoft 365 Defender sample query
+https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender
+
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
