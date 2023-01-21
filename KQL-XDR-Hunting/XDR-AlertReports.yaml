@@ -14,6 +14,7 @@ query: |
   | summarize AlertNum = count() by Severity, bin(Timestamp, 1d)
   | render timechart 
 
+
   //Alert tables - Case2 
   AlertInfo
   | where Timestamp > ago(30d)
@@ -22,6 +23,7 @@ query: |
   | mv-expand DetailedAttackTechniques= parse_json(AttackTechniques)
   | summarize MITRE_ATTACK_list = count() by tostring(DetailedAttackTechniques)
   | render columnchart
+
 
   //Alert tables - Case3
   AlertInfo
