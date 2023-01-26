@@ -4,7 +4,7 @@ description :
   - Case1.2 - Monitoring Task schedules with NT AUTHORITY/SYSTEM (local SYSTEM) privileges
   - Case2.1 - Monitoring Services
   - Case2.2 - Monitoring Services with NT AUTHORITY/SYSTEM (local SYSTEM) privileges
-  - Case3.0 - Monitoring SSH coonection
+  - Case3.0 - Monitoring SSH connection 
   - Case4.0 - Monitoring Run and RunOnce Registry Keys 
   - https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/
   - https://attack.mitre.org/techniques/T1053/005/
