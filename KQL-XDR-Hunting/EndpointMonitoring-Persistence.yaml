@@ -66,7 +66,7 @@ query : |
   | project Timestamp, DeviceId, DeviceName, FileName, FolderPath, ProcessCommandLine
 
 
-  //Case3.0 - Monitoring SSH coonection 
+  //Case3.0 - Monitoring SSH connection 
   let StartTime = datetime(2023-01-10);
   let EndTime = datetime(2023-01-24);
   DeviceProcessEvents
