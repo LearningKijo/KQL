@@ -1,4 +1,5 @@
 ## Post ransomware investigations
+
 #### Reference : [Defenders beware: A case for post-ransomware investigations](https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/)
 | MITRE ATT&CK | Link |
 | ------------- | ------------- |
@@ -9,3 +10,7 @@
 | Exfiltration | N/A |
 | Defense evasion | N/A |
 | Discovery | N/A | 
+
+
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
