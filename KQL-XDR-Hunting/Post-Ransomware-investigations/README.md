@@ -3,7 +3,7 @@
 | MITRE ATT&CK | Link |
 | ------------- | ------------- |
 | Initial access  | N/A |
-| Persistence  | https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Post-Ransomware-investigations/EndpointMonitoring-Persistence.yaml |
+| Persistence  | [EndpointMonitoring-Persistence.yaml](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Post-Ransomware-investigations/EndpointMonitoring-Persistence.yaml) |
 | Lateral movement | N/A |
 | Credential access | N/A |
 | Exfiltration | N/A |
