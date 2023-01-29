@@ -27,12 +27,18 @@ After Microsoft 365 Defender / Webcast, I also continued to explore more deeper 
 1. [Azure Data Explorer KQL cheat sheets](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/azure-data-explorer-kql-cheat-sheets/ba-p/1057404)
 2. [Microsoft Threat Protection advanced hunting cheat sheet](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/microsoft-threat-protection-advanced-hunting-cheat-sheet/ba-p/1505100) 
 
-## Microsoft docs : KQL reference 
+## KQL reference (MS docs)
 1. [KQL quick reference | Microsoft Learn](https://learn.microsoft.com/en-us/azure/data-explorer/kql-quick-reference)
 2. [String operators - Azure Data Explorer | Microsoft Learn!](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/datatypes-string-operators)
 3. [Query best practices - Azure Data Explorer | Microsoft Learn](https://learn.microsoft.com/en-us/azure/data-explorer/kql-quick-reference)
 
-## KC7
+## Microsoft 365 Defender, Advanced Hunting (MS docs)
+Learn the schema tables - App, Endpoint, Identity and Email in Microsoft 365 Defender.
+1. [Data tables in the Microsoft 365 Defender advanced hunting schema](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide)
+Also, there are a number of out-of-the-box queries.
+2. [Hunt for threats across devices, emails, apps, and identities with advanced hunting](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-query-emails-devices?view=o365-worldwide)
+
+## KC7 
 In KC7, you will be able to learn KQL step by step. After the initial training, you will be a member of SOC team and take a first case with real hunting experience. At the end of this KC7, you will be confident how you are going to hunt some suspicious activities by KQL.
 1. KC7 Website (https://kc7cyber.com/) 
 2. KC7 GitHub (https://github.com/kkneomis/kc7)
