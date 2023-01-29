@@ -1,4 +1,4 @@
-## Post ransomware investigations
+## Defenders beware: A case for post-ransomware investigations
 Microsoft, Detection and Response Team (DART), has recently posted a blog which is covered a post-ransomware incidents. Some people are interested in how we can leverage the power of kusto, KQL for hunting these malicious activities in Microsoft 365 Defender or Microsoft Sentinel. Therefore, in terms of MITRE ATT&CK and threat hunting, I wrote some out-of-the-box queries to hunt for these activities.
 
 > In this blog, we detail a recent ransomware incident in which the attacker used a collection of commodity tools and techniques, such as using living-off-the-land binaries, to launch their malicious code. Cobalt Strike was used for persistence on the network with NT AUTHORITY/SYSTEM (local SYSTEM) privileges to maintain access to the network after password resets of compromised accounts.
