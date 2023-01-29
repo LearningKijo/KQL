@@ -1,7 +1,7 @@
 ## KQL-XDR Threat Hunting
 Hi there 👋 Thank you for visiting @LearningKijo <br>
 I received a number of feedback about threat hunting in Microsoft 365 Defender.<br>
-Therefore, I wrote KQL samples based on the feedback!!
+Therefore, I wrote some out-of-the-box queries based on the feedback!!
 
 ```
 // I will cover mostly these products in KQL.
