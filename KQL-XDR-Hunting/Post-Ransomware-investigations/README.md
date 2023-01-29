@@ -8,7 +8,7 @@ Microsoft, Detection and Response Team (DART), has recently posted a blog which 
 #### Reference : [Defenders beware: A case for post-ransomware investigations](https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/)
 <br>
 
-## e.g. hunting queries - Post-Ransomware activities
+## Hunting queries - Post-Ransomware activities
 
 | MITRE ATT&CK | ID | Link |
 | ------------- |-------------| ------------- |
