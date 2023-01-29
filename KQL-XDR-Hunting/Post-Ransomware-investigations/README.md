@@ -10,15 +10,15 @@ Microsoft, Detection and Response Team (DART), has recently posted a blog which 
 
 ## Hunting queries - Post-Ransomware activities
 
-| MITRE ATT&CK | ID | Link |
+| MITRE ATT&CK | Detail | Link |
 | ------------- |-------------| ------------- |
 | Initial access  | N/A | N/A |
-| Persistence  | T1543 <br> T1546 <br> T1547 <br> T1053 | [EndpointMonitoring-Persistence.yaml](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Post-Ransomware-investigations/EndpointMonitoring-Persistence.yaml) ||
-| Lateral movement | - | In progress |
-| Credential access | - | In progress |
-| Exfiltration | - | In progress |
-| Defense evasion | - | In progress |
-| Discovery | - | In progress | 
+| Persistence  | Scheduled task <br> Service  <br> SSH connection : OpenSSH <br> Registry : Run and RunOnce | [EndpointMonitoring-Persistence.yaml](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Post-Ransomware-investigations/EndpointMonitoring-Persistence.yaml) ||
+| Lateral movement | Impacket (WMI) <br> PsExec <br> Remote desktop protocol(RDP) | In progress |
+| Credential access | WDigest <br> NTDSUtil Dumping <br> Volume shadow copy access | In progress |
+| Exfiltration | PuTTY Secure Copy (PSCP) | In progress |
+| Defense evasion | Disabling antivirus <br> Kernel driver | In progress |
+| Discovery | Commands | In progress | 
 
 
 #### Disclaimer
