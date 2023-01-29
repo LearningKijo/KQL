@@ -34,8 +34,10 @@ After Microsoft 365 Defender / Webcast, I also continued to explore more deeper 
 
 ## Microsoft 365 Defender, Advanced Hunting (MS docs)
 Learn the schema tables - App, Endpoint, Identity and Email in Microsoft 365 Defender.
-1. [Data tables in the Microsoft 365 Defender advanced hunting schema](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide)
-Also, there are a number of out-of-the-box queries.
+1. [Data tables in the Microsoft 365 Defender advanced hunting schema](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-schema-tables?view=o365-worldwide)<br>
+
+Also, there are a number of out-of-the-box queries.<br>
+
 2. [Hunt for threats across devices, emails, apps, and identities with advanced hunting](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-query-emails-devices?view=o365-worldwide)
 
 ## KC7 
