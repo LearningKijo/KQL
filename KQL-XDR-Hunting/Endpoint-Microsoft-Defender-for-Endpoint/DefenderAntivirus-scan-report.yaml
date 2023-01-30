@@ -1,11 +1,9 @@
-name : EPP detection reports
+name : defender antivirus scan report
 description : 
   - --- Microsoft Defender Antivirus ---
   - Case1 - Daily "Quick scan" by count list 
   - Case2 - Daily "Full scan" count list 
   - Case3 - Daily "Quick" or "Full" scan time list
-  - Case4 - Weekly malware detection names & number list 
-  - Case5 - Weekly malware detection names & device list 
 table :
   - DeviceEvents
   - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide
@@ -36,22 +34,4 @@ query: |
   | where ScanType.ScanTypeIndex == "Quick"
   //| where ScanType.ScanTypeIndex == "Full"
   | summarize make_list(Timestamp) by tostring(DeviceName)
-
-
-  //Case4 - Weekly malware detection names & number list 
-  DeviceEvents
-  | where Timestamp > ago(7d)
-  | where ActionType == "AntivirusDetection"
-  | extend DetectionType =parse_json(AdditionalFields)
-  | project Timestamp, DeviceId, DeviceName, ActionType, DetectionType.ReportSource, DetectionType.ThreatName
-  | summarize ThreatNumber= count() by tostring(DetectionType_ThreatName)
-  | sort by ThreatNumber desc 
-
-
-  //Case5 - Weekly malware detection names & device list
-  DeviceEvents
-  | where Timestamp > ago(7d)
-  | where ActionType == "AntivirusDetection"
-  | extend DetectionType =parse_json(AdditionalFields)
-  | summarize MalwareFamilyList = make_list(DetectionType.ThreatName) by DeviceName, DeviceId
 
