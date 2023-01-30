@@ -51,5 +51,4 @@ query : |
    | where InitiatingProcessCommandLine has "psexec"
    | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
 
-
  
