@@ -14,7 +14,7 @@ Microsoft, Detection and Response Team (DART), has recently posted a blog which 
 | ------------- |-------------| ------------- |
 | Initial access  | N/A | N/A |
 | Persistence  | Scheduled task <br> Service  <br> SSH connection : OpenSSH <br> Registry : Run and RunOnce | [EndpointMonitoring-Persistence.yaml](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Post-Ransomware-investigations/EndpointMonitoring-Persistence.yaml) ||
-| Lateral movement | Impacket (WMI) <br> PsExec <br> Remote desktop protocol(RDP) | In progress |
+| Lateral movement | Impacket (WMI) <br> PsExec <br> Remote desktop protocol(RDP) | [EndpointPsExecHunting-LMP.yaml](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Post-Ransomware-investigations/EndpointPsExecHunting-LMP.yaml) |
 | Credential access | WDigest <br> NTDSUtil Dumping <br> Volume shadow copy access | In progress |
 | Exfiltration | PuTTY Secure Copy (PSCP) | In progress |
 | Defense evasion | Disabling antivirus <br> Kernel driver | In progress |
