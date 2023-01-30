@@ -1,0 +1,55 @@
+name : Lateral movement - hunting for PsExec activities
+description : 
+- Case1 - search "psexec" activities in InitiatingProcessCommandLine
+- Case2 - search "psexec" activities in ProcessCommandLine
+- Case3 - monitoring PsExec activities with DeviceNetworkEvents table
+- Case4 - monitoring PsExec activities with DeviceProcessEvents table
+- Case5 - monitoring PsExec activities with DeviceEvents table
+KQL : 
+- InitiatingProcessCommandLine | string | Command line used to run the process that initiated the event
+- ProcessCommandLine         	 | string | Command line used to create the new process
+reference : 
+- PsExec - https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
+table : 
+- DeviceProcessEvents, DeviceEvents, DeviceFileEvents, DeviceNetworkEvents
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceprocessevents-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicefileevents-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicenetworkevents-table?view=o365-worldwide
+query : |
+   //Case1 - search "psexec" activities in InitiatingProcessCommandLine
+   search "psexec"
+   | where Timestamp > ago(7d)
+   | where isnotempty(InitiatingProcessCommandLine) 
+   | project-reorder InitiatingProcessCommandLine
+
+
+   //Case2 - search "psexec" activities in ProcessCommandLine
+   search "psexec"
+   | where Timestamp > ago(7d)
+   | where isnotempty(ProcessCommandLine) 
+   | project-reorder ProcessCommandLine
+
+
+   //Case3 - monitoring PsExec activities with DeviceNetworkEvents table
+   DeviceNetworkEvents
+   | where Timestamp > ago(7d)
+   | where InitiatingProcessCommandLine has "psexec"
+   | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, ActionType, RemotePort, InitiatingProcessCommandLine
+
+
+   //Case4 - monitoring PsExec activities with DeviceProcessEvents table
+   DeviceProcessEvents
+   | where Timestamp > ago(7d)
+   | where ProcessCommandLine has "psexec"
+   | project Timestamp, DeviceId, DeviceName, AccountUpn, ActionType, ProcessCommandLine, InitiatingProcessCommandLine
+
+
+   //Case5 - monitoring PsExec activities with DeviceEvents table
+   DeviceEvents
+   | where Timestamp > ago(7d)
+   | where InitiatingProcessCommandLine has "psexec"
+   | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
+
+
+ 
