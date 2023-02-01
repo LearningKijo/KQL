@@ -22,7 +22,7 @@ query : |
        @'["Spoof DMARC"]',
        @'["Impersonation brand"]',
        @'["Mixed analysis detection"]',
-       @'["File reputation"]'
+       @'["File reputation"]',
        @'["Fingerprint matching"]'
       )
     | project Timestamp, Subject, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, EOP_detection.Phish
