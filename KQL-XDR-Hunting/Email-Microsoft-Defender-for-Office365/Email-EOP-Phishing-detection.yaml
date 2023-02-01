@@ -14,7 +14,7 @@ query : |
     | extend EOP_detection = parse_json(DetectionMethods)
     | where EOP_detection.Phish in 
       (
-       @'["URL malicious reputation"]'
+       @'["URL malicious reputation"]',
        @'["Advanced filter"]',
        @'["General filter"]',
        @'["Spoof intra-org"]',
