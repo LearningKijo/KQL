@@ -25,7 +25,7 @@ query : |
        @'["File reputation"]',
        @'["Fingerprint matching"]'
       )
-    | project Timestamp, Subject, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, EOP_detection.Phish
+    | project Timestamp, NetworkMessageId, Subject, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, EOP_detection.Phish
 
 
     //Case2 - Filter EOP detection based on detection ethods
@@ -43,6 +43,6 @@ query : |
     //| where EOP_detection.Phish == @'["Mixed analysis detection"]'
     //| where EOP_detection.Phish == @'["File reputation"]'
     //| where EOP_detection.Phish == @'["Fingerprint matching"]'
-    | project Timestamp, Subject, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, EOP_detection.Phish
+    | project Timestamp, NetworkMessageId, Subject, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, EOP_detection.Phish
 
     
