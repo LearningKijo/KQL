@@ -23,7 +23,7 @@ query : |
        @'["File detonation reputation"]',
        @'["Campaign"]'
       )
-    | project Timestamp, Subject, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, MDO_detection.Phish
+    | project Timestamp, NetworkMessageId, Subject, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, MDO_detection.Phish
 
 
     //Case2 - Filter MDO detection based on detection methods
@@ -39,6 +39,6 @@ query : |
     //| where MDO_detection.Phish == @'["File detonation"]'
     //| where MDO_detection.Phish == @'["File detonation reputation"]'
     //| where MDO_detection.Phish == @'["Campaign"]'
-    | project Timestamp, Subject, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, MDO_detection.Phish
+    | project Timestamp, NetworkMessageId, Subject, SenderFromAddress, RecipientEmailAddress, DeliveryLocation, MDO_detection.Phish
 
 
