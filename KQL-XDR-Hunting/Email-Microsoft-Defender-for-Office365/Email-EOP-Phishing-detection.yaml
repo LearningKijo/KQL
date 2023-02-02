@@ -1,6 +1,6 @@
 name : EOP detection with Email Phish
 description : 
-- These queries are going to hunt for - Phish/Malware mails with Exchange Online Protection
+- These queries are going to hunt for - Phish mails with Exchange Online Protection
 - Case1 - EOP detection list 
 - Case2 - Filter EOP detection based on detection methods
 table : 
