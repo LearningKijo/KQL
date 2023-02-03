@@ -5,7 +5,7 @@ KQL stands for "Kusto Query Language" and this is very effective when you want t
 > https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/
 
 ![image](https://user-images.githubusercontent.com/120234772/216594925-eb0c7249-0ac1-426e-bab8-539f50eafbe0.png)
-> e.g. Microsoft 365 Defender | Advanced Hunting  
+> e.g. Microsoft 365 Defender portal | Advanced Hunting  
 
 ## Microsoft 365 Defender / Webcast 
 This webinar was definitely helpful for people who are going to start learning KQL in Microsoft 365 Defender. Each series of webinar covers the fundamental KQL and the great use case. As I mostly focus on XDR in Microsoft 365 Defender in my work, I started watching these webinars initially.
