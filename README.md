@@ -1,4 +1,5 @@
 # KQL - learning resources
+<img src="https://img.shields.io/badge/Azure-KQL-00B2FF.svg?logo=microsoftazure&style=popout">
 KQL stands for "Kusto Query Language" and this is very effective when you want to hunt for specific activities and data. Also, Microsoft Sentinel (SOAR) and Microsoft 365 Defender (Advanced Hunting) are great examples for using KQL. However, leveraging KQL might be a bit challenging if you don't have SQL or programming background. When I have started learning KQL, I had no idea how to begin as a learning process due to no programming/SQL experience. Throughout my KQL journey, I would like to share some of the best resources for learning KQL. At the same time, I would like to share some sample queries in this KQL repository.
 
 > Kusto Query Language is a powerful tool to explore your data and discover patterns, identify anomalies and outliers, create statistical modeling, and more. The query uses schema entities that are organized in a hierarchy similar to SQL's: databases, tables, and columns.
