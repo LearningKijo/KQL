@@ -1,4 +1,8 @@
 ## KQL-XDR Threat Hunting
+<a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure-KQL-00B2FF.svg?logo=microsoftazure&style=popout"></a>
+<a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/">
+<img src="https://img.shields.io/badge/Azure%20Data%20Explorer-%230078D4.svg?&style=popout&logo=azure%20data%20explorer&logoColor=white"/></a>
+
 Hi there 👋 Thank you for visiting @LearningKijo <br>
 I received a number of feedback about threat hunting in Microsoft 365 Defender.<br>
 Therefore, I wrote some out-of-the-box queries based on the feedback!!
