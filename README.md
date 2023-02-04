@@ -1,5 +1,6 @@
 # KQL - learning resources
 <a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure-KQL-00B2FF.svg?logo=microsoftazure&style=popout"></a>
+<a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure%20Data%20Explorer-%230078D4.svg?&style=popout&logo=azure%20data%20explorer&logoColor=white"/></a>
 <a href="https://www.linkedin.com/in/kijo-niimura/"><img src="https://img.shields.io/badge/-Linkedin-0077B5.svg?logo=linkedin&style=popout"></a>
 
 KQL stands for "Kusto Query Language" and this is very effective when you want to hunt for specific activities and data. Also, Microsoft Sentinel (SOAR) and Microsoft 365 Defender (Advanced Hunting) are great examples for using KQL. However, leveraging KQL might be a bit challenging if you don't have SQL or programming background. When I have started learning KQL, I had no idea how to begin as a learning process due to no programming/SQL experience. Throughout my KQL journey, I would like to share some of the best resources for learning KQL. At the same time, I would like to share some sample queries in this KQL repository.
