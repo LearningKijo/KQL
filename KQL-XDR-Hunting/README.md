@@ -22,7 +22,7 @@ MicrosoftProducts
 | project id, value
 ```
 
-### Out-of-the-box KQL queries
+### Out-of-the-box KQL queries :
 
 | Products/Threat  | Link |
 | ------------- | ------------- |
