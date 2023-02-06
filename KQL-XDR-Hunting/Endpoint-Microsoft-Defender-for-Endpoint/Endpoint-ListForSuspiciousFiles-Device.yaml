@@ -1,0 +1,19 @@
+name : Endpoint - Listing suspicious files on the device
+description : 
+- Case1 - Listing suspicious files on the device
+- By using Join operator and AlertEvidence table, it is listing suspicious files for each device
+table :
+  - Alertevidence
+  - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-alertevidence-table?view=o365-worldwide
+query: |
+    //Case1 - Listing suspicious files on the device
+    let SuspiciousFiles = AlertEvidence 
+    | where ServiceSource == "Microsoft Defender for Endpoint"
+    | where isnotempty(FileName)
+    | project AlertId, Categories, AttackTechniques, FileName;
+    AlertEvidence
+    | where isnotempty(DeviceId) and isnotempty(DeviceName)
+    | project-reorder DeviceId, DeviceName, AlertId
+    | join SuspiciousFiles on AlertId
+    | project DeviceId, DeviceName, Files= FileName1
+    | summarize make_list(Files) by DeviceId
