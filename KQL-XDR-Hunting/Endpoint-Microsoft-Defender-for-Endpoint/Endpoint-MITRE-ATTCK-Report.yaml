@@ -1,5 +1,4 @@
-
-name : Emdpoint - MDE/MDAV detection MITRE ATT&CK list
+name : Endpoint - MDE/MDAV detection MITRE ATT&CK list
 description : 
   - Case1 - Columnchart / MDE & MDAV detection with MITRE ATT&CK MITRE_ATTACK_list 
   - Case2 - Sort number / MDE & MDAV detection with MITRE ATT&CK MITRE_ATTACK_list
