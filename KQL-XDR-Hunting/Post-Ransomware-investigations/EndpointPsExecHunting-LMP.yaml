@@ -5,6 +5,7 @@ description :
 - Case3 - monitoring PsExec activities with DeviceNetworkEvents table
 - Case4 - monitoring PsExec activities with DeviceProcessEvents table
 - Case5 - monitoring PsExec activities with DeviceEvents table
+- Case6 - union with 3 tables to hunt PsExec activitie
 KQL : 
 - InitiatingProcessCommandLine | string | Command line used to run the process that initiated the event
 - ProcessCommandLine         	 | string | Command line used to create the new process
@@ -52,3 +53,9 @@ query : |
    | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
 
  
+    //Case6 - union with 3 tables to hunt PsExec activitie
+    union DeviceNetworkEvents, DeviceProcessEvents, DeviceEvents      
+    | where Timestamp > ago(7d)    
+    | where InitiatingProcessFileName =~ "PsExec.exe" or FileName =~ "PsExec.exe"    
+    | where InitiatingProcessCommandLine has "psexec" or ProcessCommandLine has "psexec"    
+    | project Timestamp, DeviceId, DeviceName, AccountUpn, ActionType, RemotePort, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
