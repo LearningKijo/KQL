@@ -53,9 +53,9 @@ query : |
    | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
 
  
-    //Case6 - union with 3 tables to hunt PsExec activitie
-    union DeviceNetworkEvents, DeviceProcessEvents, DeviceEvents      
-    | where Timestamp > ago(7d)    
-    | where InitiatingProcessFileName =~ "PsExec.exe" or FileName =~ "PsExec.exe"    
-    | where InitiatingProcessCommandLine has "psexec" or ProcessCommandLine has "psexec"    
-    | project Timestamp, DeviceId, DeviceName, AccountUpn, ActionType, RemotePort, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
+   //Case6 - union with 3 tables to hunt PsExec activitie
+   union DeviceNetworkEvents, DeviceProcessEvents, DeviceEvents      
+   | where Timestamp > ago(7d)    
+   | where InitiatingProcessFileName =~ "PsExec.exe" or FileName =~ "PsExec.exe"    
+   | where InitiatingProcessCommandLine has "psexec" or ProcessCommandLine has "psexec"    
+   | project Timestamp, DeviceId, DeviceName, AccountUpn, ActionType, RemotePort, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
