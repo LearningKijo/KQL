@@ -13,3 +13,10 @@ In some cases, Advanced Hunting query will be provided by Threat Analytics.
 
 ![image](https://user-images.githubusercontent.com/120234772/220133622-90c87dd4-11b0-4bca-894f-c9ee9fd039de.png)
 > Figure 2. Threat Analytics, Malware profile: Emotet
+
+
+![image](https://user-images.githubusercontent.com/120234772/220135271-75c42b05-a3aa-464c-b537-aafc04c8c8d2.png)
+> Figure 3. Threat Analytics, Log4j active exploitation
+
+#### Disclaimer 
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
