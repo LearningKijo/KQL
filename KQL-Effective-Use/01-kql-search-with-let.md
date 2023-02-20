@@ -67,6 +67,8 @@ Timestamp between ((StartTimestamp) .. (EndTimestamp))
 and 
 (FileName has IoC_FileName
 or InitiatingProcessFileName has IoC_FileName
+or ProcessCommandLine has IoC_FileName
+or InitiatingProcessCommandLine has IoC_FileName
 or MD5 == IoC_MD5
 or SHA1 == IoC_SHA1
 or SHA256 == IoC_SHA256
