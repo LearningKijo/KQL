@@ -1,11 +1,7 @@
 name : Lateral movement - hunting for PsExec activities
 description : 
-- Case1 - search "psexec" activities in InitiatingProcessCommandLine
-- Case2 - search "psexec" activities in ProcessCommandLine
-- Case3 - monitoring PsExec activities with DeviceNetworkEvents table
-- Case4 - monitoring PsExec activities with DeviceProcessEvents table
-- Case5 - monitoring PsExec activities with DeviceEvents table
-- Case6 - union with 3 tables to hunt PsExec activitie
+- Case1 - hunt for "psexec" activities with DeviceProcessEvents, DeviceEvents 
+- Case2 - hunt for "psexec" activities with DeviceNetworkEvents 
 KQL : 
 - InitiatingProcessCommandLine | string | Command line used to run the process that initiated the event
 - ProcessCommandLine         	 | string | Command line used to create the new process
@@ -18,44 +14,17 @@ table :
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicefileevents-table?view=o365-worldwide
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicenetworkevents-table?view=o365-worldwide
 query : |
-   //Case1 - search "psexec" activities in InitiatingProcessCommandLine
-   search "psexec"
-   | where Timestamp > ago(7d)
-   | where isnotempty(InitiatingProcessCommandLine) 
-   | project-reorder InitiatingProcessCommandLine
+   //Case1 - hunt for "psexec" activities with DeviceProcessEvents, DeviceEvents 
+   union DeviceProcessEvents, DeviceEvents      
+   | where Timestamp > ago(30d)    
+   | where InitiatingProcessFileName =~ "PsExec.exe" or FileName =~ "PsExec.exe"    
+   | where InitiatingProcessCommandLine has "psexec" or ProcessCommandLine has "psexec"    
+   | summarize make_set(ProcessCommandLine) by DeviceId, DeviceName
 
 
-   //Case2 - search "psexec" activities in ProcessCommandLine
-   search "psexec"
-   | where Timestamp > ago(7d)
-   | where isnotempty(ProcessCommandLine) 
-   | project-reorder ProcessCommandLine
-
-
-   //Case3 - monitoring PsExec activities with DeviceNetworkEvents table
-   DeviceNetworkEvents
-   | where Timestamp > ago(7d)
+   //Case2 - hunt for "psexec" activities with DeviceNetworkEvents
+   DeviceNetworkEvents      
+   | where Timestamp > ago(30d)    
+   | where InitiatingProcessFileName =~ "PsExec.exe"
    | where InitiatingProcessCommandLine has "psexec"
-   | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, ActionType, RemotePort, InitiatingProcessCommandLine
-
-
-   //Case4 - monitoring PsExec activities with DeviceProcessEvents table
-   DeviceProcessEvents
-   | where Timestamp > ago(7d)
-   | where ProcessCommandLine has "psexec"
-   | project Timestamp, DeviceId, DeviceName, AccountUpn, ActionType, ProcessCommandLine, InitiatingProcessCommandLine
-
-
-   //Case5 - monitoring PsExec activities with DeviceEvents table
-   DeviceEvents
-   | where Timestamp > ago(7d)
-   | where InitiatingProcessCommandLine has "psexec"
-   | project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
-
- 
-   //Case6 - union with 3 tables to hunt PsExec activitie
-   union DeviceNetworkEvents, DeviceProcessEvents, DeviceEvents      
-   | where Timestamp > ago(7d)    
-   | where InitiatingProcessFileName =~ "PsExec.exe" or FileName =~ "PsExec.exe"    
-   | where InitiatingProcessCommandLine has "psexec" or ProcessCommandLine has "psexec"    
-   | project Timestamp, DeviceId, DeviceName, AccountUpn, ActionType, RemotePort, InitiatingProcessAccountUpn, InitiatingProcessFolderPath, InitiatingProcessCommandLine
+   | summarize make_set(InitiatingProcessCommandLine) by DeviceId, DeviceName
