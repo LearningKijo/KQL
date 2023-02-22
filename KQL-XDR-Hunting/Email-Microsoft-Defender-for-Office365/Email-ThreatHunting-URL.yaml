@@ -1,0 +1,25 @@
+name : Hunting for a specific URL in email's activities
+description : 
+- Hunting for a specific URL in email activity.
+- By adding a particular URL to the IoC_URL, such as "www.abc.org," security analysts can monitor email traffic for any malicious links or phishing attempts. 
+- This proactive approach to email security can help prevent cyber attacks and protect sensitive data.
+table :
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-EmailUrlInfo-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-urlclickevents-table?view=o365-worldwide
+query: |
+    let IoC_URL = "www.abc.org";
+    let UrlClick = UrlClickEvents
+    | where Timestamp > ago(30d)
+    | where Url has IoC_URL;
+    let UrlInfo = EmailUrlInfo
+    | where Timestamp > ago(30d)
+    | where Url has IoC_URL;
+    EmailEvents
+    | where Timestamp > ago(30d)
+    | join kind=inner UrlInfo on NetworkMessageId
+    | join kind=leftouter UrlClick on NetworkMessageId
+    | project-reorder Timestamp, Subject, SenderFromAddress, RecipientEmailAddress, SenderIPv4, DeliveryLocation, LatestDeliveryLocation, Url, ActionType
+
+
+
