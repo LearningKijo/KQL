@@ -18,7 +18,7 @@ query: |
   //Alert tables - Case2 
   AlertInfo
   | where Timestamp > ago(30d)
-  | where ServiceSource in ("Microsoft Defender for Endpoint", "Microsoft Defender for Office 365", "Microsoft Defender for Identity", "Microsoft Defender for Cloud Apps", "Microsoft 365 Defender")
+  | where ServiceSource in ("AAD Identity Protection", "Microsoft Defender for Endpoint", "Microsoft Defender for Office 365", "Microsoft Defender for Identity", "Microsoft Cloud App Security", "Microsoft 365 Defender")
   | where isnotempty(AttackTechniques)
   | mv-expand DetailedAttackTechniques= parse_json(AttackTechniques)
   | summarize MITRE_ATTACK_list = count() by tostring(DetailedAttackTechniques)
