@@ -12,7 +12,7 @@ KQL stands for "Kusto Query Language" and is a powerful language for hunting spe
 > e.g. Microsoft 365 Defender portal | Advanced Hunting  
 
 ## Microsoft 365 Defender / Webcast 
-This webinar was definitely helpful for people who are going to start learning KQL in Microsoft 365 Defender. Each series of webinar covers the fundamental KQL and the great use case. As I mostly focus on XDR in Microsoft 365 Defender in my work, I started watching these webinars initially.
+This webinar is an excellent resource for those who are new to KQL in Microsoft 365 Defender. Each webinar in the series covers the fundamentals of KQL and demonstrates great use cases. As my work mainly focuses on XDR in Microsoft 365 Defender, I found these webinars particularly helpful and informative.
 
 Webcast 1 - 4 series 
 1. [M365 Defender (MTP) webinar: Tracking the Adversary E1: KQL Fundamentals](https://www.youtube.com/watch?v=0D9TkGjeJwM).
@@ -24,7 +24,7 @@ GitHub Microsoft-365-Defender-Hunting-Queries <br>
 https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts/TrackingTheAdversary
 
 ## Microsoft Sentinel webinar / KQL part 1-3 
-After Microsoft 365 Defender / Webcast, I also continued to explore more deeper about KQL. For people using Microsoft Sentinel and Azure Data Explorer, these webinars may be an excellent starting point for learning KQL.
+After attending the Microsoft 365 Defender Webcast, I continued to explore KQL in greater depth. For those using Microsoft Sentinel and Azure Data Explorer, these webinars can provide an excellent starting point for learning KQL.
 
 1. [Azure Sentinel webinar: KQL part 1 of 3 - Learn the KQL you need for Azure Sentinel!](https://www.youtube.com/watch?v=EDCBLULjtCM)
 2. [Azure Sentinel webinar: KQL part 2 of 3 - KQL hands-on lab exercises!](https://www.youtube.com/watch?v=YKD_OFLMpf8)
