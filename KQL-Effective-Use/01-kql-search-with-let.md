@@ -1,10 +1,9 @@
 ## KQL - search operator with let statement
-Firstly, "search" is very useful and effective operator in KQL when you look for some key word or data. <br>
+Firstly, "search" is a very useful and effective operator in KQL when you are searching for a specific keyword or data. <br>
 > Searches a text pattern in multiple tables and columns.<br>
 [search operator - Azure Data Explorer | Microsoft Learn!](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer)
 
-If you have ever used advanced hunting in Microsoft 365 Defender and selected "Go hunt" option in a device page, you might be seen KQL - seeking a device with let statement and search operator. 
-However, the question is that I haven't ever seen the search scenario with let. I looked at MS docs, [Search operator](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer), and [Let statement](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement#create-a-view-or-virtual-table). These were slightly covered the example, but not fully the use case, especially in Microsoft 365 Defender. Therefore, at this time, I´m going to focus on the use case : seach operator with let statement. 
+If you have ever used Advanced Hunting in Microsoft 365 Defender and selected the "Go hunt" option on a device page, you may have come across KQL queries that use the "let" statement and the "search" operator to seek out specific devices. However, while I have seen examples of the [Let statement](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/letstatement#create-a-view-or-virtual-table) being used with the [Search operator](https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer) in Microsoft documentation, they were not fully explained, especially in the context of Microsoft 365 Defender. Therefore, in this article, I will focus on the use case of the "search" operator with the "let" statement.
 
 #### Question: When do we use this query? 
 If you would like to search something with "specific tables" and "timeline", then the query - let & search would be a great way to use!!
