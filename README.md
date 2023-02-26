@@ -50,7 +50,7 @@ In KC7, you will be able to learn KQL step by step. After the initial training, 
 2. KC7 GitHub (https://github.com/kkneomis/kc7)
 3. KC7 setup video : [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) <br>
 
-For importing data, you can get it from here (https://github.com/kkneomis/kc7_data/tree/main/envolvelabs)
+> For importing data, you can get it from here **(https://github.com/kkneomis/kc7_data/tree/main/envolvelabs)**
 
 ## Kusto Detective Agency
 Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detectives in the team and deal with (find out the answer) missions by using KQL.
