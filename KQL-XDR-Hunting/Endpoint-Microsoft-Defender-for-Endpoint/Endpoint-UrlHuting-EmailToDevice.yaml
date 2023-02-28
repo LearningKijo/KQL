@@ -1,0 +1,42 @@
+name : Endpoint-UrlHuting Email To Device
+description : 
+- Hunting for a specific URL in Email and Endpoint tables.
+- By adding a particular URL to the HuntingURL, such as "www.abc.org," security analysts can monitor email traffic for any malicious links or phishing attempts. 
+- Also, it is capturing the URL activity in the endpoint as well.
+- This proactive approach to email security can help prevent cyber attacks and protect sensitive data.
+table : 
+- EmailEvents, EmailUrlInfo, UrlClickEvents, AlertEvidence, DeviceEvents
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailurlinfo-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-urlclickevents-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-alertevidence-table?view=o365-worldwide
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide
+query: |
+   let HuntingURL = "www.abc.org";
+   let URLInfo = EmailUrlInfo
+   | where Timestamp > ago(30d)
+   | where Url has HuntingURL;
+   let URLClick = UrlClickEvents
+   | where Timestamp > ago(30d)
+   | where Url has HuntingURL;
+   let EmailInfoWithURL = EmailEvents
+   | where Timestamp > ago(30d)
+   | join kind=inner URLInfo on NetworkMessageId
+   | join kind=leftouter URLClick on NetworkMessageId
+   | project-reorder Timestamp, Subject, SenderFromAddress, RecipientEmailAddress, SenderIPv4, DeliveryLocation, LatestDeliveryLocation, Url, ActionType;
+   let URLAlert= AlertEvidence
+   | where Timestamp > ago(30d)
+   | where EntityType in ("Url", "MailMessage")
+   | extend parsed = parse_json(AdditionalFields)
+   | where isnotempty(RemoteUrl) or isnotempty(parsed.Urls)
+   | join kind=inner AlertInfo on AlertId;
+   DeviceEvents
+   | where Timestamp > ago(30d)
+   | where ActionType == "BrowserLaunchedToOpenUrl" and isnotempty(RemoteUrl)
+   | where InitiatingProcessFileName =~ "outlook.exe" or InitiatingProcessFileName =~ "runtimebroker.exe"
+   | join kind=inner EmailInfoWithURL on $left.RemoteUrl == $right.Url
+   | join kind=leftouter URLAlert on RemoteUrl
+   | project-reorder Timestamp, DeviceId, DeviceName, Subject, SenderFromAddress, RecipientEmailAddress, SenderIPv4, DeliveryLocation, LatestDeliveryLocation, Url, ActionType, AlertId, Title
+
+
+   
