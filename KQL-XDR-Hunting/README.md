@@ -30,7 +30,6 @@ MicrosoftProducts
 | Email  | [Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
 | App | In progress |
 | Identity | In progress |
-| Ransomware | [Post ransomware investigations](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Post-Ransomware-investigations) |
 
 ## MS security blog / KQL reference 
 [Digital Security Tips and Solutions - Microsoft Security Blog!](https://www.microsoft.com/en-us/security/blog/)
