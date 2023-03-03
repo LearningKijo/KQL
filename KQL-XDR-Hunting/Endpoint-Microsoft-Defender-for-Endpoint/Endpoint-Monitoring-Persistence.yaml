@@ -1,0 +1,109 @@
+name : Persistence
+description :
+  - Case1.1 - Monitoring Task schedules
+  - Case1.2 - Monitoring Task schedules with NT AUTHORITY/SYSTEM (local SYSTEM) privileges
+  - Case2.1 - Monitoring Services
+  - Case2.2 - Monitoring Services with NT AUTHORITY/SYSTEM (local SYSTEM) privileges
+  - Case3.0 - Monitoring SSH connection 
+  - Case4.0 - Monitoring Run and RunOnce Registry Keys 
+  - https://www.microsoft.com/en-us/security/blog/2022/10/18/defenders-beware-a-case-for-post-ransomware-investigations/
+  - https://attack.mitre.org/techniques/T1053/005/
+  - https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview
+  - https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys
+table : 
+  - DeviceProcessEvents
+  - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-DeviceProcessEvents-table?view=o365-worldwide
+query : |
+  //Case1.1 - Monitoring task schedules
+  let StartTime = datetime(2023-01-10);
+  let EndTime = datetime(2023-01-20);
+  DeviceProcessEvents
+  | where Timestamp between ((StartTime) .. (EndTime))
+  | where FileName == "schtasks.exe"
+  | where ProcessCommandLine has_any ("/run", "/create")
+  | where FolderPath has_any 
+      (@"C:\ProgramData\", 
+       @"C:\Windows\Temp\",
+       @"C:\Windows\",
+       @"C:\Temp\")
+  | project Timestamp, DeviceId, DeviceName, FileName, FolderPath, ProcessCommandLine
+
+
+  //Case1.2 - Monitoring task schedules
+  let StartTime = datetime(2023-01-10);
+  let EndTime = datetime(2023-01-20);
+  DeviceProcessEvents
+  | where Timestamp between ((StartTime) .. (EndTime))
+  | where FileName == "schtasks.exe"
+  | where AccountName == "system" and AccountDomain == "nt authority"
+  | where ProcessCommandLine has_any ("/run", "/create")
+  | where FolderPath has_any 
+      (@"C:\ProgramData\", 
+       @"C:\Windows\Temp\",
+       @"C:\Windows\",
+       @"C:\Temp\")
+  | project Timestamp, DeviceId, DeviceName, FileName, FolderPath, ProcessCommandLine
+  
+
+  //Case2.1 - Monitoring Services
+  let StartTime = datetime(2023-01-10);
+  let EndTime = datetime(2023-01-20);
+  DeviceProcessEvents
+  | where Timestamp between ((StartTime) .. (EndTime))
+  | where FileName == "sc.exe"
+  | where ProcessCommandLine has "start"
+  | project Timestamp, DeviceId, DeviceName, FileName, FolderPath, ProcessCommandLine
+
+
+  //Case2.2 - Monitoring Services
+  let StartTime = datetime(2023-01-10);
+  let EndTime = datetime(2023-01-20);
+  DeviceProcessEvents
+  | where Timestamp between ((StartTime) .. (EndTime))
+  | where FileName == "sc.exe"
+  | where ProcessCommandLine has "start"
+  | where AccountName == "system" and AccountDomain == "nt authority"
+  | project Timestamp, DeviceId, DeviceName, FileName, FolderPath, ProcessCommandLine
+
+
+  //Case3.0 - Monitoring SSH connection 
+  let StartTime = datetime(2023-01-10);
+  let EndTime = datetime(2023-01-24);
+  DeviceProcessEvents
+  | where Timestamp between ((StartTime) .. (EndTime))
+  | where FolderPath has "OpenSSH" 
+      or FileName == "ssh.exe" 
+      or FileName == "scp.exe"
+      or FileName == "sftp.exe"
+      or FileName == "sshd.exe"
+      or FileName == "ssh-add.exe"
+      or FileName == "ssh-agent.exe"
+      or FileName == "ssh-keygen.exe"
+      or FileName == "ssh-keyscan.exe"
+  | where ProcessCommandLine has_all ("ssh", "-p")
+  | project-reorder ProcessCommandLine
+
+  // OpenSSH
+  // ssh is the SSH client component that runs on the user's local system
+  // scp is a file copy utility that runs on SSH
+  // sftp is the service that provides the Secure File Transfer Protocol, and runs over SSH
+  // sshd is the SSH server component that must be running on the system being managed remotely
+  // ssh-add adds private keys to the list allowed by the server
+  // ssh-agent stores private keys used for public key authentication
+  // ssh-keygen generates, manages and converts authentication keys for SSH
+  // ssh-keyscan aids in collecting the public SSH host keys from hosts
+
+
+  //Case4.0 Monitoring Registry behavior
+  let StartTime = datetime(2023-01-10);
+  let EndTime = datetime(2023-01-24);
+  DeviceProcessEvents
+  | where Timestamp between ((StartTime) .. (EndTime))
+  | where FileName == "reg.exe"
+  | where ProcessCommandLine has_any(
+        @"Software\Microsoft\Windows\CurrentVersion\Run",
+        @"Software\Microsoft\Windows\CurrentVersion\RunOnce"
+    )
+  | project-reorder ProcessCommandLine
+  
+  
