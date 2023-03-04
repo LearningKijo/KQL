@@ -45,12 +45,15 @@ Also, there are a number of out-of-the-box queries.<br>
 2. [Hunt for threats across devices, emails, apps, and identities with advanced hunting](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-query-emails-devices?view=o365-worldwide)
 
 ## KC7 
-In KC7, you will be able to learn KQL step by step. After the initial training, you will be a member of SOC team and take a first case with real hunting experience. At the end of this KC7, you will be confident how you are going to hunt some suspicious activities by KQL.
+In KC7, you will learn KQL step by step. After the initial training, you will become a member of the SOC team and gain real-world hunting experience with your first case. By the end of KC7, you will be confident in your ability to hunt down suspicious activities using KQL.
 1. KC7 Website (https://kc7cyber.com/) 
 2. KC7 GitHub (https://github.com/kkneomis/kc7)
-3. KC7 setup video : [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k) <br>
 
-> For importing data, you can get it from here **(https://github.com/kkneomis/kc7_data/tree/main/envolvelabs)**
+> For importing data, you can get it from here **[https://github.com/kkneomis/kc7_data/tree/main/envolvelabs]**
+
+#### KC7 videos
+- [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k)
+- [SANS Threat Analysis Rundown - covered KC7](https://www.youtube.com/watch?v=b82yaK15kfQ)
 
 ## Kusto Detective Agency
 Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detectives in the team and deal with (find out the answer) missions by using KQL.
