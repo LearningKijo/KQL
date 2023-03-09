@@ -3,10 +3,12 @@ Tamper Protection is a security feature in Microsoft Defender Antivirus that hel
 
 ## Microsoft Security blog
 
-[Make sure Tamper Protection is turned on - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/make-sure-tamper-protection-is-turned-on/ba-p/2695568)
+- [Make sure Tamper Protection is turned on](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/make-sure-tamper-protection-is-turned-on/ba-p/2695568)
+- [When coin miners evolve, Part 1: Exposing LemonDuck and LemonCat, modern mining malware infrastructure](https://www.microsoft.com/en-us/security/blog/2021/07/22/when-coin-miners-evolve-part-1-exposing-lemonduck-and-lemoncat-modern-mining-malware-infrastructure/)
+- [When coin miners evolve, Part 2: Hunting down LemonDuck and LemonCat attacks](https://www.microsoft.com/en-us/security/blog/2021/07/29/when-coin-miners-evolve-part-2-hunting-down-lemonduck-and-lemoncat-attacks/)
 
 ![image](https://user-images.githubusercontent.com/120234772/223905380-596a4966-d2d8-4340-ae7c-5263ecac5580.png)
-
+> Figure 1. LemonDuck attack chain from the Duck and Cat infrastructures
 
 ## Test command
 ```PowerShell
