@@ -57,3 +57,11 @@ DeviceEvents
 | where ActionType == "TamperingAttempt"
 | summarize Registry_Value = make_list(RegistryValueName) by DeviceId, DeviceName
 ```
+
+```kql
+DeviceRegistryEvents
+| where Timestamp > ago(30d)
+| where RegistryKey has @"HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender"
+| project-reorder Timestamp, DeviceId, DeviceName, ActionType, RegistryKey, RegistryValueType, RegistryValueName, RegistryValueData
+| sort by Timestamp desc 
+```
