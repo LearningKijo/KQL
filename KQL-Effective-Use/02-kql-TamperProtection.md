@@ -11,6 +11,7 @@ Tamper Protection is a security feature in Microsoft Defender Antivirus that hel
 > Figure 1. LemonDuck attack chain from the Duck and Cat infrastructures
 
 ## Test command
+The testing commands are not only for ***Microsoft Defender Antivirus***, but also for ***Microsoft Defender for Endpoint***.
 ```PowerShell
 # Microsoft Defender Antivirus
 PS : Set-MpPreference -DisableRealtimeMonitoring $true
