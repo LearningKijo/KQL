@@ -29,4 +29,5 @@ Cmd : reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" 
 
 ::  Microsoft Defender for Endpoint
 Cmd : net stop Sense
+Cmd : sc stop //
 ```
