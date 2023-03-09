@@ -19,9 +19,6 @@ The testing commands are not only for ***Microsoft Defender Antivirus***, but al
 PS : Set-MpPreference -DisableRealtimeMonitoring $true
 PS : Set-MpPreference -DisableBlockAtFirstSeen $true
 PS : Set-MpPreference -SubmitSamplesConsent 2
-PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableRealtimeMonitoring" -Value 1 -PropertyType DWORD -Force
-PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" -Name "SpynetReporting" -Value 0 -PropertyType DWORD -Force
-PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" -Name "SubmitSamplesConsent" -Value 2 -PropertyType DWORD -Force
 PS : Stop-Service -Name "WinDefend"
 PS : Stop-Process -Name "MsMpEng"
 PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force
@@ -44,3 +41,5 @@ Cmd : reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" 
 Cmd : sc stop Sense
 Cmd : net stop Sense 
 ```
+
+## KQL Hunting queries 
