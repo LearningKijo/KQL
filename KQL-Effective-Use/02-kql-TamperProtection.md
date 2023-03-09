@@ -41,6 +41,6 @@ Cmd : net stop WinDefend
 Cmd : reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
 
 ::  Microsoft Defender for Endpoint
-Cmd : sc stop //service
+Cmd : sc stop Sense
 Cmd : net stop Sense 
 ```
