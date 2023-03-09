@@ -43,3 +43,9 @@ Cmd : net stop Sense
 ```
 
 ## KQL Hunting queries 
+```kql
+DeviceEvents
+| where Timestamp > ago(30d)
+| where ActionType == "TamperingAttempt"
+| summarize TamperingAttempt = count() by DeviceId, DeviceName
+```
