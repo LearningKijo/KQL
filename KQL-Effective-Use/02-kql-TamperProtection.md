@@ -9,12 +9,13 @@ PS : Set-MpPreference -SubmitSamplesConsent 2
 PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableRealtimeMonitoring" -Value 1 -PropertyType DWORD -Force
 PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" -Name "SpynetReporting" -Value 0 -PropertyType DWORD -Force
 PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" -Name "SubmitSamplesConsent" -Value 2 -PropertyType DWORD -Force
-PS : Stop-Service WinDefend
-PS : Stop-Process -Name MsMpEng
+PS : Stop-Service -Name "WinDefend"
+PS : Stop-Process -Name "MsMpEng"
 PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force
 
 # Microsoft Defender for Endpoint
-PS : Stop-Service Sense
+PS : Stop-Service -Name "Sense"
+PS : Stop-Process -Name "MsSense"
 ```
 ```cmd
 :: Microsoft Defender Antivirus
