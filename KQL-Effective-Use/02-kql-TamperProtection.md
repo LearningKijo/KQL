@@ -1,0 +1,1 @@
+# KQL : Tamper Protection 
