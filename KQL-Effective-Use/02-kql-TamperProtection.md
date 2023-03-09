@@ -49,3 +49,11 @@ DeviceEvents
 | where ActionType == "TamperingAttempt"
 | summarize TamperingAttempt = count() by DeviceId, DeviceName
 ```
+
+```kql
+
+DeviceEvents
+| where Timestamp > ago(30d)
+| where ActionType == "TamperingAttempt"
+| summarize Registry_Value = make_list(RegistryValueName) by DeviceId, DeviceName
+```
