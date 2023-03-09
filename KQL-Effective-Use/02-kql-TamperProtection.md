@@ -65,3 +65,15 @@ DeviceRegistryEvents
 | project-reorder Timestamp, DeviceId, DeviceName, ActionType, RegistryKey, RegistryValueType, RegistryValueName, RegistryValueData
 | sort by Timestamp desc 
 ```
+
+```kql
+DeviceEvents
+| where Timestamp > ago(30d)
+| where ActionType == "OtherAlertRelatedActivity"
+| where AdditionalFields has "net stop Sense"
+or AdditionalFields has "sc stop Sense"
+or AdditionalFields has "net stop WinDefend"
+or AdditionalFields has "sc stop WinDefend"
+| extend Command = split(AdditionalFields, 'line')[1]
+| project-reorder Timestamp, DeviceId, DeviceName, Command
+```
