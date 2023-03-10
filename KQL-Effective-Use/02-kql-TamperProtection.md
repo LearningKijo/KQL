@@ -16,6 +16,9 @@ Tamper Protection is a security feature in Microsoft Defender Antivirus that hel
 
 ## Test command
 The testing commands are not only for ***Microsoft Defender Antivirus***, but also for ***Microsoft Defender for Endpoint***.
+
+**PowerShell Cmdlets**
+
 ```PowerShell
 # Microsoft Defender Antivirus
 PS : Set-MpPreference -DisableRealtimeMonitoring $true
@@ -29,6 +32,7 @@ PS : New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender"
 PS : Stop-Service -Name "Sense"
 PS : Stop-Process -Name "MsSense"
 ```
+**Windows Commands**
 ```cmd
 :: Microsoft Defender Antivirus
 Cmd : reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v "DisableRealtimeMonitoring" /t REG_DWORD /d 1 /f
