@@ -65,6 +65,7 @@ DeviceEvents
 | summarize Registry_Value = make_list(RegistryValueName) by DeviceId, DeviceName
 ```
 
+3. Hunt for registry key activities for Microsoft Defender Antivirus.
 ```kql
 DeviceRegistryEvents
 | where Timestamp > ago(30d)
@@ -73,6 +74,7 @@ DeviceRegistryEvents
 | sort by Timestamp desc 
 ```
 
+4. Hunt for disabling activities for Microsoft Defender Antivirus and Microsoft Defender for Endpoint.
 ```kql
 DeviceEvents
 | where Timestamp > ago(30d)
