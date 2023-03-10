@@ -1,8 +1,9 @@
-# 03-kql-WebProtection.md
+# KQL : Web Protection
 
 ## Web Protection architecture
 ![image](https://user-images.githubusercontent.com/120234772/224228868-2dc0c0f9-1841-423b-a64b-f6d655192c92.png)
-> https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide
+> [Web protection | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide)
+
 
 ## KQL Hunting queries
 **Edge browser** - Microsoft SmartScreen
