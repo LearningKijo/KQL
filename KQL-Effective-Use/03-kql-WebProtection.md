@@ -24,7 +24,7 @@ DeviceEvents
 | summarize MDE_IoC = countif(Experience=tostring(ParsedFields.Experience) == "CustomBlockList"), 
 MDE_WCF = countif(Experience=tostring(ParsedFields.Experience) == "CustomPolicy"), 
 MDA_CASB = countif(Experience=tostring(ParsedFields.Experience) == "CasbPolicy"), 
-Edge_SS = countif(Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing")) by DeviceId, DeviceName![image](https://user-images.githubusercontent.com/120234772/224230579-a4544023-2677-4b0a-92ec-3bfe262a7700.png)
+Edge_SS = countif(Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing")) by DeviceId, DeviceName
 ```
 
 ```kql
