@@ -1,4 +1,13 @@
 # KQL : Web Protection
+Microsoft Defender for Endpoint's web protection comprises of several features, including web threat protection, web content filtering, and custom indicators.
+Therefore, in this section, I am going to share hunting queries related to web protection.
+
+The KQL hunting queries will include the following products :
+1. Microsoft Defender for Endpoint - Url Indicators
+2. Microsoft Defender for Endpoint - Web Content Filtering
+3. Microsoft Defender for Cloud Apps - Unsanctioned app
+4. Microsoft Defender SmartScreen
+
 
 ## Web Protection architecture
 ![image](https://user-images.githubusercontent.com/120234772/224228868-2dc0c0f9-1841-423b-a64b-f6d655192c92.png)
@@ -61,3 +70,6 @@ DeviceEvents
 "3rd party browser")
 | project Timestamp, DeviceId, DeviceName, ActionType, Browser, RemoteUrl
 ```
+
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
