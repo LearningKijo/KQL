@@ -49,13 +49,14 @@ Cmd : net stop Sense
 ```
 
 ## KQL Hunting queries 
+1. Counts how many times 'TamperingAttempt' happened to each device.
 ```kql
 DeviceEvents
 | where Timestamp > ago(30d)
 | where ActionType == "TamperingAttempt"
 | summarize TamperingAttempt = count() by DeviceId, DeviceName
 ```
-
+2. Counts how many times 'TamperingAttempt' occurred and indicates which registry value impacted each device.
 ```kql
 
 DeviceEvents
@@ -83,3 +84,6 @@ or AdditionalFields has "sc stop WinDefend"
 | extend Command = split(AdditionalFields, 'line')[1]
 | project-reorder Timestamp, DeviceId, DeviceName, Command
 ```
+
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
