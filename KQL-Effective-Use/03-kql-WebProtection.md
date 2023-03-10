@@ -1,7 +1,7 @@
 # 03-kql-WebProtection.md
 
 ## KQL Hunting queries
-
+**Edge browser** - Microsoft SmartScreen
 ```kql
 DeviceEvents
 | where Timestamp > ago(7d)
@@ -23,3 +23,5 @@ MDE_WCF = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) =
 MDA_CASB = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CasbPolicy"),
 Edge_SS = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing")) by DeviceId, DeviceName
 ```
+
+**3rd party browser** - Windows Defender Exploit Guard, Netwrk Protection
