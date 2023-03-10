@@ -29,3 +29,11 @@ Edge_SS = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) i
 ```
 
 **3rd party browser** - Windows Defender Exploit Guard, Netwrk Protection
+```kql
+DeviceEvents
+| where ActionType == "ExploitGuardNetworkProtectionBlocked"
+| extend ParsedFields=parse_json(AdditionalFields)
+| summarize MDE_IoC = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
+MDE_WCF = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
+MDA_CASB = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
+```
