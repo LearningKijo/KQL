@@ -19,6 +19,9 @@ Remove-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe
 ## KQL Hunting queries
 ```kql
 DeviceEvents
-| where Timestamp > ago(30d)
+| where Timestamp > ago(7d)
 | where ActionType contains "ControlledFolder"
+| summarize TargetFolderPath = make_list(FolderPath) by DeviceId, DeviceName
+| extend Num = array_length(TargetFolderPath)
+| project DeviceId, DeviceName, Num, TargetFolderPath
 ```
