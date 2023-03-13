@@ -2,6 +2,7 @@
 
 WIP
 
+## PowerShell Cmdlet
 **PowerShell**
 ```powershell
 # Enable/Disable controlled folder access
@@ -16,3 +17,9 @@ Remove-MpPreference -ControlledFolderAccessProtectedFolders  "c:\apps\"
 Remove-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
 ```
 
+## KQL Hunting queries
+```kql
+DeviceEvents
+| where Timestamp > ago(30d)
+| where ActionType contains "ControlledFolder"
+```
