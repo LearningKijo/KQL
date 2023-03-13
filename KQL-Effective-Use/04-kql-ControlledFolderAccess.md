@@ -4,9 +4,6 @@ WIP
 
 **PowerShell**
 ```powershell
-# Confirm controlled folder access 
-Get-MpPreference | Select EnableControlledFolderAccess, ControlledFolderAccessEnable, ControlledFolderAccessAllowedApplications
-
 # Enable/Disable controlled folder access
 Set-MpPreference -EnableControlledFolderAccess AuditMode
 Set-MpPreference -EnableControlledFolderAccess Enabled
