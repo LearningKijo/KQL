@@ -1,6 +1,5 @@
 # KQL : Controlled Folder Access
-
-WIP
+Controlled Folder Access is a security feature in Microsoft Defender for Endpoint that helps protect important files from ransomware and other malicious software. It blocks unauthorized changes to designated folders and allows only trusted applications to access them, which helps prevent malware from accessing or modifying sensitive files.
 
 ## PowerShell Cmdlet
 **PowerShell**
