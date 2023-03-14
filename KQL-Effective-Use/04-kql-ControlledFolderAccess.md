@@ -40,6 +40,16 @@ DeviceEvents
 | extend Num = array_length(TargetFolderPath)
 | project Timestamp, DeviceId, DeviceName, Num, TargetFolderPath
 ```
+**Controlled Folder Access - Audit**
+```kql
+DeviceEvents
+| where Timestamp > ago(7d)
+| where ActionType contains "ControlledFolderAccessViolationAudit"
+| summarize TargetFolderPath = make_list(strcat(FolderPath, " | ", InitiatingProcessFileName)) by bin(Timestamp, 1d), DeviceId, DeviceName
+| extend Num = array_length(TargetFolderPath)
+| project Timestamp, DeviceId, DeviceName, Num, TargetFolderPath
+```
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
+
