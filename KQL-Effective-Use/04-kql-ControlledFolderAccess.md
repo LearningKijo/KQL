@@ -40,3 +40,6 @@ DeviceEvents
 | extend Num = array_length(TargetFolderPath)
 | project Timestamp, DeviceId, DeviceName, Num, TargetFolderPath
 ```
+
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
