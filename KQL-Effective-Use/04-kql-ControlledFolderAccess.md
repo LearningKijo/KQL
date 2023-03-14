@@ -31,6 +31,7 @@ Remove-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe
 > [Protect important folders from ransomware from encrypting your files with controlled folder access | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/controlled-folders?view=o365-worldwide)
 
 ## KQL Hunting queries
+**Controlled Folder Access - Block**
 ```kql
 DeviceEvents
 | where Timestamp > ago(7d)
