@@ -34,8 +34,8 @@ Remove-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe
 ```kql
 DeviceEvents
 | where Timestamp > ago(7d)
-| where ActionType contains "ControlledFolder"
+| where ActionType contains "ControlledFolderAccessViolationBlocked"
 | summarize TargetFolderPath = make_list(strcat(FolderPath, " | ", InitiatingProcessFileName)) by bin(Timestamp, 1d), DeviceId, DeviceName
 | extend Num = array_length(TargetFolderPath)
-| project DeviceId, DeviceName, Num, TargetFolderPath
+| project Timestamp, DeviceId, DeviceName, Num, TargetFolderPath
 ```
