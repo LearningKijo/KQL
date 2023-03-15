@@ -1,7 +1,7 @@
 # KQL : Tamper Protection 
 Tamper Protection is a security feature in Microsoft Defender Antivirus that helps prevent unauthorized changes to security settings and software. It works by preventing other programs, including malware, from modifying critical security features, files, and settings in the Windows operating system. Therefore, in this section, I am going to share testing commands and hunting queries
 
-> Note : Tamper Protection mainly works for Microsoft Defender Antivirus. In the case of Microsoft Defender for Endpoint, there is a built-in protection for the EDR sensor that prevents security features from being disabled.
+> **Note** : Tamper Protection mainly works for Microsoft Defender Antivirus. In the case of Microsoft Defender for Endpoint, there is a built-in protection for the EDR sensor that prevents security features from being disabled.
 
 
 
