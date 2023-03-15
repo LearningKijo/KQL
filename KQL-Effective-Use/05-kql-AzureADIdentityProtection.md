@@ -15,6 +15,10 @@ SigninLogs
 | summarize count() by tostring(RiskName), Detection
 | render barchart 
 ```
+> **Note** : 
+> SigninLogs table is available in Log Analytics workspace / Microsoft Sentinel, Not in Microsoft 365 Defender. 
+> [Stream Azure Active Directory logs to Azure Monitor logs - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+
 
 2. This KQL shows the daily AAD Identity Protection data for a given month.
 ```kql
@@ -30,6 +34,9 @@ SigninLogs
 | summarize count() by tostring(RiskName), Detection,bin(TimeGenerated, 1d)
 | render columnchart 
 ```
+> **Note** : 
+> SigninLogs table is available in Log Analytics workspace / Microsoft Sentinel, Not in Microsoft 365 Defender. 
+> [Stream Azure Active Directory logs to Azure Monitor logs - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
 
 ## KQL : Hunting results
 **e.g. - Case 1**
