@@ -5,8 +5,13 @@
 
 KQL stands for "Kusto Query Language" and is a powerful language for hunting specific activities and data. Microsoft Sentinel (SOAR) and Microsoft 365 Defender (Advanced Hunting) are great examples of using KQL. However, leveraging KQL might be a bit challenging if you don't have SQL or programming background. When I started learning KQL, I had no idea how to begin as a learning process due to no programming/SQL experience. Throughout my KQL journey, I would like to share some of the best resources for learning KQL. At the same time, I would like to provide **"Hunting Queries"** in KQL-XDR-Hunting repository.
 
-### "Out-of-the-box" Hunting Queries repository
- - [KQL-XDR-Hunting](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting)
+### LearningKijo/KQL repo architecture
+
+| # | Folder | About |
+|:---|:---|:---|
+|1 |KQL/[README.md](https://github.com/LearningKijo/KQL/blob/main/README.md) | KQL introduction & learning resource. |
+|2 |KQL/[KQL-XDR-Hunting](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting)| Provide **out-of-the-box KQL hunting queries** - App, Email, Identity and Endpoint. |
+|3 |KQL/[KQL-Effective-Use](https://github.com/LearningKijo/KQL/tree/main/KQL-Effective-Use)| Provide **product feature based KQL** and advanced KQL tips in XDR & SIEM |
 
 ![image](https://user-images.githubusercontent.com/120234772/216594925-eb0c7249-0ac1-426e-bab8-539f50eafbe0.png)
 > e.g. Microsoft 365 Defender portal | Advanced Hunting  
