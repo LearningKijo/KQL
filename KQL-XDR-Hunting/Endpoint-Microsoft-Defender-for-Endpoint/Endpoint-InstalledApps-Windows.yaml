@@ -9,7 +9,7 @@ query : |
     DeviceTvmSoftwareInventory
     | where OSPlatform startswith "Windows"
     | summarize Installed_Software = make_set(strcat(SoftwareName, " | ", SoftwareVersion)) by DeviceName, DeviceId, OSPlatform, OSVersion
-    | extend Num = array_length(Installed_Software)
-    | project DeviceId, DeviceName, OSPlatform, OSVersion, Num, Installed_Software
+    | extend AppNum = array_length(Installed_Software)
+    | project DeviceId, DeviceName, OSPlatform, OSVersion, AppNum, Installed_Software
     
     
