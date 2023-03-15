@@ -31,7 +31,7 @@ SigninLogs
 | render columnchart 
 ```
 
-## Demo
+## KQL : Hunting results
 **e.g. - Case 1**
 
 ![image](https://user-images.githubusercontent.com/120234772/225237878-cc8cd3e2-8d4f-4c16-b6aa-16a3148cb4f4.png)
