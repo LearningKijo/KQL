@@ -16,7 +16,7 @@ Remove-MpPreference -ControlledFolderAccessProtectedFolders  "c:\apps\"
 Remove-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe"
 ```
 
-> Note : **Windows system folders are protected by default**
+> **Note** : **Windows system folders are protected by default**
 > ```
 > c:\Users\<username>\Documents
 > c:\Users\Public\Documents
