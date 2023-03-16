@@ -10,7 +10,7 @@ KQL stands for "Kusto Query Language" and is a powerful language for hunting spe
 | # | Folder | About |
 |:---|:---|:---|
 |1 |KQL/[README.md](https://github.com/LearningKijo/KQL/blob/main/README.md) | KQL introduction & learning resource. |
-|2 |KQL/[KQL-XDR-Hunting](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting)| Provide **out-of-the-box KQL hunting queries** - App, Email, Identity and Endpoint. |
+|2 |KQL/[KQL-XDR-Hunting](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting)| Provide **"out-of-the-box" KQL hunting queries** - App, Email, Identity and Endpoint. |
 |3 |KQL/[KQL-Effective-Use](https://github.com/LearningKijo/KQL/tree/main/KQL-Effective-Use)| Provide **product feature based KQL** and advanced KQL tips in XDR & SIEM. |
 
 ![image](https://user-images.githubusercontent.com/120234772/216594925-eb0c7249-0ac1-426e-bab8-539f50eafbe0.png)
