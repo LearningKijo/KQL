@@ -57,7 +57,7 @@ In KC7, you will learn KQL step by step. After the initial training, you will be
 1. KC7 Website (https://kc7cyber.com/) 
 2. KC7 GitHub (https://github.com/kkneomis/kc7)
 
-> For importing data, you can get it from here **[https://github.com/kkneomis/kc7_data/tree/main/envolvelabs]**
+> **Note** - For importing data, you can get it from here **[https://github.com/kkneomis/kc7_data/tree/main/envolvelabs]**
 
 #### KC7 videos
 - [KC7 Loading cybersecurity data into Azure Data Explorer](https://www.youtube.com/watch?v=aHJxEHIHq0k)
