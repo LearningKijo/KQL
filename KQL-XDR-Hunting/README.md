@@ -25,11 +25,11 @@ MicrosoftProducts
 
 | Products/Threat  | Link |
 | :------------- | :------------- |
-| XDR | [Microsoft 365 Defender](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-Microsoft-365-Defender) |
+| XDR alerts | [Microsoft 365 Defender](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-Microsoft-365-Defender) |
 | Endpoint   | [Microsoft Defender for Endpoint](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint)  |
 | Email  | [Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
 | App | In progress |
-| Identity | In progress |
+| Identity | [Identity-Azure-Active-Directory](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Azure-Active-Directory) |
 
 ## MS security blog / KQL reference 
 [Digital Security Tips and Solutions - Microsoft Security Blog!](https://www.microsoft.com/en-us/security/blog/)
