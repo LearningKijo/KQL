@@ -1,0 +1,14 @@
+
+name : EOP detection with Email Malware
+description : 
+table : 
+query : |
+  EmailEvents
+  | where Timestamp > ago(7d)
+  | where isnotempty(ThreatNames)
+  | join kind=inner EmailAttachmentInfo on NetworkMessageId 
+  | extend ThreatFamilyAttachment = strcat(ThreatNames, @"\", FileName)
+  | summarize ThreatFamily_wih_Attachment= make_list(ThreatFamilyAttachment) by RecipientEmailAddress
+  | extend Case = array_length(ThreatFamily_wih_Attachment)
+  | project RecipientEmailAddress, Case, ThreatFamily_wih_Attachment 
+  | sort by Case desc 
