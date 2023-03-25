@@ -16,7 +16,8 @@ KQL stands for "Kusto Query Language" and is a powerful language for hunting spe
 ![image](https://user-images.githubusercontent.com/120234772/216594925-eb0c7249-0ac1-426e-bab8-539f50eafbe0.png)
 > e.g. Microsoft 365 Defender portal | Advanced Hunting  
 
-## Microsoft 365 Defender / Webcast 
+# KQL Webinar 
+### Microsoft 365 Defender / Webcast 
 This webinar is an excellent resource for those who are new to KQL in Microsoft 365 Defender. Each webinar in the series covers the fundamentals of KQL and demonstrates great use cases. As my work mainly focuses on XDR in Microsoft 365 Defender, I found these webinars particularly helpful and informative.
 
 Webcast 1 - 4 series 
@@ -25,10 +26,9 @@ Webcast 1 - 4 series
 3. [M365 Defender (MTP) webinar: Tracking the Adversary, E3: Summarizing, Pivoting, and Visualizing Data](https://www.youtube.com/watch?v=UKnk9U1NH6Y).
 4. [M365 Defender (MTP) webinar: Tracking the Adversary E4 Let’s hunt! Applying KQL to incident tracking](https://www.youtube.com/watch?v=2EUxOc_LNd8&list=RDCMUCGTUbqE3SJiLgtvWjIkSQuQ&index=3). <br>
 
-GitHub Microsoft-365-Defender-Hunting-Queries <br>
-https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts/TrackingTheAdversary
+> **Note** : [GitHub Microsoft-365-Defender-Hunting-Queries](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/tree/master/Webcasts/TrackingTheAdversary)
 
-## Microsoft Sentinel webinar / KQL part 1-3 
+### Microsoft Sentinel webinar / KQL part 1-3 
 After attending the Microsoft 365 Defender Webcast, I continued to explore KQL in greater depth. For those using Microsoft Sentinel and Azure Data Explorer, these webinars can provide an excellent starting point for learning KQL.
 
 1. [Azure Sentinel webinar: KQL part 1 of 3 - Learn the KQL you need for Azure Sentinel!](https://www.youtube.com/watch?v=EDCBLULjtCM)
