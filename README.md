@@ -16,7 +16,7 @@ KQL stands for "Kusto Query Language" and is a powerful language for hunting spe
 ![image](https://user-images.githubusercontent.com/120234772/216594925-eb0c7249-0ac1-426e-bab8-539f50eafbe0.png)
 > e.g. Microsoft 365 Defender portal | Advanced Hunting  
 
-# KQL Webinar 
+# KQL - Webinar 
 ### Microsoft 365 Defender / Webcast 
 This webinar is an excellent resource for those who are new to KQL in Microsoft 365 Defender. Each webinar in the series covers the fundamentals of KQL and demonstrates great use cases. As my work mainly focuses on XDR in Microsoft 365 Defender, I found these webinars particularly helpful and informative.
 
@@ -35,6 +35,25 @@ After attending the Microsoft 365 Defender Webcast, I continued to explore KQL i
 2. [Azure Sentinel webinar: KQL part 2 of 3 - KQL hands-on lab exercises!](https://www.youtube.com/watch?v=YKD_OFLMpf8)
 3. [Azure Sentinel webinar: KQL part 3 of 3 - Optimizing Azure Sentinel KQL queries performance!](https://www.youtube.com/watch?v=jN1Cz0JcLYU)
 
+# KQL - Interactive Experience
+### KC7 
+In KC7, you will learn KQL step by step. After the initial training, you will become a member of the SOC team and gain real-world hunting experience with your first case. By the end of KC7, you will be confident in your ability to hunt down suspicious activities using KQL.
+
+**Get started !!**
+[Practice Pivoting and Analysis - KC7 (kc7cyber.com)](https://kc7cyber.com/modules/practice-pivoting-and-analysis/)
+
+![image](https://user-images.githubusercontent.com/120234772/225783624-91b8c734-fb39-4a92-9997-8451b3c9e5ba.png)
+
+
+### Kusto Detective Agency
+Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detectives in the team and deal with (find out the answer) missions by using KQL.
+1. Kusto Detective Agency website (https://detective.kusto.io/)
+2. Kusto Detective Agency short video : [Kusto Detective Agency - an interactive big data contest](https://www.youtube.com/watch?v=BaW0qsxxYRc)
+> Welcome to the Kusto Detective agency, rookie!  Be prepared to flex your investigative muscles as you use your big data skills to solve our most challenging cases.  Prizes and awards are up for grabs if you are successful!
+
+![image](https://user-images.githubusercontent.com/120234772/226299505-b04ff9ab-9e46-4121-8a4f-f4fcabb60e04.png)
+
+
 ## KQL cheat sheet
 1. [Azure Data Explorer KQL cheat sheets](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/azure-data-explorer-kql-cheat-sheets/ba-p/1057404)
 2. [Microsoft Threat Protection advanced hunting cheat sheet](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/microsoft-threat-protection-advanced-hunting-cheat-sheet/ba-p/1505100) 
@@ -51,24 +70,6 @@ Learn the schema tables - App, Endpoint, Identity and Email in Microsoft 365 Def
 Also, there are a number of out-of-the-box queries.<br>
 
 2. [Hunt for threats across devices, emails, apps, and identities with advanced hunting](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-query-emails-devices?view=o365-worldwide)
-
-## KC7 
-In KC7, you will learn KQL step by step. After the initial training, you will become a member of the SOC team and gain real-world hunting experience with your first case. By the end of KC7, you will be confident in your ability to hunt down suspicious activities using KQL.
-
-**Get started !!**
-[Practice Pivoting and Analysis - KC7 (kc7cyber.com)](https://kc7cyber.com/modules/practice-pivoting-and-analysis/)
-
-![image](https://user-images.githubusercontent.com/120234772/225783624-91b8c734-fb39-4a92-9997-8451b3c9e5ba.png)
-
-
-## Kusto Detective Agency
-Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detectives in the team and deal with (find out the answer) missions by using KQL.
-1. Kusto Detective Agency website (https://detective.kusto.io/)
-2. Kusto Detective Agency short video : [Kusto Detective Agency - an interactive big data contest](https://www.youtube.com/watch?v=BaW0qsxxYRc)
-> Welcome to the Kusto Detective agency, rookie!  Be prepared to flex your investigative muscles as you use your big data skills to solve our most challenging cases.  Prizes and awards are up for grabs if you are successful!
-
-![image](https://user-images.githubusercontent.com/120234772/226299505-b04ff9ab-9e46-4121-8a4f-f4fcabb60e04.png)
-
 
 ## Microsoft 365 Defender sample query
 https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender
