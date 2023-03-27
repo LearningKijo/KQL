@@ -1,1 +1,0 @@
-#KQL : MDO remediation actions
