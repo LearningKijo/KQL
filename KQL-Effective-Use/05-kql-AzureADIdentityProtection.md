@@ -1,7 +1,7 @@
 # KQL : Azure AD Identity Protection & Detection
 Azure AD Identity Protection is a cloud-based security service that helps organizations protect their identity infrastructure. It uses machine learning and threat intelligence to identify and mitigate risks related to identity and access. Some of its key features include risk-based conditional access, identity risk assessment, threat intelligence, and self-service password reset. It helps organizations to prevent identity-related attacks and improve the security of their identity infrastructure.
 
-## KQL Hunting queries
+## KQL : Hunting queries
 1. This KQL shows AAD Identity Protection data for a given month with barchart.
 ```kql
 SigninLogs
