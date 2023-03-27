@@ -1,5 +1,6 @@
 # KQL : MDO remediation actions
 
+## KQL : Hunting queries
 ```kql
     EmailEvents
     | where Timestamp > ago(30d)
@@ -16,5 +17,7 @@
     | project RecipientEmailAddress, Sum_case, HD_case, SD_case, MvToJ_case, MvToD_case, HD_NWId, SD_NWId, MvToJ_NWId, MvToD_NWId
     | sort by Sum_case desc  
 ```
+
+## KQL : Hunting results
 
 ![image](https://user-images.githubusercontent.com/120234772/227914685-8f3dafd0-83c6-4e1b-80e0-8cbca1963639.png)
