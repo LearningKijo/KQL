@@ -14,7 +14,7 @@ The KQL hunting queries will include the following products :
 > [Web protection | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/web-protection-overview?view=o365-worldwide)
 
 
-## KQL Hunting queries
+## KQL : Hunting queries
 **Edge browser** - Microsoft SmartScreen
 ```kql
 DeviceEvents
