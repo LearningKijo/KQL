@@ -48,7 +48,7 @@ Cmd : sc stop Sense
 Cmd : net stop Sense 
 ```
 
-## KQL Hunting queries 
+## KQL : Hunting queries 
 1. Counts how many times 'TamperingAttempt' happened to each device.
 ```kql
 DeviceEvents
