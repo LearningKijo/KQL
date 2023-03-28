@@ -8,4 +8,5 @@ DeviceEvents
 | where ActionType startswith "asr" and ActionType endswith "audited"
 | project Timestamp, ReportId, DeviceId, DeviceName, FileName, FolderPath
 ```
-![image](https://user-images.githubusercontent.com/120234772/228131787-0e851e2f-0643-495a-801f-596daa7076d1.png)
+![image](https://user-images.githubusercontent.com/120234772/228133466-69fb1e17-c5f2-4130-ba27-3562ce119c40.png)
+
