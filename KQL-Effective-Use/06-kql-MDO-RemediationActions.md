@@ -1,4 +1,5 @@
 # KQL : MDO remediation actions
+WIP
 
 ## KQL : Hunting queries
 ```kql
