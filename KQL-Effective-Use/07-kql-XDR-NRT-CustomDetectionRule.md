@@ -1,1 +1,5 @@
-Custom Detection Rule
+# KQL : XDR Custom Detection Rule with NRT
+WIP
+
+
+
