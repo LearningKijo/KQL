@@ -1,0 +1,64 @@
+name : MDE Web Protection
+source : https://github.com/LearningKijo/KQL/blob/main/KQL-Effective-Use/03-kql-MDE-WebProtection.md
+description : the KQL hunting queries will include the following products
+- Microsoft Defender for Endpoint - Url Indicators
+- Microsoft Defender for Endpoint - Web Content Filtering
+- Microsoft Defender for Cloud Apps - Unsanctioned app
+- Microsoft Defender SmartScreen
+query: |
+    //Edge browser - Microsoft SmartScreen
+    DeviceEvents
+    | where Timestamp > ago(7d)
+    | where ActionType == "SmartScreenUrlWarning"
+    | extend ParsedFields=parse_json(AdditionalFields)
+    | summarize MDE_IoC = countif(Experience=tostring(ParsedFields.Experience) == "CustomBlockList"), 
+    MDE_WCF = countif(Experience=tostring(ParsedFields.Experience) == "CustomPolicy"), 
+    MDA_CASB = countif(Experience=tostring(ParsedFields.Experience) == "CasbPolicy"), 
+    Edge_SS = countif(Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing")) by DeviceId, DeviceName
+    
+    
+    //Edge browser - Microsoft SmartScreen
+    DeviceEvents
+    | where Timestamp > ago(7d)
+    | where ActionType == "SmartScreenUrlWarning"
+    | extend ParsedFields=parse_json(AdditionalFields)
+    | summarize MDE_IoC = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CustomBlockList"), 
+    MDE_WCF = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CustomPolicy"),
+    MDA_CASB = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CasbPolicy"),
+    Edge_SS = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing")) by DeviceId, DeviceName
+    
+    
+    //3rd party browser - Windows Defender Exploit Guard, Netwrk Protection
+    DeviceEvents
+    | where Timestamp > ago(7d)
+    | where ActionType == "ExploitGuardNetworkProtectionBlocked"
+    | extend ParsedFields=parse_json(AdditionalFields)
+    | summarize MDE_IoC = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
+    MDE_WCF = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
+    MDA_CASB = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
+    
+    
+    //3rd party browser - Windows Defender Exploit Guard, Netwrk Protection
+    DeviceEvents
+    | where Timestamp > ago(7d)
+    | where ActionType == "ExploitGuardNetworkProtectionBlocked"
+    | extend ParsedFields=parse_json(AdditionalFields)
+    | summarize MDE_IoC = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
+    MDE_WCF = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
+    MDA_CASB = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
+    
+    
+    //Bypass - MDE Indicators Warn
+    DeviceEvents
+    | where Timestamp > ago(7d)
+    | where ActionType in ("SmartScreenUserOverride", "NetworkProtectionUserBypassEvent")
+    | extend Browser = case(
+          InitiatingProcessFileName has "msedge", "Edge",
+          InitiatingProcessFileName has "chrome", "Chrome", 
+          InitiatingProcessFileName has "firefox", "Firefox",
+          InitiatingProcessFileName has "opera", "Opera",
+    "3rd party browser")
+    | project Timestamp, DeviceId, DeviceName, ActionType, Browser, RemoteUrl
+    
+    
+    
