@@ -22,7 +22,7 @@ To configure a custom detection rule in the Microsoft 365 Defender portal, selec
 ![image](https://user-images.githubusercontent.com/120234772/228149676-e2ac0076-f004-46af-8d6b-7845f6d46830.png)
 
 ## Alerts : Custom Detection Rule NRT
-![image](https://user-images.githubusercontent.com/120234772/228417194-278436c8-7691-49b4-91db-04774b67b18e.png)
+![image](https://user-images.githubusercontent.com/120234772/228417365-b35b8350-6ed3-4401-9c94-dd79d1c9ea9d.png)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
