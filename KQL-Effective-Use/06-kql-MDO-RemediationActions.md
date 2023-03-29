@@ -20,5 +20,9 @@ WIP
 ```
 
 ## KQL : Hunting results
+**e.g. - Case**
 
 ![image](https://user-images.githubusercontent.com/120234772/227914685-8f3dafd0-83c6-4e1b-80e0-8cbca1963639.png)
+
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
