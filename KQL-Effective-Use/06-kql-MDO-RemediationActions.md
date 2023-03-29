@@ -2,6 +2,9 @@
 WIP
 
 ## KQL : Hunting queries
+This KQL shows the summary of Microsoft Defender for Office 365 remediation actions.
+- Track each cases with **Network Message ID**
+- Sort **the users who got a number of actions**- e.g. Soft Delete, Hard Delete, Move to junk folder, Move to deleted items
 ```kql
     EmailEvents
     | where Timestamp > ago(30d)
