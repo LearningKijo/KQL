@@ -3,12 +3,12 @@ A custom detection rule in Microsoft 365 Defender is a way to create a specific 
 
 Recently, there was an update about the rule frequency - **Near-Real-Time(NRT)** and I will cover how to use the detection rule with NRT in this article.
 
-#### Advantage to use NRT
+#### NRT Advantage 
 Help faster detections and response
 - Detect in near real-time
 - Respond in near real-time
 
-#### Reference
+#### NRT Reference
 1. [Create and manage custom detection rules in Microsoft 365 Defender](https://learn.microsoft.com/en-us/microsoft-365/security/defender/custom-detection-rules?view=o365-worldwide)
 2. [Respond to threats in near real-time with custom XDR detections](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/respond-to-threats-in-near-real-time-with-custom-detections/ba-p/3761243)
 
