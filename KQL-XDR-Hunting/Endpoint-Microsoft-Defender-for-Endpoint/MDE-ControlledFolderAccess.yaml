@@ -1,5 +1,5 @@
 name : MDE Controlled Folder Access
-source : https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-WebProtection.yaml
+source : https://github.com/LearningKijo/KQL/blob/main/KQL-Effective-Use/04-kql-MDE-ControlledFolderAccess.md
 query: |
     //Controlled Folder Access - Block
     DeviceEvents
