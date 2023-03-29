@@ -1,5 +1,5 @@
 # KQL : MDO remediation actions
-WIP
+Microsoft Defender for Office 365(MDO) is a cloud-based email filtering service designed to protect organizations that use the Microsoft Office 365 platform from various email-based threats such as malware, phishing, and spam. At this time, I would like to focus on the remediation actions available in Microsoft Defender for Office 365, Explorer.
 
 ## KQL : Hunting queries
 This KQL shows the summary of Microsoft Defender for Office 365 remediation actions.
