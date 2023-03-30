@@ -72,6 +72,10 @@ DeviceEvents
 "3rd party browser")
 | project Timestamp, DeviceId, DeviceName, ActionType, Browser, RemoteUrl
 ```
+## KQL : Hunting results
+e.g. Edge browser - Microsoft SmartScreen
+
+![image](https://user-images.githubusercontent.com/120234772/228752118-d90b881a-4267-48f6-b404-e8d9cd658a5d.png)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
