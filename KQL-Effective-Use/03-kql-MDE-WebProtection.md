@@ -59,7 +59,7 @@ MDE_WCF = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.Respons
 MDA_CASB = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
 ```
 
-**Bypass** - MDE Indicators Warn
+**Bypass** - MDE Indicators Warn & MDA Monitored app
 ```kql
 DeviceEvents
 | where Timestamp > ago(7d)
