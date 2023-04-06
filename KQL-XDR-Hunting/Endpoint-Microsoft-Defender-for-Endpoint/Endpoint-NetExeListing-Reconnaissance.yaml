@@ -13,3 +13,5 @@ query : |
     | extend Case = array_length(CmdList)
     | project DeviceId, DeviceName, Case, CmdList
     | order by Case desc 
+
+
