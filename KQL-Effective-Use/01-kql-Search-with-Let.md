@@ -11,7 +11,7 @@ If you would like to search something with "specific tables" and "timeline", the
 #### Ex) "Go hunt" from a device page in Microsoft 365 Defender <br>
 This query hunts "DeviceA" with a time range by filtering some tables such as DeviceEvent, DeviceInfo and so on.
 
-```
+```kql
 let deviceName = "DeviceA";
 let deviceId = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 let selectedTimestamp = datetime(2022-11-22T10:22:11.2370000Z);
@@ -30,13 +30,13 @@ and
 <br>
 
 #### Point 1 -  after you write let statement, please be careful to not forget ";" in the end.
-```
+```kql
 let deviceName = "DeviceA";
 let deviceId = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 let selectedTimestamp = datetime(2022-11-22T10:22:11.2370000Z);
 ```
 #### Point 2 - you can flexibly choose the timestamp - without let or with let. 
-```
+```kql
 // Timestamp with let statement 
 let selectedTimestamp = datetime(2022-11-22T10:22:11.2370000Z);
 Timestamp between ((selectedTimestamp - 1h) .. (selectedTimestamp + 1h))
@@ -45,14 +45,14 @@ Timestamp between ((selectedTimestamp - 1h) .. (selectedTimestamp + 1h))
 Timestamp between (datetime(2022-11-22) .. datetime(2022-11-23))
 ```
 #### Point 3 - when you want to filter with multiple conditions, you can use "and"
-```
+```kql
 Timestamp between ((selectedTimestamp - 1h) .. (selectedTimestamp + 1h))
 and
 (DeviceName == deviceName)
 ```
 
 ## Example
-```
+```kql
 // search mimikatz activities 
 
 let IoC_FileName = "mimikatz";
