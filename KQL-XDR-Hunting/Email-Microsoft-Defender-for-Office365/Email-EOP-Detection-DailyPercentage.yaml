@@ -36,7 +36,7 @@ query : |
       | extend File_reputation_percentage = todouble(round(File_reputation / todouble(TotalEmailCount) * 100, 2))
       | extend Fingerprint_matching_percentage = todouble(round(Fingerprint_matching / todouble(TotalEmailCount) * 100, 2))
       | extend Antimalware_engine_percentage = todouble(round(Antimalware_engine / todouble(TotalEmailCount) * 100, 2))
-      | project Timestamp, Phish_detection_percentage, Malware_detection_percentage, URL_malicious_reputation_percentage, Advanced_filter_percentage, General_filter_percentage, Spoof_intra_org_percentage, Spoof_external_domain_percentage, Spoof_DMARC_percentage, Impersonation_brand_percentage, Mixed_analysis_detection_percentage, File_reputation_percentage, Antimalware_engine_percentage
+      | project Timestamp, TotalEmailCount, Phish_detection_percentage, Malware_detection_percentage, URL_malicious_reputation_percentage, Advanced_filter_percentage, General_filter_percentage, Spoof_intra_org_percentage, Spoof_external_domain_percentage, Spoof_DMARC_percentage, Impersonation_brand_percentage, Mixed_analysis_detection_percentage, File_reputation_percentage, Antimalware_engine_percentage
 
 
 
