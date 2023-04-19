@@ -1,0 +1,8 @@
+name : MDO Detection Daily Percentage 
+description : 
+- This query shows the daily percentage of MDO detections.
+table : 
+- EmailEvents
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
+query : |
+ WIP
