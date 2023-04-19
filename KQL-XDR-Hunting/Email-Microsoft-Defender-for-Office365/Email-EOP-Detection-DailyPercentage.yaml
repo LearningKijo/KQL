@@ -1,6 +1,6 @@
-name : EOP Malware Detection Daily Percentage 
+name : EOP Detection Daily Percentage 
 description : 
-- This query shows the daily percentage of EOP malware detections.
+- This query shows the daily percentage of EOP detections.
 table : 
 - EmailEvents
 - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide
