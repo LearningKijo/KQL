@@ -1,0 +1,7 @@
+Indicator,Type,Description
+Soldier.exe,File name,Soldier backdoor
+ad55b4a40f9e52682d9d4f069914e09c941e8b77ca7b615e9deffccdfbc54145,SHA-256,Soldier backdoor hash
+Drokbk.exe,File name,Drokbk backdoor
+64f39b858c1d784df1ca8eb895ac7eaf47bf39acf008ed4ae27a796ac90f841b,SHA-256,Drokbk backdoor hash
+sync-system-time[.]cf,Domain,Drokbk C2 infrastructure
+update-windows-security[.]tk,Domain,Drokbk C2 infrastructure
