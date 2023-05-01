@@ -1,5 +1,6 @@
 Indicator,Type,Description
-hxxp://sygateway.com,Domain,"First seen: May 16, 2022"
+http://sygateway.com,Domain,"First seen: May 16, 2022"
+sygateway.com,Domain,"First seen: May 16, 2022"
 91.121.240.104,IP address,"First seen: May 17, 2022"
 164.132.237.64,IP address,"First seen: November 26, 2021"
 e81a8f8ad804c4d83869d7806a303ff04f31cce376c5df8aada2e9db2c1eeb98,SHA-256,mimikatz.exe
