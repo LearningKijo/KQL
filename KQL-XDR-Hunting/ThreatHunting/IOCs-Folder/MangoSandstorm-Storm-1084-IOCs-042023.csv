@@ -1,33 +1,33 @@
 Indicator,Type,Description
-9107be160f7b639d68fe3670de58ed254d81de6aec9a41ad58d91aa814a247ff,DEV-1084 ransom payload,8thCurse.exe
-80bd00c0f6d5e39b542ee6e9b67b1eef97b2dbc6ec6cae87bf5148f1cf18c260,DEV-1084 batch script,
-8dd9773c24703e803903e7a5faa088c2df9a4b509549e768f29276ef86ef96ae,DEV-1084 batch script,
-486eb80171c086f4d184423ed7e79303ad7276834e5e5529b199f8ae5fc661f2,DEV-1084 batch script,
-f1edff0fb16a64ac5a2ce64579d0d76920c37a0fd183d4c19219ca990f50effc,DEV-1084 batch script,
-887ae654d69ac5ccb8835e565a449d7716d6c4747dc2fbff1f59f11723244202,DEV-1084 batch script,
-3fba459d589cd513d2478fb4ae7c4efd6aa09e62bc3ff249a19f9a233e922061,DEV-1084 batch script,
-0dde13e3cd2dcda522eeb565b6374c97b3ed4aa6b8ed9ff9b6224ea97bf2a584,DEV-1084 batch script,
-afd16b9ad57eb9c26c8ae347c379c8e2b82361c7bdff5b189659674d5614854c,DEV-1084 batch script,
-3e59d36faf2d5e6edf1d881e2043a46055c63b7c68cc08d44cc7fc1b364157eb,DEV-1084 batch script,
-786bd97172ec0cef88f6ea08e3cb482fd15cf28ab22d37792e3a86fa3c27c975,DEV-1084 batch script,
-36c71ce7cd38733eb66f32a8c56acd635680197f01585c5a2a846cc3cb0a8fe2,DEV-1084 batch script,
-016967de76382c674b3a1cb912eb85ff642b2ebfe4e107fc576065f172c6ef80,DEV-1084 batch script,
-3059844c102595172bb7f644c9a70d77a198a11f1e84539792408b1f19954e18,DEV-1084 batch script,
-194.61.121.86,Command and control,
-hxxps://pairing.rport.io/qMLc2Wx,Download Rport software from it,
-141.95.22.153,Command and control,
-193.200.16.3,Command and control,
-192.52.166.191,Command and control,
-45.56.162.111,Command and control,
-104.194.222.219,Command and control,
-192.169.6.88,Command and control,
-192.52.167.209,Command and control,
-webstore4tech.uaenorth.cloudapp.azure.com,Command and control,
-vatacloud.com,Actor-owned Rport domain,
-146.70.106.89,"DEV-1084 operators were observed sending threatening emails to the victim after the attack from 146.70.106[.]89, an IP address previously linked to MERCURY",
-b9cf785b81778e2b805752c7b839737416e3af54f64f1e40e008142e382df0c4,Rport Legit remote access tool,rport.exe
-ab179112caadaf138241c43c4a4dccc2e3c67aeb96a151e432cfbafa18a4b436,Customized Ligolo tunneling tool,
-46.249.35.243,Command and control,
-45.86.230.20,Command and control,
-6485a68ba1d335d16a1d158976e0cbfad7ab15b51de00c381d240e8b0c479f77,db.ps1 Customized Script Backdoor,
-b155c5b3a8f4c89ba74c5c5c03d029e4202510d0cbb5e152995ab91e6809bcd7,db.sqlite Customized Obfuscated Script Backdoor,
+9107be160f7b639d68fe3670de58ed254d81de6aec9a41ad58d91aa814a247ff,SHA-256,DEV-1084 ransom payload
+80bd00c0f6d5e39b542ee6e9b67b1eef97b2dbc6ec6cae87bf5148f1cf18c260,SHA-256,DEV-1084 batch script
+8dd9773c24703e803903e7a5faa088c2df9a4b509549e768f29276ef86ef96ae,SHA-256,DEV-1084 batch script
+486eb80171c086f4d184423ed7e79303ad7276834e5e5529b199f8ae5fc661f2,SHA-256,DEV-1084 batch script
+f1edff0fb16a64ac5a2ce64579d0d76920c37a0fd183d4c19219ca990f50effc,SHA-256,DEV-1084 batch script
+887ae654d69ac5ccb8835e565a449d7716d6c4747dc2fbff1f59f11723244202,SHA-256,DEV-1084 batch script
+3fba459d589cd513d2478fb4ae7c4efd6aa09e62bc3ff249a19f9a233e922061,SHA-256,DEV-1084 batch script
+0dde13e3cd2dcda522eeb565b6374c97b3ed4aa6b8ed9ff9b6224ea97bf2a584,SHA-256,DEV-1084 batch script
+afd16b9ad57eb9c26c8ae347c379c8e2b82361c7bdff5b189659674d5614854c,SHA-256,DEV-1084 batch script
+3e59d36faf2d5e6edf1d881e2043a46055c63b7c68cc08d44cc7fc1b364157eb,SHA-256,DEV-1084 batch script
+786bd97172ec0cef88f6ea08e3cb482fd15cf28ab22d37792e3a86fa3c27c975,SHA-256,DEV-1084 batch script
+36c71ce7cd38733eb66f32a8c56acd635680197f01585c5a2a846cc3cb0a8fe2,SHA-256,DEV-1084 batch script
+016967de76382c674b3a1cb912eb85ff642b2ebfe4e107fc576065f172c6ef80,SHA-256,DEV-1084 batch script
+3059844c102595172bb7f644c9a70d77a198a11f1e84539792408b1f19954e18,SHA-256,DEV-1084 batch script
+194.61.121.86,IP address,Command and control
+hxxps://pairing.rport.io/qMLc2Wx,Domain,Download Rport software from it
+141.95.22.153,IP address,Command and control
+193.200.16.3,IP address,Command and control
+192.52.166.191,IP address,Command and control
+45.56.162.111,IP address,Command and control
+104.194.222.219,IP address,Command and control
+192.169.6.88,IP address,Command and control
+192.52.167.209,IP address,Command and control
+webstore4tech.uaenorth.cloudapp.azure.com,Domain,Command and control
+vatacloud.com,Domain,Actor-owned Rport domain
+146.70.106.89,IP address,"DEV-1084 operators were observed sending threatening emails to the victim after the attack from 146.70.106[.]89, an IP address previously linked to MERCURY. rport.exe"
+b9cf785b81778e2b805752c7b839737416e3af54f64f1e40e008142e382df0c4,SHA-256,Rport Legit remote access tool
+ab179112caadaf138241c43c4a4dccc2e3c67aeb96a151e432cfbafa18a4b436,SHA-256,Customized Ligolo tunneling tool
+46.249.35.243,IP address,Command and control
+45.86.230.20,IP address,Command and control
+6485a68ba1d335d16a1d158976e0cbfad7ab15b51de00c381d240e8b0c479f77,SHA-256,db.ps1 Customized Script Backdoor
+b155c5b3a8f4c89ba74c5c5c03d029e4202510d0cbb5e152995ab91e6809bcd7,SHA-256,db.sqlite Customized Obfuscated Script Backdoor
