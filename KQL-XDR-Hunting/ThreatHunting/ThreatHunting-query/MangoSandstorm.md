@@ -10,6 +10,17 @@
 
 ## KQL Threat Hunting
 ```kql
+// IoCs - MERCURY leveraging Log4j 2 vulnerabilities in unpatched systems to target Israeli organizations
+let MangoSandstorm082022 = externaldata(Indicator:string, Type:string, Description:string)
+[@'https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-IOCs-082022.csv'] with (format='csv', ignorefirstrecord = true);
+let Domains082022 = (MangoSandstorm082022 | where Type == "Domain"| project Indicator);
+let IP082022 = (MangoSandstorm082022 | where Type == "IP address"| project Indicator);
+DeviceNetworkEvents
+| where Timestamp > ago(1d)
+| where RemoteUrl has_any (Domains082022) or RemoteIP in (IP082022) 
+| project-reorder Timestamp, DeviceId, DeviceName, RemoteUrl, RemoteIP, ActionType
+
+// IoCs - MERCURY and DEV-1084: Destructive attack on hybrid environment
 let MangoSandstorm042023 = externaldata(Indicator:string, Type:string, Description:string)
 [@'https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-Storm-1084-IOCs-042023.csv'] with (format='csv', ignorefirstrecord = true);
 let Domains042023 = (MangoSandstorm042023 | where Type == "Domain"| project Indicator);
