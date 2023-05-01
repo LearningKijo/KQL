@@ -8,5 +8,5 @@ let IP042023 = (MangoSandstorm042023 | where Type == "IP address"| project Indic
 DeviceNetworkEvents
 | where Timestamp > ago(1d) 
 | where RemoteUrl has_any (Domains042023) or RemoteIP in (IP042023) 
-| project-reorder Timestamp, DeviceId, DeviceName, RemoteUrl, RemoteIP, ActionType![image](https://user-images.githubusercontent.com/120234772/235415259-0c3d910a-ea82-427f-beac-0fe4c369d2ae.png)
+| project-reorder Timestamp, DeviceId, DeviceName, RemoteUrl, RemoteIP, ActionType
 ```
