@@ -1,4 +1,4 @@
-# Mango Sandstorm : Threat Hunting with KQL
+# Mango Sandstorm & Storm-1084
 
 
 
