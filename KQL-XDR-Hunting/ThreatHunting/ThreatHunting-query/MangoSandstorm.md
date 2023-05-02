@@ -20,17 +20,17 @@ let SHA256hash = (MangoSandstorm | where Type == "SHA-256"| project Indicator);
 ),
 (DeviceFileEvents
 | where Timestamp > ago(1d)
-| where SHA256 in~(SHA256hash)
+| where SHA256 in~ (SHA256hash)
 | project Timestamp, DeviceId, DeviceName, ActionType, FileName, FileSize, FolderPath, SHA256
 ),
 (DeviceProcessEvents
 | where Timestamp > ago(1d)
-| where SHA256 in~(SHA256hash)
+| where SHA256 in~ (SHA256hash)
 | project Timestamp, DeviceId, DeviceName, ActionType, FileName, FileSize, FolderPath, SHA256, ProcessCommandLine, InitiatingProcessCommandLine
 ),
 (DeviceImageLoadEvents
 | where Timestamp > ago(1d)
-| where SHA256 in~(SHA256hash)
+| where SHA256 in~ (SHA256hash)
 | project Timestamp, DeviceId, DeviceName, ActionType, FileName, FileSize, FolderPath, SHA256, InitiatingProcessFileName, InitiatingProcessCommandLine
 )
 )
