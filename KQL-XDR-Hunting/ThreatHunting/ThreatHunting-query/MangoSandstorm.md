@@ -1,13 +1,10 @@
-# Mango Sandstorm
+# Mango Sandstorm : Threat Hunting with KQL
 
-## Reference
-1. August 25, 2022, [MERCURY leveraging Log4j 2 vulnerabilities in unpatched systems to target Israeli organizations](https://www.microsoft.com/en-us/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/)
-2. April 7, 2023, [MERCURY and DEV-1084: Destructive attack on hybrid environment](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/)
 
-## IoCs
-KQL/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/[MangoSandstorm-Storm-1084-IOCs-042023.csv](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-Storm-1084-IOCs-042023.csv)
 
 ## KQL Threat Hunting
+#### IOCs csv file : [MangoSandstorm-Storm-1084-IOCs-042023.csv](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/IOCs-Folder/MangoSandstorm-Storm-1084-IOCs-042023.csv)
+
 ```kql
 // IoCs - MERCURY and DEV-1084: Destructive attack on hybrid environment
 let MangoSandstorm = externaldata(Indicator:string, Type:string, Description:string)
@@ -103,3 +100,6 @@ CloudAppEvents
         | project PermissionTime=Timestamp, InitiatingUser=AccountDisplayName, OuthAppName, OAuthApplicationId, AppRoleValue, AccountObjectId, FullAccessPermission
     ) on AccountObjectId
 ```
+## Reference
+1. August 25, 2022, [MERCURY leveraging Log4j 2 vulnerabilities in unpatched systems to target Israeli organizations](https://www.microsoft.com/en-us/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/)
+2. April 7, 2023, [MERCURY and DEV-1084: Destructive attack on hybrid environment](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/)
