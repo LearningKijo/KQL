@@ -1,5 +1,6 @@
 # Mango Sandstorm & Storm-1084
 
+![image](https://user-images.githubusercontent.com/120234772/235574789-f65f3881-c9f2-436e-9377-76599fdeef54.png)
 
 
 ## KQL Threat Hunting
