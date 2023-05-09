@@ -19,7 +19,7 @@ DeviceNetworkEvents
 | where Timestamp > ago(14d)
 | where RemoteUrl has_any (Domains) or RemoteUrl in (URL) or RemoteIP in (IPaddress) 
 | project Timestamp, DeviceId, DeviceName, ActionType, RemoteIP, RemoteUrl, RemotePort, InitiatingProcessFileName
-```
+``` 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/88350645-11ad-4d0b-a5ff-8994a5a5b5eb)
 
 
