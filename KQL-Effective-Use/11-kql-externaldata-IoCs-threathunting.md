@@ -7,6 +7,19 @@
 ![image](https://user-images.githubusercontent.com/120234772/236631659-984e9f9e-a12c-41b5-a7df-93cc4973ced1.png)
 > Mango Sandstorm, Microsoft Defender Threat Intelligence
 
+### Step 2
+
+```
+https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-Effective-Use/11-kql-MTDI-MangoSandstorm-IoCs.csv
+```
+
+![image](https://github.com/LearningKijo/KQL/assets/120234772/7d9f3d7b-ade7-414a-881b-904aa9be11cc)
+
+### Step 3
+
+![image](https://github.com/LearningKijo/KQL/assets/120234772/4b38f341-41f3-45c7-8782-e8d6e6ad9dac)
+
+
 ## KQL : Hunting queries
 ```kql
 // MangoSandstorm C2C IoCs by MDTI
