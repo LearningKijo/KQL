@@ -3,12 +3,13 @@
 ![image](https://user-images.githubusercontent.com/120234772/236630807-c8eb0d5b-7c7e-4688-b3c3-0001a8851c9f.png)
 
 ### Step 1
+At first, collect Mango Sandstorm IoCs in Microsoft Defender Threat Intelligence and import them as a CSV file.
 
 ![image](https://user-images.githubusercontent.com/120234772/236631659-984e9f9e-a12c-41b5-a7df-93cc4973ced1.png)
 > Mango Sandstorm, Microsoft Defender Threat Intelligence
 
 ### Step 2
-
+Next, upload it to an external storage such as GitHub.
 ```
 https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-Effective-Use/11-kql-MTDI-MangoSandstorm-IoCs.csv
 ```
@@ -16,6 +17,8 @@ https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-Effective-Use/11-kql
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/7d9f3d7b-ade7-414a-881b-904aa9be11cc)
 
 ### Step 3
+
+Lastly, use the 'externaldata' operator to hunt Mango Sandstorm activities in Microsoft 365 Defender.
 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/4b38f341-41f3-45c7-8782-e8d6e6ad9dac)
 
