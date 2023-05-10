@@ -1,9 +1,13 @@
-## KQL : externaldata IoCs threat hunting (WIP)
+## KQL : externaldata IoCs threat hunting 
+Using KQL's 'externaldata' operator is highly effective for hunting suspicious activities with IoCs. 
+Therefore, today I would like to showcase how we can leverage externaldata with Microsoft Defender Threat Intelligence (MDTI).
+
+Additionally, I have summarized the process into three steps for leveraging external data to track Mango Sandstorm activities
 
 ![image](https://user-images.githubusercontent.com/120234772/236630807-c8eb0d5b-7c7e-4688-b3c3-0001a8851c9f.png)
 
 ### Step 1
-At first, collect Mango Sandstorm IoCs in Microsoft Defender Threat Intelligence and import them as a CSV file.
+At first, collect Mango Sandstorm IoCs in MDTI and import them as a CSV file.
 
 ![image](https://user-images.githubusercontent.com/120234772/236631659-984e9f9e-a12c-41b5-a7df-93cc4973ced1.png)
 > Mango Sandstorm, Microsoft Defender Threat Intelligence
