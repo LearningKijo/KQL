@@ -25,7 +25,7 @@ https://raw.githubusercontent.com/LearningKijo/KQL/main/KQL-Effective-Use/11-kql
 Lastly, use the 'externaldata' operator to hunt Mango Sandstorm activities in Microsoft 365 Defender.
 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/4b38f341-41f3-45c7-8782-e8d6e6ad9dac)
-
+> Advanced Hunting page, Microsoft 365 Defender portal
 
 ## KQL : Hunting queries
 ```kql
