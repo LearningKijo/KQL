@@ -1,0 +1,76 @@
+name : Daily Percentage of Detections by Security Products
+description : 
+- This query displays the daily percentage of detections based on security products.
+- Microsoft 365 Defender, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps
+- Microsoft Defender for Office 365, Microsoft Defender for Endpoint, AAD Identity Protection
+- App Governance, Microsoft Data Loss Prevention
+table : 
+- AlertInfo
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-alertinfo-table?view=o365-worldwide
+query : |
+    // Microsoft Sentinel
+    AlertInfo
+    | where TimeGenerated > ago(7d)
+    | summarize TotalAlertCount = count(),
+            App_Governance = countif(ServiceSource == "App Governance"),
+            AAD_Identity_Protection = countif(ServiceSource == "AAD Identity Protection"),
+            Microsoft_365_Defender = countif(ServiceSource == "Microsoft 365 Defender"),
+            Microsoft_Defender_for_Identity = countif(ServiceSource == "Microsoft Defender for Identity"),
+            Microsoft_Defender_for_Cloud_Apps = countif(ServiceSource == "Microsoft Cloud App Security"),
+            Microsoft_Defender_for_Office365 = countif(ServiceSource == "Microsoft Defender for Office 365"),
+            Microsoft_Defender_for_Endpoint = countif(ServiceSource == "Microsoft Defender for Endpoint"),
+            Microsoft_Data_Loss_Prevention  = countif(ServiceSource == "Microsoft Data Loss Prevention") by bin(TimeGenerated, 1d)
+    | extend App_Governance_percentage = todouble(round(App_Governance / todouble(TotalAlertCount) * 100, 2))
+    | extend AAD_Identity_Protection_percentage = todouble(round(AAD_Identity_Protection / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_365_Defender_percentage = todouble(round(Microsoft_365_Defender / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Identity_percentage = todouble(round(Microsoft_Defender_for_Identity / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Cloud_Apps_percentage = todouble(round(Microsoft_Defender_for_Cloud_Apps / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Office365_percentage = todouble(round(Microsoft_Defender_for_Office365 / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Endpoint_percentage = todouble(round(Microsoft_Defender_for_Endpoint / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Data_Loss_Prevention_percentage = todouble(round(Microsoft_Data_Loss_Prevention / todouble(TotalAlertCount) * 100, 2))
+    | project TimeGenerated,  
+              App_Governance_percentage, 
+              AAD_Identity_Protection_percentage, 
+              Microsoft_365_Defender_percentage,
+              Microsoft_Defender_for_Identity_percentage,
+              Microsoft_Defender_for_Cloud_Apps_percentage,
+              Microsoft_Defender_for_Office365_percentage,
+              Microsoft_Defender_for_Endpoint_percentage,
+              Microsoft_Data_Loss_Prevention_percentage
+    | render columnchart 
+
+
+
+    // Microsoft 365 Defender 
+    AlertInfo
+    | where Timestamp > ago(7d)
+    | summarize TotalAlertCount = count(),
+            App_Governance = countif(ServiceSource == "App Governance"),
+            AAD_Identity_Protection = countif(ServiceSource == "AAD Identity Protection"),
+            Microsoft_365_Defender = countif(ServiceSource == "Microsoft 365 Defender"),
+            Microsoft_Defender_for_Identity = countif(ServiceSource == "Microsoft Defender for Identity"),
+            Microsoft_Defender_for_Cloud_Apps = countif(ServiceSource == "Microsoft Cloud App Security"),
+            Microsoft_Defender_for_Office365 = countif(ServiceSource == "Microsoft Defender for Office 365"),
+            Microsoft_Defender_for_Endpoint = countif(ServiceSource == "Microsoft Defender for Endpoint"),
+            Microsoft_Data_Loss_Prevention  = countif(ServiceSource == "Microsoft Data Loss Prevention") by bin(Timestamp, 1d)
+    | extend App_Governance_percentage = todouble(round(App_Governance / todouble(TotalAlertCount) * 100, 2))
+    | extend AAD_Identity_Protection_percentage = todouble(round(AAD_Identity_Protection / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_365_Defender_percentage = todouble(round(Microsoft_365_Defender / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Identity_percentage = todouble(round(Microsoft_Defender_for_Identity / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Cloud_Apps_percentage = todouble(round(Microsoft_Defender_for_Cloud_Apps / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Office365_percentage = todouble(round(Microsoft_Defender_for_Office365 / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Defender_for_Endpoint_percentage = todouble(round(Microsoft_Defender_for_Endpoint / todouble(TotalAlertCount) * 100, 2))
+    | extend Microsoft_Data_Loss_Prevention_percentage = todouble(round(Microsoft_Data_Loss_Prevention / todouble(TotalAlertCount) * 100, 2))
+    | project Timestamp,  
+              App_Governance_percentage, 
+              AAD_Identity_Protection_percentage, 
+              Microsoft_365_Defender_percentage,
+              Microsoft_Defender_for_Identity_percentage,
+              Microsoft_Defender_for_Cloud_Apps_percentage,
+              Microsoft_Defender_for_Office365_percentage,
+              Microsoft_Defender_for_Endpoint_percentage,
+              Microsoft_Data_Loss_Prevention_percentage
+    | render columnchart 
+
+
+
