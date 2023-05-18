@@ -63,6 +63,13 @@ DeviceEvents
 | project Timestamp, DeviceId, DeviceName, Num, TargetFolderPath
 ```
 
+## KQL : Hunting results
+e.g. Controlled Folder Access - Block
+
+![image](https://github.com/LearningKijo/KQL/assets/120234772/9b931ee7-07a6-4185-8608-33f33690a6f2)
+
+
+
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
 
