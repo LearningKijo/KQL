@@ -1,4 +1,4 @@
-# KQL : Controlled Folder Access
+# KQL : Controlled Folder Access (CFA)
 Controlled Folder Access is a security feature in Microsoft Defender for Endpoint that helps protect important files from ransomware and other malicious software. It blocks unauthorized changes to designated folders and allows only trusted applications to access them, which helps prevent malware from accessing or modifying sensitive files.
 
 ## PowerShell Cmdlet
@@ -32,6 +32,16 @@ Remove-MpPreference -ControlledFolderAccessAllowedApplications "c:\apps\test.exe
 > c:\Users\<username>\Favorites
 > ```
 > [Protect important folders from ransomware from encrypting your files with controlled folder access | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/controlled-folders?view=o365-worldwide)
+
+## CFA quick test 
+- Download [the CFA test tool](https://demo.wd.microsoft.com/Content/CFAtool.exe).
+- Create an executable file with PowerShell script.
+```powershell
+$filePath = "C:\Users\Public\Documents\example.exe"
+$textContent = "This is an example file."
+
+New-Item -Path $filePath -ItemType File -Value $textContent
+```
 
 ## KQL : Hunting queries
 **Controlled Folder Access - Block**
