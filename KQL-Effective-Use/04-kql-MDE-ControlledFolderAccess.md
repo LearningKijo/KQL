@@ -4,6 +4,9 @@ Controlled Folder Access is a security feature in Microsoft Defender for Endpoin
 ## PowerShell Cmdlet
 **PowerShell**
 ```powershell
+# Confirm CFA configuration
+Get-MpPreference | Select-Object EnableControlledFolderAccess, ControlledFolderAccessAllowedApplications, ControlledFolderAccessProtectedFolders
+
 # Enable/Disable controlled folder access
 Set-MpPreference -EnableControlledFolderAccess AuditMode
 Set-MpPreference -EnableControlledFolderAccess Enabled
