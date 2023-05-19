@@ -64,9 +64,9 @@ DeviceEvents
 | project Timestamp, DeviceId, DeviceName, ActionType, Browser, RemoteUrl
 ```
 ## KQL : Hunting results
-e.g. Edge browser - Microsoft SmartScreen
+e.g. 3rd party browser - Windows Defender Exploit Guard, Netwrk Protection
 
-![image](https://user-images.githubusercontent.com/120234772/228752118-d90b881a-4267-48f6-b404-e8d9cd658a5d.png)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/5de6b732-3204-46a9-a7b2-58b4e07f6eb7)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
