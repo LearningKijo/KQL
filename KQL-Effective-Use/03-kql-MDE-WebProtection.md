@@ -4,9 +4,10 @@ Therefore, in this section, I am going to share hunting queries related to web p
 
 The KQL hunting queries will include the following products :
 1. Microsoft Defender for Endpoint - Url Indicators
-2. Microsoft Defender for Endpoint - Web Content Filtering
-3. Microsoft Defender for Cloud Apps - Unsanctioned app
-4. Microsoft Defender SmartScreen
+2. Microsoft Defender for Endpoint - Network Protection
+3. Microsoft Defender for Endpoint - Web Content Filtering
+4. Microsoft Defender for Cloud Apps - Unsanctioned app
+5. Microsoft Defender SmartScreen
 
 
 ## Web Protection architecture
@@ -46,6 +47,7 @@ DeviceEvents
 | extend ParsedFields=parse_json(AdditionalFields)
 | summarize MDE_IoC = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
 MDE_WCF = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
+MDE_NP = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CmdCtrl"),
 MDA_CASB = countif(ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
 ```
 
@@ -56,6 +58,7 @@ DeviceEvents
 | extend ParsedFields=parse_json(AdditionalFields)
 | summarize MDE_IoC = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
 MDE_WCF = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
+MDE_NP = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CmdCtrl"), 
 MDA_CASB = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
 ```
 
