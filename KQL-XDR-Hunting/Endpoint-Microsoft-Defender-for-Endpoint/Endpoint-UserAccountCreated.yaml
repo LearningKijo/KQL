@@ -1,0 +1,16 @@
+name : Tracking daily "UserAccountCreated" activities 
+table :
+  - DeviceEvents
+  - https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide
+query: |
+    DeviceEvents
+    | where Timestamp > ago(30d)
+    | where ActionType == "UserAccountCreated"
+    | summarize List = make_list(strcat(DeviceId, " - ", DeviceName, 
+                        "| ", InitiatingProcessAccountDomain, @"\", InitiatingProcessAccountName,  
+                        "| ", AccountDomain, @"\", AccountName)) by bin(Timestamp, 1d)
+    | extend Case = array_length(List)
+    | project Timestamp, Case, List
+    
+    
+    
