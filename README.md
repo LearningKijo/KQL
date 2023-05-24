@@ -49,14 +49,15 @@ In KC7, you will learn KQL step by step. After the initial training, you will be
 Kusto Detective Agency is an interactive big data contest and gives you 5 missions. You will be one of the detectives in the team and deal with (find out the answer) missions by using KQL.
 1. [Kusto Detective Agency website](https://detective.kusto.io/)
 
-#### Kusto Detective Agency short video  
+#### Kusto Detective Agency short video & blog
 - [Kusto Detective Agency - Season 1 !!](https://www.youtube.com/watch?v=BaW0qsxxYRc)
 - [Kusto Detective Agency - Season 2 !!](https://www.youtube.com/watch?v=unftp2cQTsg)
+- [Introducing Kusto Detective Agency Season 2 - blog](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/introducing-kusto-detective-agency-season-2-bigger-better-and/ba-p/3829614)
 > Welcome to the Kusto Detective agency, rookie!  Be prepared to flex your investigative muscles as you use your big data skills to solve our most challenging cases.  Prizes and awards are up for grabs if you are successful!
 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/8aaf1399-0e83-4e57-a82a-49587f68a032)
 
-![image](https://github.com/LearningKijo/KQL/assets/120234772/7c8fc536-6031-4da5-9b8f-69065e800c3b)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/7011b604-154a-4beb-b163-2e84c8821a60)
 
 
 ## KQL cheat sheet
