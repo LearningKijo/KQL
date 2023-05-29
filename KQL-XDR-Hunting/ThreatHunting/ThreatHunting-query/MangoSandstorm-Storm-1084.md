@@ -1,4 +1,6 @@
 # Mango Sandstorm & Storm-1084
+Mango Sandstorm, previously known for using Log4j 2 exploits and targeting on-premises environments, has now expanded its focus to include both on-premises and cloud environments. 
+After gaining initial access through known vulnerabilities, the attack has been linked to Storm-1084 (formerly known as DEV-1084).
 
 ![image](https://user-images.githubusercontent.com/120234772/235574789-f65f3881-c9f2-436e-9377-76599fdeef54.png)
 
