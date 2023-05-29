@@ -1,0 +1,14 @@
+name : Tracking the activities of Mimikatz command-line by devices
+description : 
+- This query displays all unique Mimikatz command-line activities for each device
+table :
+- DeviceProcessEvents
+- https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceprocessevents-table?view=o365-worldwide
+query: |
+    DeviceProcessEvents
+    | where Timestamp > ago(30d)
+    | where FileName in~ ("powershell.exe","powershell_ise.exe", "mimikatz.exe")
+    | where ProcessCommandLine has_any ("sekurlsa","kerberos","crypto", "vault", "lsadump") or InitiatingProcessCommandLine has_any ("sekurlsa","kerberos","crypto", "vault", "lsadump")
+    | summarize make_set(ProcessCommandLine) by DeviceId, DeviceName
+    
+    
