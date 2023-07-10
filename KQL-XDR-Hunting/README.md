@@ -29,6 +29,7 @@ MicrosoftProducts
 | Endpoint   | [Microsoft Defender for Endpoint](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint)  |
 | Email  | [Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
 | Identity | [Identity-Azure-Active-Directory](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Azure-Active-Directory) |
+| Threat Hunting | [Threat Hunting](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/README.md)|
 
 ## MS security blog / KQL reference 
 [Digital Security Tips and Solutions - Microsoft Security Blog!](https://www.microsoft.com/en-us/security/blog/)
