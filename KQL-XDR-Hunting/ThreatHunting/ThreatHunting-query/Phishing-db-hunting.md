@@ -1,5 +1,9 @@
 # Phishing DB hunting
 
+1. [Phishing Domain Database](https://github.com/mitchellkrogza/Phishing.Database/tree/master)
+2. [PhishTank](https://phishtank.org/)
+
+#### Phishing Domain Database
 ```kql
 // Phishing Domain Database
 // https://github.com/mitchellkrogza/Phishing.Database/tree/master
@@ -14,8 +18,9 @@ EmailUrlInfo
 | project TimeGenerated, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, Subject, LatestDeliveryLocation, Url, ActionType, IsClickedThrough
 ```
 
+#### PhishTank
 ```kql
-// Phishtank
+// PhishTank
 // https://data.phishtank.com/
 let PhishingDB = materialize(externaldata(phish_id:string, url:string, phish_detail_url:string, submission_time:datetime, verified:string, verification_time:datetime, online:string, target:string)[@'http://data.phishtank.com/data/online-valid.csv'] with (format='csv', ignorefirstrecord = true));
 let URLs = materialize((PhishingDB | where verification_time > ago(8h) | project url));
