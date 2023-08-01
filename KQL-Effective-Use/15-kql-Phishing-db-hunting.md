@@ -42,5 +42,7 @@ externaldata(phish_id:string, url:string, phish_detail_url:string, submission_ti
 ```
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/288013f8-f2d0-4e26-b969-f7c172d8a3fe)
 
+externaldata
+
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
