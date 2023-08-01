@@ -38,3 +38,5 @@ EmailUrlInfo
 externaldata(phish_id:string, url:string, phish_detail_url:string, submission_time:datetime, verified:string, verification_time:datetime, online:string, target:string)[@'http://data.phishtank.com/data/online-valid.csv'] with (format='csv', ignorefirstrecord = true)
 | summarize URLs = count() by bin(verification_time, 8h)
 ```
+![image](https://github.com/LearningKijo/KQL/assets/120234772/288013f8-f2d0-4e26-b969-f7c172d8a3fe)
+
