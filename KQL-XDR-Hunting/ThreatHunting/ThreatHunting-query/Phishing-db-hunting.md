@@ -34,7 +34,7 @@ EmailUrlInfo
 ```
 
 ```kql
-// 8 hours 
+// URLs case calculation for every 8 hours 
 externaldata(phish_id:string, url:string, phish_detail_url:string, submission_time:datetime, verified:string, verification_time:datetime, online:string, target:string)[@'http://data.phishtank.com/data/online-valid.csv'] with (format='csv', ignorefirstrecord = true)
 | summarize URLs = count() by bin(verification_time, 8h)
 ```
