@@ -3,7 +3,7 @@
 1. [Phishing Domain Database](https://github.com/mitchellkrogza/Phishing.Database/tree/master)
 2. [PhishTank](https://phishtank.org/)
 
-#### Phishing Domain Database
+### Phishing Domain Database
 ```kql
 // Phishing Domain Database
 // https://github.com/mitchellkrogza/Phishing.Database/tree/master
@@ -18,7 +18,7 @@ EmailUrlInfo
 | project TimeGenerated, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, Subject, LatestDeliveryLocation, Url, ActionType, IsClickedThrough
 ```
 
-#### PhishTank
+### PhishTank
 ```kql
 // PhishTank
 // https://data.phishtank.com/
@@ -33,6 +33,7 @@ EmailUrlInfo
 | project TimeGenerated, NetworkMessageId, SenderFromAddress, RecipientEmailAddress, Subject, ThreatTypes, LatestDeliveryLocation, Url, ActionType, IsClickedThrough
 ```
 
+## Appendix
 ```kql
 // URLs case calculation for every 8 hours 
 externaldata(phish_id:string, url:string, phish_detail_url:string, submission_time:datetime, verified:string, verification_time:datetime, online:string, target:string)[@'http://data.phishtank.com/data/online-valid.csv'] with (format='csv', ignorefirstrecord = true)
