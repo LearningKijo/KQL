@@ -1,5 +1,5 @@
 # Phishing DB hunting
-
+These queries will help find out the inbound emails which include potential phishing links.
 1. [Phishing Domain Database](https://github.com/mitchellkrogza/Phishing.Database/tree/master)
 2. [PhishTank](https://phishtank.org/)
 
@@ -34,6 +34,7 @@ EmailUrlInfo
 ```
 
 ## Appendix
+Regarding PhishTank, there is a huge amount of data. Therefore, I filtered the phishing link data every 8 hours. This is a sample query that returns the total number of phishing links detected/reported every 8 hours.
 ```kql
 // URLs case calculation for every 8 hours 
 externaldata(phish_id:string, url:string, phish_detail_url:string, submission_time:datetime, verified:string, verification_time:datetime, online:string, target:string)[@'http://data.phishtank.com/data/online-valid.csv'] with (format='csv', ignorefirstrecord = true)
@@ -41,3 +42,5 @@ externaldata(phish_id:string, url:string, phish_detail_url:string, submission_ti
 ```
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/288013f8-f2d0-4e26-b969-f7c172d8a3fe)
 
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
