@@ -19,6 +19,6 @@ query : |
     | extend MoveToJunk_case = array_length(MoveToJunk_NetworkID)
     | extend MoveToDelete_case = array_length(MoveToDelete_NetworkID)
     | extend Sum_case = HardDelete_case + SoftDelete_case + MoveToJunk_case + MoveToDelete_case
-    | project RecipientEmailAddress, Sum_case, HardDelete_case, SoftDelete_case, MoveToJunk_case, MoveToDelete_case, HardDelete_NetworkID, SoftDelete_NetworkID, MoveToJunk_NetworkID, MoveToDelete_NetwrokID
+    | project RecipientEmailAddress, Sum_case, HardDelete_case, SoftDelete_case, MoveToJunk_case, MoveToDelete_case, HardDelete_NetworkID, SoftDelete_NetworkID, MoveToJunk_NetworkID, MoveToDelete_NetworkID
     | order by Sum_case desc 
 
