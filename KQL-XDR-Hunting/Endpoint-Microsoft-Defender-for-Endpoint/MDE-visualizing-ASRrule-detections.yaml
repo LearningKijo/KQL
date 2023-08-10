@@ -1,4 +1,4 @@
-name : MDE ASR rule detection list 
+name : MDE - Visualizing ASR Rule Detections with KQL
 source : https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment?view=o365-worldwide
 description : The KQL hunting queries will provide a summary of all devices based on ASR rule detection, including the filename and timeline.
 query: |
