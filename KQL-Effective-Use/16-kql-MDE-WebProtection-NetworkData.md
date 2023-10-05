@@ -36,6 +36,10 @@ DeviceEvents
 | project Timestamp, DeviceId, DeviceName, DetectionType, InitiatingProcessFileName, URL, IPaddress, Port
 ```
 
+> **Important**
+> In DeviceNetworkEvents, URLs may appear as 'ConnectionSuccess,' but this is the expected result due to the three-way handshake that occurs before an IoC, such as blocking a URL. Technically, end users haven't accessed the URL even if the record shows 'ConnectionSuccess`.
+
+
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/436cf538-496f-4b35-b257-6303383bc7c6)
 > Query result in Advanced Hunting, Microsoft 365 Defender 
 
