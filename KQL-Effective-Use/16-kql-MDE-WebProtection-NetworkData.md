@@ -36,7 +36,7 @@ DeviceEvents
 | project Timestamp, DeviceId, DeviceName, DetectionType, InitiatingProcessFileName, URL, IPaddress, Port
 ```
 
-> **Important**
+> [!Important]
 > In DeviceNetworkEvents, URLs may appear as ***'ConnectionSuccess'***, but this is the expected result due to the three-way handshake that occurs before an IoC, such as blocking a URL.
 > Technically, end users were blocked from accessing the URL, even if the record shows ***'ConnectionSuccess'***.
 > MS docs : [IP/URL Indicators: Network protection and the TCP three-way handshake](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/manage-indicators?view=o365-worldwide#ipurl-indicators-network-protection-and-the-tcp-three-way-handshake)
