@@ -65,9 +65,9 @@ DeviceEvents
 | project Timestamp, DeviceId, DeviceName, ActionType, Browser, RemoteUrl
 ```
 ## KQL : Hunting results
-e.g. 3rd party browser - Windows Defender Exploit Guard, Netwrk Protection
+e.g. Edge browser - Windows Defender Exploit Guard, Netwrk Protection
 
-![image](https://github.com/LearningKijo/KQL/assets/120234772/5de6b732-3204-46a9-a7b2-58b4e07f6eb7)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/0976bad9-c517-4171-8e17-0c5f1e22a317)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
