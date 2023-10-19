@@ -21,11 +21,12 @@ The KQL hunting queries will include the following products :
 DeviceEvents
 | where Timestamp > ago(7d)
 | where ActionType == "SmartScreenUrlWarning"
+| project-reorder AdditionalFields, RemoteUrl
 | extend ParsedFields=parse_json(AdditionalFields)
-| summarize MDE_IoC = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CustomBlockList"), 
-MDE_WCF = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CustomPolicy"),
-MDA_CASB = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) == "CasbPolicy"),
-Edge_SS = make_list_if(RemoteUrl, Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing")) by DeviceId, DeviceName
+| summarize MDE_IoC = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", RemoteUrl), Experience=tostring(ParsedFields.Experience) == "CustomBlockList"), 
+MDE_WCF = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", RemoteUrl), Experience=tostring(ParsedFields.Experience) == "CustomPolicy"),
+MDA_CASB = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", RemoteUrl), Experience=tostring(ParsedFields.Experience) == "CasbPolicy"),
+Edge_SS = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", ParsedFields.Experience," : ", RemoteUrl), Experience=tostring(ParsedFields.Experience) in ("Malicious", "Phishing", "Exploit", "Untrusted")) by DeviceId, DeviceName
 | extend MDE_IoC_case = array_length(MDE_IoC)
 | extend MDE_WCF_case = array_length(MDE_WCF)
 | extend MDA_CASB_case = array_length(MDA_CASB)
