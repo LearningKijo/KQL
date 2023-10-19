@@ -40,10 +40,10 @@ DeviceEvents
 | where Timestamp > ago(7d)
 | where ActionType == "ExploitGuardNetworkProtectionBlocked"
 | extend ParsedFields=parse_json(AdditionalFields)
-| summarize MDE_IoC = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
-MDE_WCF = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
-MDE_NP = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CmdCtrl"),
-MDA_CASB = make_list_if(RemoteUrl, ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
+| summarize MDE_IoC = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", RemoteUrl), ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomBlockList"), 
+MDE_WCF = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", RemoteUrl), ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CustomPolicy"),
+MDE_NP = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", ParsedFields.ResponseCategory, " : ", RemoteUrl), ResponseCategory=tostring(ParsedFields.ResponseCategory) in ("CmdCtrl", "Malicious")),
+MDA_CASB = make_list_if(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", RemoteUrl), ResponseCategory=tostring(ParsedFields.ResponseCategory) == "CasbPolicy") by DeviceId, DeviceName
 | extend MDE_IoC_case = array_length(MDE_IoC)
 | extend MDE_WCF_case = array_length(MDE_WCF)
 | extend MDE_NP_case = array_length(MDE_NP)
