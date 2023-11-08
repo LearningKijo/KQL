@@ -30,7 +30,7 @@ AlertInfo
 | project MITRE_ATTCK, SUM, MDE, MDO, MDI, MDA, Entra, M365D
 | order by SUM desc 
 ```
-![image](https://github.com/LearningKijo/Malware-Analysis/assets/120234772/385a3da0-ab51-4670-a0bb-f5b170a78ebf)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/88e5fe0d-85ad-4e29-b795-eee2c0a7a708)
 
 
 2. This query displays alerts detected in all Defender security products by threat category and by product.
@@ -60,7 +60,8 @@ AlertInfo
 | project Category, SUM, MDE, MDO, MDI, MDA, Entra, M365D
 | order by SUM desc 
 ```
-![image](https://github.com/LearningKijo/Malware-Analysis/assets/120234772/99b6bce4-fa81-4898-84a2-9660ccc362f5)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/264875c3-826c-498e-a88a-91cec7496807)
+
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
