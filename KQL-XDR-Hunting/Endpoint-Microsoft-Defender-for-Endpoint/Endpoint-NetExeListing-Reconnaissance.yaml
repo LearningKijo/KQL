@@ -7,9 +7,10 @@ table :
 query : |
     //List all distinct command lines from Net.exe 
     DeviceProcessEvents
-    | where Timestamp > ago(30d)
+    | where Timestamp > ago(7d)
     | where FileName == "net.exe"
-    | summarize CmdList = make_set(ProcessCommandLine) by DeviceId, DeviceName
+    | where ProcessCommandLine has_any ("/domain", "user", "group")
+    | summarize CmdList = make_set(strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'), " : ", ProcessCommandLine)) by DeviceId, DeviceName
     | extend Case = array_length(CmdList)
     | project DeviceId, DeviceName, Case, CmdList
     | order by Case desc 
