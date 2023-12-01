@@ -1,4 +1,4 @@
-## Last Password Reset & Account Disabled Time List
+# Last Password Reset & Account Disabled Time List
 This query helps list the last password reset and account disabled time in your environment.
 
 #### Table name & Description
