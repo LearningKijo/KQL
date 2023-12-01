@@ -1,7 +1,7 @@
 # EOP Detection Daily Percentage
 This query shows the daily percentage of EOP detections.
 
-####
+#### Table name & Description
 - [EmailEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-emailevents-table?view=o365-worldwide) : Microsoft 365 email events, including email delivery and blocking events
 
 ```kusto
