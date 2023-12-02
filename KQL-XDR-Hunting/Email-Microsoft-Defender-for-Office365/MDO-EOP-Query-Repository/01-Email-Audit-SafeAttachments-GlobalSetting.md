@@ -4,25 +4,23 @@ This query shows the configuration auditing - [Safe Attachments for SharePoint, 
 #### Table name & Description
 - [CloudAppEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-cloudappevents-table?view=o365-worldwide) : Events involving accounts and objects in Office 365 and other cloud apps and services
 
+#### Query
 ```kusto
-   let StartTime = datetime(2023-01-22);
-   let EndTime = datetime(2023-01-24);
-   CloudAppEvents
-   | where Timestamp between ((StartTime) .. (EndTime))
-   | where Application == "Microsoft Exchange Online"
-   | where ActionType contains "atp"
+CloudAppEvents
+| where Application == "Microsoft Exchange Online"
+| where ActionType == "Set-AtpPolicyForO365"
+| mv-expand ActivityObjects
+| extend Name = tostring(ActivityObjects.Name)
+| extend Value = tostring(ActivityObjects.Value)
+| where Name in ("EnableATPForSPOTeamsODB", "EnableSafeDocs", "AllowSafeDocsOpen")
+| extend packed = pack(Name, Value)
+| summarize PackedInfo = make_bag(packed), ActionType = any(ActionType) by Timestamp, AccountDisplayName
+| evaluate bag_unpack(PackedInfo)
 ```
 
-```
-Output : 
- Parameters 
-  [
-    {"Name":"Identity","Value":"Default"},
-    {"Name":"EnableATPForSPOTeamsODB","Value":"True"},
-    {"Name":"EnableSafeDocs","Value":"True"},
-    {"Name":"AllowSafeDocsOpen","Value":"False"}
-  ]
-```
+#### Result
+![image](https://github.com/LearningKijo/KQL/assets/120234772/220a08ac-6688-4d91-8e24-217940b38b9b)
+
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
