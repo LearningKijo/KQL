@@ -1,12 +1,13 @@
 # Identity-related KQL queries
 Thank you for visiting @LearningKijo KQL repository.
-In this Identity KQL repository, I am delighted to share out-of-the-box Identity-related KQL queries based on ***Microsoft Entra ID*** and ***Microsoft Defender for Identity***. 
+In this Identity KQL repository, I am delighted to share out-of-the-box Identity-related KQL queries based on ***Microsoft Entra ID (Entra)*** and ***Microsoft Defender for Identity (MDI)***. 
 
 
-| Products       | Scope          |
-| :------------- | :------------- |
-| Microsoft Defender for Identity | TBD |
-| Microsoft Entra ID (Azure AD)   | TBD |
+| Product | KQL query |
+|:--------|:----------|
+| MDI     | [01-LDAP-Query-Activities-Endpoint.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/01-LDAP-Query-Activities-Endpoint.md) |
+| MDI     | [02-LDAP-Query-Activities-Identity.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/02-LDAP-Query-Activities-Identity.md) |
+| MDI     | [03-Last-PasswordReset-AccountDisabled-TimeList.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/03-Last-PasswordReset-AccountDisabled-TimeList.md) |
 
 ## Pinned Identity-related KQL queries contributors
 I want to be respectful of the excellent work done by others, and while I aim to avoid duplication, there may be slight overlaps. 
