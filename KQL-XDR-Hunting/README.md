@@ -4,35 +4,18 @@
 
 To successfully detect suspicious activities, it's crucial to use KQL queries in Advanced Hunting. However, it can be challenging for some to start from scratch and sample queries may not always suffice. Therefore, in this section on KQL-XDR-Hunting, I will be sharing 'out-of-the-box' KQL queries based on feedback, security blogs, and new cyber attacks to assist your threat hunting.
 
-```
-// I will cover mostly these products and topics in KQL.
-let MicrosoftProducts = datatable(id: int, value: string)
-[
-      1, "Microsoft Defender for Endpoints", 
-      2, "Microsoft Defender for Office 365", 
-      3, "Microsoft Defender for Cloud Apps", 
-      4, "Microsoft Defender for Identity", 
-      5, "Microsoft Defender Antivirus", 
-      6, "Microsoft 365 Defender"
-      7, "Threat Hunting"
-      8, "Worldwide security breach"
-];
-MicrosoftProducts
-| project id, value
-```
-
 ## Out-of-the-box KQL queries
 
-| Products/Threat  | Link |
-| :------------- | :------------- |
-| XDR alerts | [Microsoft 365 Defender](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-Microsoft-365-Defender) |
-| Endpoint   | [Microsoft Defender for Endpoint](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint)  |
-| Email  | [Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
-| Identity | [Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity) |
-| Threat Hunting | [Threat Hunting](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/README.md)|
+| Category       | Products       | Memo          |
+| :------------- | :------------- |:------------- |
+| Endpoint       | [Microsoft Defender Antivirus <br> Microsoft Defender for Endpoint](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint)  |
+| Email          | [Exchange Online Protection <br> Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
+| Identity       | [Microsoft Entra ID (Azure AD) <br> Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity)  |
+| App & Data     | TBD |
+| Other | [Threat Hunting](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/README.md) <br> [Microsoft Defender XDR](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-Microsoft-365-Defender) |
 
-## MS security blog / KQL reference 
-[Digital Security Tips and Solutions - Microsoft Security Blog!](https://www.microsoft.com/en-us/security/blog/)
+## Usage 
+TBD
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
