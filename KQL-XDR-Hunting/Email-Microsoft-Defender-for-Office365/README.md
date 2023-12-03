@@ -1,4 +1,6 @@
 # Email-related KQL queries
+Thank you for visiting @LearningKijo KQL repository. 
+In this repository, I am excited to share email-based out-of-the-box queries related to ***Microsoft Defender for Office 365 (MDO)*** and ***Exchange Online Protection (EOP)***.
 
 | Product | KQL query |
 |:--------|:----------|
