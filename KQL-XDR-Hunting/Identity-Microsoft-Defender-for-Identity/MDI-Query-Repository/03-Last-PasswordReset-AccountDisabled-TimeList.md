@@ -2,7 +2,7 @@
 This query helps list the last password reset and account disabled time in your environment.
 
 #### Table name & Description
-- [IdentityDirectoryEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-identitydirectoryevents-table?view=o365-worldwide) : Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller.
+- [IdentityDirectoryEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-identitydirectoryevents-table?view=o365-worldwide) : Events involving an on-premises domain controller running Active Directory (AD). This table covers a range of identity-related events and system events on the domain controller
 - [IdentityInfo](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-identityinfo-table?view=o365-worldwide) : Account information from various sources, including Microsoft Entra ID
 
 ```kusto
