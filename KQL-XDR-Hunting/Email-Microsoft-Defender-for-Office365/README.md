@@ -12,6 +12,9 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDO     | [06-MDO-MalwareDetection-Filtering.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/06-MDO-MalwareDetection-Filtering.md) |
 | MDO     | [07-MDO-PhishingDetection-Filtering.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/07-MDO-PhishingDetection-Filtering.md) |
 | MDO     | [08-MDO-UserList-for-RemediationAction.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/08-MDO-UserList-for-RemediationAction.md) |
+| MDO/EOP | [09-Email-MalwareDetection-byAccount.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/09-Email-MalwareDetection-byAccount.md) |
+| MDO     | [10-UserInsights-ClickedSuspiciousURLs-PhishMalware-Emails.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/10-UserInsights-ClickedSuspiciousURLs-PhishMalware-Emails.md) |
+| MDO/EOP | [11-Email-Weekly-DetectionTrend.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/11-Email-Weekly-DetectionTrend.md) |
 
 
 
