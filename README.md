@@ -56,8 +56,6 @@ Kusto Detective Agency is an interactive big data contest and gives you 5 missio
 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/8aaf1399-0e83-4e57-a82a-49587f68a032)
 
-![image](https://github.com/LearningKijo/KQL/assets/120234772/7011b604-154a-4beb-b163-2e84c8821a60)
-
 
 ## KQL cheat sheet
 1. [Azure Data Explorer KQL cheat sheets](https://techcommunity.microsoft.com/t5/azure-data-explorer-blog/azure-data-explorer-kql-cheat-sheets/ba-p/1057404)
