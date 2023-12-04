@@ -13,7 +13,8 @@ IdentityQueryEvents
 | extend Case = array_length(QueryList)
 | project Timestamp, Case, QueryList
 ```
-
+#### Result
+![image](https://github.com/LearningKijo/KQL/assets/120234772/36aeb06d-faa7-41aa-b802-d0c7628ba94e)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
