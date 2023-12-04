@@ -2,7 +2,9 @@
 <a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure-KQL-00B2FF.svg?logo=microsoftazure&style=popout"></a>
 <a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure%20Data%20Explorer-%230078D4.svg?&style=popout&logo=azure%20data%20explorer&logoColor=white"/></a>
 
-To successfully detect suspicious activities, it's crucial to use KQL queries in Advanced Hunting. However, it can be challenging for some to start from scratch and sample queries may not always suffice. Therefore, in this section on KQL-XDR-Hunting, I will be sharing 'out-of-the-box' KQL queries based on feedback, security blogs, and new cyber attacks to assist your threat hunting.
+Being able to fully leverage the data you have means you can control all activities that occurred across all Defender's workloads. 
+However, starting from scratch can be challenging for some, and sample queries may not always suffice. 
+Therefore, in this repository on KQL-XDR-Hunting, I will be sharing 'out-of-the-box' KQL queries based on feedback, security blogs, and new cyber attacks to assist you in your threat hunting.
 
 ## Out-of-the-box KQL queries
 
