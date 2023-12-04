@@ -23,5 +23,9 @@ IdentityInfo
 | join kind = leftouter AccountDisabled on $left.AccountUpn == $right.TargetAccountUpn 
 | project AccountUpn, AccountDisplayName, SourceProvider, AccountDisabledTime, PasswordChangedTime
 ```
+
+#### Result
+![image](https://github.com/LearningKijo/KQL/assets/120234772/5521bc01-514b-4ea7-8bdb-5fa25eb1cb0e)
+
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
