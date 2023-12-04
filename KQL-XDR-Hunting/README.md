@@ -17,7 +17,9 @@ Therefore, in this repository on KQL-XDR-Hunting, I will be sharing 'out-of-the-
 | Other | [Threat Hunting](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/README.md) <br> [Microsoft Defender XDR](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-Microsoft-365-Defender) |
 
 ## Usage 
-TBD
+![image](https://github.com/LearningKijo/KQL/assets/120234772/6fb7848e-439f-4871-84c6-70d8c3df6c80)
+> [!Note]
+> If you would like to change some lines, you can even change them by yourself and adjust them depending on what data you want to take out.
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
