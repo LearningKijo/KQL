@@ -10,11 +10,11 @@ Therefore, in this repository on KQL-XDR-Hunting, I will be sharing 'out-of-the-
 
 | Category       | Products       | Memo          |
 | :------------- | :------------- |:------------- |
-| Endpoint       | [Microsoft Defender Antivirus <br> Microsoft Defender for Endpoint](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint)  |
+| Endpoint       |  WIP  | 
 | Email          | [Exchange Online Protection <br> Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
 | Identity       | [Microsoft Entra ID (Azure AD) <br> Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity)  |
 | App & Data     | TBD |
-| Other | [Threat Hunting](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/ThreatHunting/README.md) <br> [Microsoft Defender XDR](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-Microsoft-365-Defender) |
+| Other | WIP |
 
 ## Usage 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/6fb7848e-439f-4871-84c6-70d8c3df6c80)
