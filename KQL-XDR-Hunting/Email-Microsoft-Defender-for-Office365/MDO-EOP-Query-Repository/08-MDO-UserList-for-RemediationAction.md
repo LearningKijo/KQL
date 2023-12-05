@@ -10,9 +10,9 @@ EmailEvents
 | where Timestamp > ago(30d)
 | where LatestDeliveryAction in ("Hard delete", "Soft delete", "Moved to junk folder", "Moved to deleted items")
 | summarize HardDelete_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Hard delete"),  
-                SoftDelete_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Soft delete"),
-                MoveToJunk_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Moved to junk folder"),
-                MoveToDelete_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Moved to deleted items") by RecipientEmailAddress
+            SoftDelete_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Soft delete"),
+            MoveToJunk_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Moved to junk folder"),
+            MoveToDelete_NetworkID = make_list_if(strcat(NetworkMessageId, @"\", Timestamp,@"\", Subject), LatestDeliveryAction == "Moved to deleted items") by RecipientEmailAddress
 | extend HardDelete_case = array_length(HardDelete_NetworkID)
 | extend SoftDelete_case = array_length(SoftDelete_NetworkID)
 | extend MoveToJunk_case = array_length(MoveToJunk_NetworkID)
