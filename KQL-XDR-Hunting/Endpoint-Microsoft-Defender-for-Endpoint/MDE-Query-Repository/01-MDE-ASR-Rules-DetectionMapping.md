@@ -22,7 +22,8 @@ This query provides a summary of all ASR rules detections across all devices, di
  | order by Case desc
 ```
 
-#### <Result> 
+#### Result 
+![1692085121731](https://github.com/LearningKijo/KQL/assets/120234772/c8fbb62b-c668-4638-9d36-0b7de5a52fcd)
 
 
 
