@@ -26,7 +26,9 @@ DeviceEvents
 | render piechart 
 ```
 
-#### <Result> 
+#### Result
+![image](https://github.com/LearningKijo/KQL/assets/120234772/8052b7f3-2900-44f8-811e-6a68f8e34d76)
+
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
