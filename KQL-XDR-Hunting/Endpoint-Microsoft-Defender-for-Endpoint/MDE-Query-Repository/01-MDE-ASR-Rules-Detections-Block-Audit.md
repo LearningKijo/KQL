@@ -5,7 +5,7 @@ The first query displays ASR rules detection for block mode, and the second quer
 - [DeviceEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide) :	Multiple event types, including events triggered by security controls such as Microsoft Defender Antivirus and exploit protection
 
 
-####  ASR rules Block activities 
+####  ASR rules : Block mode 
 ```kusto
 DeviceEvents 
 | where Timestamp > ago(7d) 
@@ -14,7 +14,7 @@ DeviceEvents
 | where Parsed.IsAudit == "false" 
 ```
 
-#### ASR rules Audit activities 
+#### ASR rules : Audit mode 
 ```kusto
 DeviceEvents 
 | where Timestamp > ago(7d) 
