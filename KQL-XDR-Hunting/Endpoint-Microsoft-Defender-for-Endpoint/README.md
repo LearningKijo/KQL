@@ -8,7 +8,8 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDE     | ASR Rules | [02-MDE-ASR-Rules-VisualizingDetectionWithPieChart.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/02-MDE-ASR-Rules-VisualizingDetectionWithPieChart.md)
 | MDE     | ASR Rules | [03-MDE-ASR-Rules-DetectionAcrossAllDevices.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/03-MDE-ASR-Rules-DetectionAcrossAllDevices.md)
 | MDE     | ASR Rules | [04-MDE-ASR-Rules-CategorizedDetection-Graph.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/04-MDE-ASR-Rules-CategorizedDetection-Graph.md)
-
+| AV      | Detection | [01-AV-Detection-ThreatInsightWithFilenameByDeviceList.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-AV-Detection-ThreatInsightWithFilenameByDeviceList.md)
+| AV      | ScanTime  | [02-AV-LastCompletedAVScanTime-For-EachDevice.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/02-AV-LastCompletedAVScanTime-For-EachDevice.md)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
