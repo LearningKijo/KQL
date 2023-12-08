@@ -28,6 +28,8 @@ AlertInfo
 | project MITRE_ATTCK, SUM, MDE, MDO, MDI, MDA, Entra, M365D
 | order by SUM desc 
 ```
+> [!Important]
+> You can use this query in Advanced Hunting, Microsoft Defender XDR, by shifting 'TimeGenerated' to 'Timestamp' (Line 2, 7). However, in terms of columnchart and data visualization, I recommend utilizing this query in Microsoft Sentinel.
 
 #### Result
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/d081cb11-c00c-415e-b6e8-bc8d8a90bb35)
