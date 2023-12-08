@@ -30,7 +30,7 @@ AlertInfo
 ```
 
 #### Result
-![](image.png)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/d081cb11-c00c-415e-b6e8-bc8d8a90bb35)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
