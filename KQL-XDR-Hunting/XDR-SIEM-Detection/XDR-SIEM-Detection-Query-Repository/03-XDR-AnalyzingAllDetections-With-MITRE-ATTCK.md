@@ -1,4 +1,4 @@
-# XDR : Analyzing All Detections MITRE ATT&CK 
+# XDR : Analyzing All Detections With MITRE ATT&CK 
 This query displays alerts detected in all Defender security products and correlates each of them with MITRE ATT&CK techniques. Each record (MITRE ATT&CK technique) lists the details of alerts detected in each product as dynamic values, including detection time, ID, title and detection source.
 
 #### Table name & Description
