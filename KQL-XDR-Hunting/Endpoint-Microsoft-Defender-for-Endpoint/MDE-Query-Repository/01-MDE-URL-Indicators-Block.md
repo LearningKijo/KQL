@@ -1,4 +1,4 @@
-# MDE : URL IoCs Detection on Edge and 3rd Party Browsers
+# MDE : URL IoCs Detection on Edge & 3rd Party Browsers
 This query displays MDE URL Indicators detections by both Edge and third-party browsers for each device over the past 7 days.
 
 #### Table name & Description
