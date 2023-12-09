@@ -1,5 +1,5 @@
 # MDE : URL IoCs Block on Edge & 3rd Party Browsers
-This query displays MDE URL Indicators detections by both Edge and third-party browsers for each device over the past 7 days.
+This query displays MDE URL Indicators detections by both Edge and 3rd party browsers for each device over the past 7 days.
 
 #### Table name & Description
 - [DeviceEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide) :	Multiple event types, including events triggered by security controls such as Microsoft Defender Antivirus and exploit protection
