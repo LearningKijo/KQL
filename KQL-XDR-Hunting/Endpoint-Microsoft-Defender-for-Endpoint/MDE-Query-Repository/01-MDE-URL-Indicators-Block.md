@@ -36,7 +36,8 @@ DeviceEvents
 > Technically, end users were blocked from accessing the URL, even if the record shows ***'ConnectionSuccess'***.
 > MS docs : [IP/URL Indicators: Network protection and the TCP three-way handshake](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/manage-indicators?view=o365-worldwide#ipurl-indicators-network-protection-and-the-tcp-three-way-handshake)
 
-#### <Result> 
+#### Result
+![image](https://github.com/LearningKijo/KQL/assets/120234772/660570f4-e39b-4317-8fba-a431cd9b8504)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
