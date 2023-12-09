@@ -20,16 +20,16 @@ DeviceEvents
 | extend SmartScreen = Parsed.Experience
 | extend NetworkProtection = Parsed.ResponseCategory
 | where SmartScreen == "CustomBlockList" or NetworkProtection == "CustomBlockList"
-| extend Broswer = iff( ActionType == "SmartScreenUrlWarning" and SmartScreen == "CustomBlockList", "Edge", "3rd Party")
+| extend Browser = iff( ActionType == "SmartScreenUrlWarning" and SmartScreen == "CustomBlockList", "Edge", "3rd Party")
 | join kind=inner NetworkLogs on $left.RemoteUrl == $right.URL
 | extend DetectionTime = strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'))
-| extend BroswerType = strcat("<", Broswer, " /", InitiatingProcessFileName, ">")
+| extend BrowserType = strcat("<", Browser, " /", InitiatingProcessFileName, ">")
 | extend DetectionURL = strcat("[", RemoteUrl, " : ", IPaddress, " : ", Port, "]")
-| extend Details = strcat(DetectionTime, " ", BroswerType, " ", DetectionURL)
+| extend Details = strcat(DetectionTime, " ", BrowserType, " ", DetectionURL)
 | summarize IoCList = make_list(Details) by DeviceId, DeviceName
 | extend Case = array_length(IoCList)
 | project DeviceId, DeviceName, Case, IoCList
-| order by Case desc 
+| order by Case desc  
 ```
 > [!Important]
 > In DeviceNetworkEvents, URLs may appear as ***'ConnectionSuccess'***, but this is the expected result due to the three-way handshake that occurs before an IoC, such as blocking a URL.
@@ -37,7 +37,7 @@ DeviceEvents
 > MS docs : [IP/URL Indicators: Network protection and the TCP three-way handshake](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/manage-indicators?view=o365-worldwide#ipurl-indicators-network-protection-and-the-tcp-three-way-handshake)
 
 #### Result
-![image](https://github.com/LearningKijo/KQL/assets/120234772/1ba09aad-678f-4a46-bf88-9ad7246676f3)
+![image](https://github.com/LearningKijo/KQL/assets/120234772/a39b9f95-05c8-4597-a37f-9a49dc46b0bf)
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
