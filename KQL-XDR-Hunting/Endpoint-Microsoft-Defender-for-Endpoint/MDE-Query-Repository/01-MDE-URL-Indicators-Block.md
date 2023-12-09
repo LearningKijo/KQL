@@ -25,11 +25,16 @@ DeviceEvents
 | extend DetectionTime = strcat(format_datetime(Timestamp,'yyyy-M-dd H:mm:ss'))
 | extend BroswerType = strcat("<", Broswer, " /", InitiatingProcessFileName, ">")
 | extend DetectionURL = strcat("[", RemoteUrl, " : ", IPaddress, " : ", Port, "]")
-| extend Details = strcat("DetectionTime", " ", BroswerType, " ", DetectionURL)
+| extend Details = strcat(DetectionTime, " ", BroswerType, " ", DetectionURL)
 | summarize IoCList = make_list(Details) by DeviceId, DeviceName
 | extend Case = array_length(IoCList)
+| project DeviceId, DeviceName, Case, IoCList
 | order by Case desc 
 ```
+> [!Important]
+> In DeviceNetworkEvents, URLs may appear as ***'ConnectionSuccess'***, but this is the expected result due to the three-way handshake that occurs before an IoC, such as blocking a URL.
+> Technically, end users were blocked from accessing the URL, even if the record shows ***'ConnectionSuccess'***.
+> MS docs : [IP/URL Indicators: Network protection and the TCP three-way handshake](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/manage-indicators?view=o365-worldwide#ipurl-indicators-network-protection-and-the-tcp-three-way-handshake)
 
 #### <Result> 
 
