@@ -12,7 +12,10 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDE     | ASR Rules | [04-MDE-ASR-Rules-CategorizedDetection-Graph.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/04-MDE-ASR-Rules-CategorizedDetection-Graph.md) |
 | MDE     | Indicators "Block" | [01-MDE-URL-Indicators-Block.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-MDE-URL-Indicators-Block.md) | 
 | MDE     | Indicators "Warn"  | [02-MDE-URL-Indicators-Bypass.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/02-MDE-URL-Indicators-Bypass.md) |
-| MDE     | Web Content Filtering | [03-MDE-WebContentFiltering-Detection.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/03-MDE-WebContentFiltering-Detection.md)
+| MDE     | Network Protection |
+| SS*     | Defender SmartScreen  |
+| MDE     | Web Content Filtering | [05-MDE-WebContentFiltering-Detection.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/05-MDE-WebContentFiltering-Detection.md)
+
 
 
 #### Disclaimer
