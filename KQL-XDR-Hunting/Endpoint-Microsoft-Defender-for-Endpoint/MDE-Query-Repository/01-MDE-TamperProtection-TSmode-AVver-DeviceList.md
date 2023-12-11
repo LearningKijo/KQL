@@ -52,5 +52,9 @@ DeviceTvmSecureConfigurationAssessment
 
 #### <Result>
 
+#### Reference
+1. [Endpoint Agent Health Status Report](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/General%20queries/Endpoint%20Agent%20Health%20Status%20Report.md)
+2. [Endpoint AV version report](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/General%20queries/MD%20AV%20Signature%20and%20Platform%20Version.md)
+
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
