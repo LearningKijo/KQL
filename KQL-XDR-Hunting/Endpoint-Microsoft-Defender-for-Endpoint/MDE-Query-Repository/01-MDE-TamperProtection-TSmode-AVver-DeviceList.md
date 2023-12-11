@@ -1,5 +1,5 @@
 # TamperProtection & Troubleshooting mode - Device List
-This query displays 1) Tamper Protection status, 2) Troubleshooting Mode status and 3) Defender Antivirus versions.
+This query displays 1) ***Tamper Protection status***, 2) ***Troubleshooting Mode*** status and 3) ***Defender Antivirus versions*** for each device over the past 7 days.
 
 #### Table name & Description
 - [DeviceEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide) :	Multiple event types, including events triggered by security controls such as Microsoft Defender Antivirus and exploit protection
