@@ -6,18 +6,18 @@ This query displays 1) ***Tamper Protection status***, 2) ***Troubleshooting Mod
 - [DeviceTvmSecureConfigurationAssessment](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicetvmsecureconfigurationassessment-table?view=o365-worldwide) : Microsoft Defender Vulnerability Management assessment events, indicating the status of various security configurations on devices
 
 ```kusto
-// MDE TroubleshootMode Status
+// TroubleshootMode Status
 let TroubleshootMode = (DeviceEvents
 | where Timestamp > ago(7d)
 | where ActionType == "AntivirusTroubleshootModeEvent"
 | extend Parsed = parse_json(AdditionalFields)
 | where Parsed.TroubleshootingStateChangeReason == "Troubleshooting mode started"
-| extend StartTime = Parsed.TroubleshootingStartTime
-| extend EndTime = Parsed.TroubleshootingStateExpiry
+| extend StartTime = todatetime(Parsed.TroubleshootingStartTime)
+| extend EndTime = todatetime(Parsed.TroubleshootingStateExpiry)
 | extend CurrentTime = now()
 | extend TroubleshootMode_Status = iff(CurrentTime > todatetime(EndTime), "Inactive", "Active")
 | summarize arg_max(Timestamp, *) by DeviceId 
-| project Timestamp, DeviceId, DeviceName, TroubleshootMode_Status, tostring(StartTime), tostring(EndTime));
+| project Timestamp, DeviceId, DeviceName, TroubleshootMode_Status, StartTime, EndTime);
 // Microsoft Defender Antivirus versions 
 // Some AV versions are prerequisites for using MDE Troubleshooting Mode
 let AV_versions = (DeviceTvmSecureConfigurationAssessment
