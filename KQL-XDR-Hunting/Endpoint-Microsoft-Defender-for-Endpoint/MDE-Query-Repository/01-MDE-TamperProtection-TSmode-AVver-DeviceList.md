@@ -6,7 +6,7 @@ This query displays 1) ***Tamper Protection status***, 2) ***Troubleshooting Mod
 - [DeviceTvmSecureConfigurationAssessment](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicetvmsecureconfigurationassessment-table?view=o365-worldwide) : Microsoft Defender Vulnerability Management assessment events, indicating the status of various security configurations on devices
 
 ```kusto
-// TroubleshootMode status
+// MDE TroubleshootMode Status
 let TroubleshootMode = (DeviceEvents
 | where Timestamp > ago(7d)
 | where ActionType == "AntivirusTroubleshootModeEvent"
@@ -16,10 +16,10 @@ let TroubleshootMode = (DeviceEvents
 | extend EndTime = Parsed.TroubleshootingStateExpiry
 | extend CurrentTime = now()
 | extend TroubleshootMode_Status = iff(CurrentTime > todatetime(EndTime), "Inactive", "Active")
-| summarize arg_max(Timestamp, DeviceName, TroubleshootMode_Status, tostring(StartTime), tostring(EndTime)) by DeviceId 
+| summarize arg_max(Timestamp, *) by DeviceId 
 | project Timestamp, DeviceId, DeviceName, TroubleshootMode_Status, tostring(StartTime), tostring(EndTime));
-// Defender Antivirus versions 
-// Some AV versions are prerequisites for using MDE TroubleshootMode
+// Microsoft Defender Antivirus versions 
+// Some AV versions are prerequisites for using MDE Troubleshooting Mode
 let AV_versions = (DeviceTvmSecureConfigurationAssessment
 | where ConfigurationId == "scid-2011" and isnotnull(Context)
 | extend avdata=parsejson(Context)
@@ -38,16 +38,16 @@ let AV_config =(DeviceTvmSecureConfigurationAssessment
 | extend packed = pack(Test, Result)
 | summarize Tests = make_bag(packed), DeviceName = any(DeviceName) by DeviceId
 | evaluate bag_unpack(Tests));
-// TamperProtection status
+// MDE TamperProtection Status
 DeviceTvmSecureConfigurationAssessment
 | where ConfigurationId == "scid-2003"
 | extend TamperProtection_State = iff(IsCompliant == 1, "Active", "Inactive")
-| summarize arg_max(Timestamp, DeviceName, TamperProtection_State) by DeviceId
+| summarize arg_max(Timestamp, *) by DeviceId
 | join kind=leftouter TroubleshootMode on DeviceId
 | join kind=leftouter AV_versions on DeviceId
 | join kind=leftouter AV_config on DeviceId
-| extend TamperProtectiontimestamp = Timestamp
-| project DeviceId, DeviceName, TamperProtection_State, TamperProtectiontimestamp, TroubleshootMode_Status, StartTime, EndTime, AntivirusEnabled, RealtimeProtection, AVProductVersion, AVEngineVersion, AVSigVersion, AVSigLastUpdateTime
+| extend TamperProtectionTime = Timestamp
+| project DeviceId, DeviceName, TamperProtection_State, TamperProtectionTime, TroubleshootMode_Status, StartTime, EndTime, AntivirusEnabled, RealtimeProtection, AVProductVersion, AVEngineVersion, AVSigVersion, AVSigLastUpdateTime
 ```
 
 #### <Result>
