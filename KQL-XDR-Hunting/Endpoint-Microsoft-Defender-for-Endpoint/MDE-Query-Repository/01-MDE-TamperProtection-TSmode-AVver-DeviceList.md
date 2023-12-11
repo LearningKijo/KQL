@@ -1,0 +1,56 @@
+# TamperProtection & Troubleshooting mode - Device List
+This query displays 1) Tamper Protection status, 2) Troubleshooting Mode status and 3) Defender Antivirus versions.
+
+#### Table name & Description
+- [DeviceEvents](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceevents-table?view=o365-worldwide) :	Multiple event types, including events triggered by security controls such as Microsoft Defender Antivirus and exploit protection
+- [DeviceTvmSecureConfigurationAssessment](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-devicetvmsecureconfigurationassessment-table?view=o365-worldwide) : Microsoft Defender Vulnerability Management assessment events, indicating the status of various security configurations on devices
+
+```kusto
+// TroubleshootMode status
+let TroubleshootMode = (DeviceEvents
+| where Timestamp > ago(7d)
+| where ActionType == "AntivirusTroubleshootModeEvent"
+| extend Parsed = parse_json(AdditionalFields)
+| where Parsed.TroubleshootingStateChangeReason == "Troubleshooting mode started"
+| extend StartTime = Parsed.TroubleshootingStartTime
+| extend EndTime = Parsed.TroubleshootingStateExpiry
+| extend CurrentTime = now()
+| extend TroubleshootMode_Status = iff(CurrentTime > todatetime(EndTime), "Inactive", "Active")
+| summarize arg_max(Timestamp, DeviceName, TroubleshootMode_Status, tostring(StartTime), tostring(EndTime)) by DeviceId 
+| project Timestamp, DeviceId, DeviceName, TroubleshootMode_Status, tostring(StartTime), tostring(EndTime));
+// Defender Antivirus versions 
+// Some AV versions are prerequisites for using MDE TroubleshootMode
+let AV_versions = (DeviceTvmSecureConfigurationAssessment
+| where ConfigurationId == "scid-2011" and isnotnull(Context)
+| extend avdata=parsejson(Context)
+| extend AVSigVersion = tostring(avdata[0][0])
+| extend AVEngineVersion = tostring(avdata[0][1])
+| extend AVSigLastUpdateTime = tostring(avdata[0][2])
+| extend AVProductVersion = tostring(avdata[0][3]) 
+| project DeviceId, DeviceName, OSPlatform, AVSigVersion, AVEngineVersion, AVSigLastUpdateTime, AVProductVersion, IsCompliant, IsApplicable);
+let AV_config =(DeviceTvmSecureConfigurationAssessment
+| where ConfigurationId in ('scid-2010', 'scid-2012')
+| extend Test = case(
+         ConfigurationId == "scid-2010", "AntivirusEnabled",
+         ConfigurationId == "scid-2012", "RealtimeProtection",
+         "N/A"),
+         Result = case(IsApplicable == 0, "N/A", IsCompliant == 1, "Enable", "Disable")
+| extend packed = pack(Test, Result)
+| summarize Tests = make_bag(packed), DeviceName = any(DeviceName) by DeviceId
+| evaluate bag_unpack(Tests));
+// TamperProtection status
+DeviceTvmSecureConfigurationAssessment
+| where ConfigurationId == "scid-2003"
+| extend TamperProtection_State = iff(IsCompliant == 1, "Active", "Inactive")
+| summarize arg_max(Timestamp, DeviceName, TamperProtection_State) by DeviceId
+| join kind=leftouter TroubleshootMode on DeviceId
+| join kind=leftouter AV_versions on DeviceId
+| join kind=leftouter AV_config on DeviceId
+| extend TamperProtectiontimestamp = Timestamp
+| project DeviceId, DeviceName, TamperProtection_State, TamperProtectiontimestamp, TroubleshootMode_Status, StartTime, EndTime, AntivirusEnabled, RealtimeProtection, AVProductVersion, AVEngineVersion, AVSigVersion, AVSigLastUpdateTime
+```
+
+#### <Result>
+
+#### Disclaimer
+The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
