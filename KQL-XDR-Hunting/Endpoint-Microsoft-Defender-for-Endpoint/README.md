@@ -15,6 +15,10 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDE     | Network Protection | [03-MDE-NetworkProtection-Detection.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/03-MDE-NetworkProtection-Detection.md)
 | SS      | Defender SmartScreen  | [04-SS-DefenderSmartScreen-Detection.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/04-SS-DefenderSmartScreen-Detection.md)
 | MDE     | Web Content Filtering | [05-MDE-WebContentFiltering-Detection.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/05-MDE-WebContentFiltering-Detection.md)
+| MDE     | Troubleshooting mode  |
+| MDE     | Tamper Protection, AV    |
+| MDE     | Tamper Protection, MDE   |
+
 
 > [!Note]
 > - SS : Microsoft Defender SmartScreen
