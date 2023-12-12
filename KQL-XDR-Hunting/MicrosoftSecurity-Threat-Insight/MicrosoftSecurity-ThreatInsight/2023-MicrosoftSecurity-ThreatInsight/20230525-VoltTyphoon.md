@@ -1,4 +1,7 @@
 # Volt Typhoon targets US critical infrastructure with living-off-the-land techniques
+Microsoft has uncovered stealthy and targeted malicious activity focused on post-compromise credential access and network system discovery aimed at critical infrastructure organizations in the United States. 
+The attack is carried out by Volt Typhoon, a state-sponsored actor based in China that typically focuses on espionage and information gathering. 
+Microsoft assesses with moderate confidence that this Volt Typhoon campaign is pursuing development of capabilities that could disrupt critical communications infrastructure between the United States and Asia region during future crises.
 
 ## Advanced hunting queries
 **Find commands creating domain controller installation media** -
