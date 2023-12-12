@@ -5,15 +5,15 @@
 
 Being able to fully leverage the data you have means you can control all activities that occurred across all Defender's workloads. 
 However, starting from scratch can be challenging for some, and sample queries may not always suffice. 
-Therefore, in this repository on KQL-XDR-Hunting, I will be sharing 'out-of-the-box' KQL queries based on feedback, security blogs, and new cyber attacks to assist you in your threat hunting.
+Therefore, in this repository on KQL-XDR-Hunting, I will be sharing ***'out-of-the-box' KQL queries*** based on feedback, security blogs, and new cyber attacks to assist you in your threat hunting.
 
 ## LearningKijo/KQL repo architecture
 
-| Category       | Products       | Memo          |
-| :------------- | :------------- |:------------- |
-| Endpoint       | [Microsoft Defender for Endpoint <br> Microsoft Defender Antivirus](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint) | 
-| Email          | [Exchange Online Protection <br> Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
-| Identity       | [Microsoft Entra ID (Azure AD) <br> Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity)  |
+| Category       | Products       |
+| :------------- | :------------- |
+| Endpoint       | [- Microsoft Defender for Endpoint <br>  - Microsoft Defender Antivirus](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint) | 
+| Email          | [- Exchange Online Protection <br> - Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
+| Identity       | [- Microsoft Entra ID (Azure AD) <br> - Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity)  |
 | App & Data     | TBD |
 | Detection      | TBD |
 
