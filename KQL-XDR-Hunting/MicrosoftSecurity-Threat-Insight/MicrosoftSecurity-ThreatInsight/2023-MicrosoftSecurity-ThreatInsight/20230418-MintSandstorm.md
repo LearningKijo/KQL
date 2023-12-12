@@ -1,4 +1,5 @@
 # Nation-state threat actor Mint Sandstorm refines tradecraft to attack high-value targets
+Mint Sandstorm is known to pursue targets in both the private and public sectors, including political dissidents, activist leaders, the Defense Industrial Base (DIB), journalists, and employees from multiple government agencies, including individuals protesting oppressive regimes in the Middle East. Activity Microsoft tracks as part of the larger Mint Sandstorm group overlaps with public reporting on groups known as APT35, APT42, Charming Kitten, and TA453.
 
 ## Advanced hunting queries
 ManageEngine Suspicious Process Execution
