@@ -1,4 +1,4 @@
-# MERCURY and DEV-1084: Destructive attack on hybrid environment
+# MERCURY and DEV-1084: Destructive attack on hybrid environments
 
 > [!Important]
 > April 2023 update – Microsoft Threat Intelligence has shifted to a new threat actor naming taxonomy aligned around the theme of weather. MERCURY is now tracked as Mango Sandstorm and DEV-1084 is now tracked as Storm-1084.
