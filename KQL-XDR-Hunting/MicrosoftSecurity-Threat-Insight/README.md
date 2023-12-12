@@ -1,5 +1,11 @@
 # DEV
 
+
+![image](https://github.com/LearningKijo/KQL/assets/120234772/9a4b225a-18b6-4242-9055-c914641708b1)
+> [!Note]
+> Microsoft has shifted to a new naming taxonomy for threat actors aligned with the theme of weather. With the new taxonomy, we intend to bring better clarity to customers and other security researchers already confronted with an overwhelming amount of threat intelligence data and offer a more organized, articulate, and easy way to reference threat actors so that organizations can better prioritize and protect themselves.
+> [How Microsoft names threat actors](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide)
+
 ## Sandstorm
 | Date    | Name    | Microsoft Security Blog / KQL |
 |:--------|:--------|:----------|
