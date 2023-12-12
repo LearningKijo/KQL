@@ -1,4 +1,6 @@
 # MERCURY and DEV-1084: Destructive attack on hybrid environments
+Microsoft Threat Intelligence has detected destructive operations enabled by MERCURY, a nation-state actor linked to the Iranian government, that attacked both on-premises and cloud environments. 
+While the threat actors attempted to masquerade the activity as a standard ransomware campaign, the unrecoverable actions show destruction and disruption were the ultimate goals of the operation.
 
 > [!Important]
 > April 2023 update – Microsoft Threat Intelligence has shifted to a new threat actor naming taxonomy aligned around the theme of weather. MERCURY is now tracked as Mango Sandstorm and DEV-1084 is now tracked as Storm-1084.
