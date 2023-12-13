@@ -11,6 +11,11 @@ In this Identity KQL repository, I am delighted to share out-of-the-box ***XDR &
 
 
 ### AiTM
+| Date           | AiTM Hunting queries                  |
+|:---------------|:--------------------------------------|
+| July 12, 2022  | [From cookie theft to BEC: Attackers use AiTM phishing sites as entry point to further financial fraud](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20220712-MSSecurityBlog-AiTM-HuntingQueries.md) |
+| March 13, 2023 | [DEV-1101 enables high-volume AiTM campaigns with open-source phishing kit](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20230313-MSSecurityBlog-AiTM-MicrosoftSentinel-AnalyticsTemplate.md) |
+
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
