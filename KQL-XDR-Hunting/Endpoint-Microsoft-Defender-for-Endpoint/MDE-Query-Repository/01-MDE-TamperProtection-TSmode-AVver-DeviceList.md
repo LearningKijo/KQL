@@ -40,6 +40,7 @@ let AV_config =(DeviceTvmSecureConfigurationAssessment
 | evaluate bag_unpack(Tests));
 // MDE TamperProtection Status
 DeviceTvmSecureConfigurationAssessment
+| where OSPlatform in ("Windows10", "Windows11", "WindowsServer2019", "WindowsServer2022")
 | where ConfigurationId == "scid-2003"
 | extend TamperProtection_State = iff(IsCompliant == 1, "Active", "Inactive")
 | summarize arg_max(Timestamp, *) by DeviceId
@@ -47,10 +48,11 @@ DeviceTvmSecureConfigurationAssessment
 | join kind=leftouter AV_versions on DeviceId
 | join kind=leftouter AV_config on DeviceId
 | extend TamperProtectionTime = Timestamp
-| project DeviceId, DeviceName, TamperProtection_State, TamperProtectionTime, TroubleshootMode_Status, StartTime, EndTime, AntivirusEnabled, RealtimeProtection, AVProductVersion, AVEngineVersion, AVSigVersion, AVSigLastUpdateTime
+| project DeviceId, DeviceName, OSPlatform, TamperProtection_State, TamperProtectionTime, TroubleshootMode_Status, StartTime, EndTime, AntivirusEnabled, RealtimeProtection, AVProductVersion, AVEngineVersion, AVSigVersion, AVSigLastUpdateTime
 ```
 
-#### <Result>
+#### Result
+![image](https://github.com/LearningKijo/KQL/assets/120234772/cac589f6-3e9a-44bd-b263-d52cf35838be)
 
 #### Reference
 1. [Endpoint Agent Health Status Report](https://github.com/microsoft/Microsoft-365-Defender-Hunting-Queries/blob/master/General%20queries/Endpoint%20Agent%20Health%20Status%20Report.md)
