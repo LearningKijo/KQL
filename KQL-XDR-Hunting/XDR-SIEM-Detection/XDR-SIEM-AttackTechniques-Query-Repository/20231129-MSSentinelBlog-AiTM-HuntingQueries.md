@@ -147,7 +147,7 @@
 - **Description** : This rule identifies successful logins by risky users on non-Microsoft network devices. It looks for users who have engaged in potentially suspicious network activity on these devices.
 - **How it works** : By analyzing Azure Active Directory and security logs from network devices like Palo Alto Networks, Fortinet, Check Point, and Zscaler, this rule identifies suspicious user sign-ins. It then correlates these sign-ins with risky network activity.
 ```kusto
-SigninLogs
+    SigninLogs
     //Find risky Signin
     | where RiskState == "atRisk" and ResultType == 0
     | extend Signin_Time = TimeGenerated
