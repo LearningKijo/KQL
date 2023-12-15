@@ -9,13 +9,7 @@ AADSignInEventsBeta
 | where Timestamp >ago (7d)
 | where ErrorCode==0
 | where RiskLevelDuringSignIn >= 50
-| project
-    AccountUpn,
-    AccountObjectId,
-    SessionId,
-    RiskLevelDuringSignIn,
-    ApplicationId,
-    Application
+| project AccountUpn, AccountObjectId, SessionId, RiskLevelDuringSignIn, ApplicationId, Application
 ```
 
 Oauth Application creation or modification by user who has suspicious sign in activities
@@ -28,17 +22,7 @@ AADSignInEventsBeta
 | join kind=leftouter (CloudAppEvents | where Timestamp > ago(7d)
 | where ActionType in ("Add application.", "Update application.", "Update application – Certificates and secrets management ")
 | extend appId = tostring(parse_json(RawEventData.Target[4].ID))
-| project
-    Timestamp,
-    ActionType,
-    Application,
-    ApplicationId,
-    UserAgent,
-    ISP,
-    AccountObjectId,
-    AppName=ObjectName,
-    OauthApplicationId=appId,
-    RawEventData ) on AccountObjectId
+| project Timestamp, ActionType, Application, ApplicationId, UserAgent, ISP, AccountObjectId, AppName=ObjectName, OauthApplicationId=appId, RawEventData ) on AccountObjectId
 | where isnotempty(ActionType)
 ```
 
@@ -74,23 +58,17 @@ let mailItemsAccessedActions = reconEvents
     | summarize TotalCount = sum(OperationCount) by bin (Timestamp, 15m), AccountObjectId, SessionId, IPAddress;
 mailItemsAccessedActions;
 ```
+> [!Note]
+> This query works in Kusto Explorer
 
 SignIn to newly created app within Risky Session
 ```kusto
+//SignIn to newly created app within Risky Session
 AADSignInEventsBeta
 | where Timestamp >ago (7d) 
-| where AccountObjectId in ("<Impacted AccountObjectId>") and 
-SessionId in ("<Risky Session Id>")
+| where AccountObjectId in ("<Impacted AccountObjectId>") and SessionId in ("<Risky Session Id>")
 | where ApplicationId in ("<Oauth appId>") // Recently added or modified App Id
-| project
-    AccountUpn,
-    AccountObjectId,
-    ApplicationId,
-    Application,
-    SessionId,
-    RiskLevelDuringSignIn,
-    RiskLevelAggregated,
-    Country
+| project AccountUpn, AccountObjectId, ApplicationId, Application, SessionId, RiskLevelDuringSignIn, RiskLevelAggregated, Country
 ```
 
 To check suspicious Mailbox rules
@@ -114,7 +92,7 @@ To check any suspicious Url clicks from emails before risky signin by the user
 UrlClickEvents
 | where Timestamp between (start .. end) //Timestamp around time proximity of Risky signin by user
 | where AccountUpn has "<Impacted User’s UPN or Email address>" and ActionType has "ClickAllowed"
-| project Timestamp,Url,NetworkMessageId
+| project Timestamp, Url, NetworkMessageId
 ```
 
 To fetch the suspicious email details
@@ -123,7 +101,7 @@ EmailEvents
 | where Timestamp between (start .. end) //Timestamp lookback to be increased gradually to find the email received
 | where EmailDirection has "Inbound"
 | where RecipientEmailAddress has "<Impacted User’s UPN or Email address>" and NetworkMessageId == "<NetworkMessageId from UrlClickEvents>"
-| project SenderFromAddress,SenderMailFromAddress,SenderIPv4,SenderFromDomain, Subject,UrlCount,AttachmentCount
+| project SenderFromAddress, SenderMailFromAddress, SenderIPv4, SenderFromDomain, Subject, UrlCount, AttachmentCount
 ```  
      
 To check if suspicious emails sent for spamming (with similar email subjects, urls etc.)
@@ -132,7 +110,7 @@ EmailEvents
 | where Timestamp between (start .. end) //Timestamp from the app creation time to few hours upto 24 hours or more
 | where EmailDirection in ("Outbound","Intra-org")
 | where SenderFromAddress has "<Impacted User’s UPN or Email address>"  or SenderMailFromAddress has "<Impacted User’s UPN or Email address>"
-| project RecipientEmailAddress,RecipientObjectId,SenderIPv4,SenderFromDomain, Subject,UrlCount,AttachmentCount,NetworkMessageId
+| project RecipientEmailAddress, RecipientObjectId, SenderIPv4, SenderFromDomain, Subject, UrlCount, AttachmentCount, NetworkMessageId
 ```
 
 #### Reference
