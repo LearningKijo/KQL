@@ -9,6 +9,11 @@ In this Identity KQL repository, I am delighted to share out-of-the-box ***XDR &
 | EDR     | [02-XDR-EDR-Endpoint-AnalyzingDailyDetections.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-Detection-Query-Repository/02-XDR-EDR-Endpoint-AnalyzingDailyDetections.md) |
 | XDR     | [03-XDR-AnalyzingAllDetection-With-MITRE-ATTCK.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-Detection-Query-Repository/03-XDR-AnalyzingAllDetections-With-MITRE-ATTCK.md)
 
+### Detection & Attack Techniques   
+| Type        | Detection & Attack Techniques         |
+|:------------|:--------------------------------------|
+| Email       | [Suspicious email events](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20231212-MSSecurityBlog-OAuthApplications-SuspiciousEmailEvents.md) |
+| Email, App  | [BEC reconnaissance and OAuth application activity](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20231212-MSSecurityBlog-OAuthApplications-BECreconnaissanceOAuthApp.md) |
 
 ### AiTM, Storm-1101
 | Date           | Microsoft Security Blog - Hunting query                   |
