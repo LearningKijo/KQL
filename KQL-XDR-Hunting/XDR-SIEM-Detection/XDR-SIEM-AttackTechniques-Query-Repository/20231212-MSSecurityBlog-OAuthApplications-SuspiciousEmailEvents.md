@@ -1,6 +1,6 @@
 # Suspicious email events
 
-### Threat actors misuse OAuth applications to automate financially driven attacks
+Microsoft Security Blog title - Threat actors misuse OAuth applications to automate financially driven attacks
 
 > [!Note]
 > These queries need to be updated with timestamps related to application creation time before running.
