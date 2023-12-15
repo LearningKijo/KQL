@@ -1,5 +1,6 @@
 # BEC reconnaissance and OAuth application activity
-- Threat actors misuse OAuth applications to automate financially driven attacks
+
+ ### Threat actors misuse OAuth applications to automate financially driven attacks
 
 #### BEC reconnaissance and OAuth application activity
 
