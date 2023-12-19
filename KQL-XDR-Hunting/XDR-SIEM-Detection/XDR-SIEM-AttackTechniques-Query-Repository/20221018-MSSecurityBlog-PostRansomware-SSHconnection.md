@@ -1,7 +1,7 @@
 # Monitoring SSH connection 
 Microsoft Security Blog title - Defenders beware: A case for post-ransomware investigations
 
-Scheduled task: OpenSSH
+**Scheduled task: OpenSSH**
 
 The actor installed OpenSSH on the client's network to maintain persistence on critical servers, including domain controllers and domain administrator workstations. The actor installed OpenSSH within C:\Windows\OpenSSH, rather than the standard OpenSSH path in System32.
 
