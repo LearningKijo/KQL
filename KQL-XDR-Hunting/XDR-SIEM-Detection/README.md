@@ -17,9 +17,11 @@ In this Identity KQL repository, I am delighted to share out-of-the-box ***XDR &
 | Ransomware, <br> DART| Defenders beware: A case for post-ransomware investigation, October 18, 2022 <br> 1. [Monitoring Task schedules](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20221018-MSSecurityBlog-PostRansomware-Taskschedules.md) <br> 2. [Monitoring SSH connection](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20221018-MSSecurityBlog-PostRansomware-SSHconnection.md) <br> 3. [Possible Impacket (WMI) module usage](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20221018-MSSecurityBlog-PostRansomware-Impacket.md) <br> 4. [PsExec.exe usage](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20221018-MSSecurityBlog-PostRansomware-PsExec.md) <br> 5. [WDigest credential harvesting](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20221018-MSSecurityBlog-PostRansomware-WDigest.md) <br> 6. [Antivirus tampering](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/XDR-SIEM-Detection/XDR-SIEM-AttackTechniques-Query-Repository/20221018-MSSecurityBlog-PostRansomware-AntivirusTampering.md)|
 
 > [!Note]
-> The idea behind creating this repository stems from the sense of disappointment I've felt over time.
+> The idea behind creating this repository ***(Detection & Attack Techniques)*** stems from the sense of disappointment I've felt over time.
 > Despite the continuous sharing of excellent blogs, such as MSTIC and DART, there's a recurring concern that lists covering threat hunting queries, attacker TTPs, and similar aspects tend to fade away and get lost as time progresses.
-> Consequently, I've taken the initiative to create this repository as a meticulous effort to serve as a log where one can carefully revisit insights into threat hunting against various attacks, to the extent possible. - Kijo Ninja
+> Consequently, I've taken the initiative to create this repository as a meticulous effort to serve as a log where one can carefully revisit insights into threat hunting against various attacks, to the extent possible.
+> 
+> By Kijo Ninja
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
