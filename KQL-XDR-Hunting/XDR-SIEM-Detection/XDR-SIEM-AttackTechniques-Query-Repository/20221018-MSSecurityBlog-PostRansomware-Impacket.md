@@ -21,7 +21,7 @@ DeviceEvents
 | project Timestamp, DeviceId, DeviceName, ActionType, FolderPath, FileName, ProcessCommandLine, InitiatingProcessCommandLine
 ```
 
-```
+```kusto
 DeviceProcessEvents
 | where Timestamp > ago(7d)
 | where InitiatingProcessParentFileName == "WmiPrvSE.exe"
