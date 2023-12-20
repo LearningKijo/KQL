@@ -19,6 +19,10 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDE     | Troubleshooting mode  | [01-MDE-TamperProtection-TSmode-AVver-DeviceList.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-MDE-TamperProtection-TSmode-AVver-DeviceList.md) |
 | MDE     | Vulnerability Management | [01-MDE-TVM-InstalledSoftware-List-Windows.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-MDE-TVM-InstalledSoftware-List-Windows.md) |
 
+### X-plat - Linux & MacOS
+Update 2024 !!
+| Product | Feature   | KQL query |
+|:--------|:----------|:----------|
 
 
 > [!Note]
