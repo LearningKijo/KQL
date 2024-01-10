@@ -15,7 +15,7 @@ Therefore, in this repository on KQL-XDR-Hunting, I will be sharing ***'out-of-t
 | Email          | [- Exchange Online Protection <br> - Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
 | Identity       | [- Microsoft Entra ID (Azure AD) <br> - Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity)  |
 | App & Data     | TBD |
-| Detection      | TBD |
+| Detection      | SOON !! |
 
 ## Usage 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/6fb7848e-439f-4871-84c6-70d8c3df6c80)
