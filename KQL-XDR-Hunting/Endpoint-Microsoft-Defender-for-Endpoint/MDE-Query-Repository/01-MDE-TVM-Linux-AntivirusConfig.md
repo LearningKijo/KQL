@@ -29,7 +29,7 @@ DeviceTvmSecureConfigurationAssessmentKB
 
 //scid-6090, Turn on Microsoft Defender Antivirus real-time protection for Linux
 //scid-6091, Turn on Microsoft Defender Antivirus PUA protection in block mode for Linux
-//scid-6094, Enable Microsoft Defender Antivirus cloud-delivered protection for Linu//
+//scid-6094, Enable Microsoft Defender Antivirus cloud-delivered protection for Linux
 //scid-6095, Update Microsoft Defender Antivirus definitions for Linux
 ```
 
