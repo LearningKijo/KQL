@@ -10,6 +10,7 @@ I have seen a variety of valuable insights on nation-based threat actors from MS
 | Date            | Name            | Microsoft Security Blog / KQL |
 |:----------------|:----------------|:------------------------------|
 | May 24, 2023    | Volt Typhoon    | [Volt Typhoon targets US critical infrastructure with living-off-the-land techniques](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230525-VoltTyphoon.md) |
+| August 24, 2023 | Flax Typhoon | [Flax Typhoon using legitimate software to quietly access Taiwanese organizations](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230824-FlaxTyphoon.md) |
 
 ## Sandstorm
 | Date            | Name            | Microsoft Security Blog / KQL |
