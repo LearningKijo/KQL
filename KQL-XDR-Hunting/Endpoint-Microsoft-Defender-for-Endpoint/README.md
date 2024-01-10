@@ -23,7 +23,10 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 Update 2024 !!
 | Product | Feature   | KQL query |
 |:--------|:----------|:----------|
-
+| AV      | Configuration | [01-MDE-TVM-Linux-AntivirusConfig.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-MDE-TVM-Linux-AntivirusConfig.md) |
+| AV      | Configuration | [02-MDE-TVM-MacOS-AntivirusConfig.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/02-MDE-TVM-MacOS-AntivirusConfig.md) |
+| MDE     | Vulnerability Management | [03-MDE-TVM-InstalledSoftware-List-Linux.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/03-MDE-TVM-InstalledSoftware-List-Linux.md) |
+| MDE     | Vulnerability Management | [04-MDE-TVM-InstalledSoftware-List-MacOS.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/04-MDE-TVM-InstalledSoftware-List-MacOS.md)|
 
 > [!Note]
 > - SS : Microsoft Defender SmartScreen
