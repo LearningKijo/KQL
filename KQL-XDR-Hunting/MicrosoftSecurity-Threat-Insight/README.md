@@ -1,5 +1,9 @@
-# Microsoft Security Threat Insight
+# Microsoft Security Threat Insight 2023
 I have seen a variety of valuable insights on nation-based threat actors from MSTIC, DART, the Product Team, and others. While I may not be able to list them all precisely, I would like to keep them here as KQL query logs.
+
+> [!Note]
+> This repository primarily focuses on ***Threat Actors*** from the year 2023 , and therefore, does not include specific attack techniques.
+> For details on each KQL, attack backgrounds, etc., please refer to the accompanying blog.
 
 ## Blizzard
 | Date            | Name            | Microsoft Security Blog / KQL |
