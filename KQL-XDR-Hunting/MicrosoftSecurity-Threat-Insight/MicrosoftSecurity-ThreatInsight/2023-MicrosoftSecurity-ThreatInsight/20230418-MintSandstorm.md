@@ -1,6 +1,13 @@
 # Nation-state threat actor Mint Sandstorm refines tradecraft to attack high-value targets
 Mint Sandstorm is known to pursue targets in both the private and public sectors, including political dissidents, activist leaders, the Defense Industrial Base (DIB), journalists, and employees from multiple government agencies, including individuals protesting oppressive regimes in the Middle East. Activity Microsoft tracks as part of the larger Mint Sandstorm group overlaps with public reporting on groups known as APT35, APT42, Charming Kitten, and TA453.
 
+Mint Sandstorm is a composite name used to describe several subgroups of activity with ties to the same organizational structure. 
+Microsoft assesses that Mint Sandstorm is associated with an intelligence arm of Iran’s military, the Islamic Revolutionary Guard Corps (IRGC), an assessment that has been corroborated by multiple credible sources including Mandiant, Proofpoint, and SecureWorks.  
+In 2022, the US Department of Treasury sanctioned elements of Mint Sandstorm for past cyberattacks citing sponsorship from the IRGC.
+
+Today, Microsoft is reporting on a distinct Mint Sandstorm subgroup that specializes in hacking into and stealing sensitive information from high-value targets. 
+This Mint Sandstorm subgroup is technically and operationally mature, capable of developing bespoke tooling and quickly weaponizing N-day vulnerabilities, and has demonstrated agility in its operational focus, which appears to align with Iran’s  national priorities.
+
 ## Advanced hunting queries
 ManageEngine Suspicious Process Execution
 ```kusto
