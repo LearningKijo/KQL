@@ -1,7 +1,9 @@
 # KQL - Detection & Threat Hunting 
+<a href="https://twitter.com/kj_ninja25"><img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/kj_ninja25"></a>
+<a href="https://www.linkedin.com/in/kijo-niimura/"><img src="https://img.shields.io/badge/-Linkedin-0077B5.svg?logo=linkedin&style=popout"></a>
 <a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure-KQL-00B2FF.svg?logo=microsoftazure&style=popout"></a>
 <a href="https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/"><img src="https://img.shields.io/badge/Azure%20Data%20Explorer-%230078D4.svg?&style=popout&logo=azure%20data%20explorer&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/kijo-niimura/"><img src="https://img.shields.io/badge/-Linkedin-0077B5.svg?logo=linkedin&style=popout"></a>
+
 
 Being able to fully leverage the data you have means you can control all activities that occurred across all Defender's workloads. 
 However, starting from scratch can be challenging for some, and sample queries may not always suffice. 
