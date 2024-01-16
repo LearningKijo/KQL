@@ -22,7 +22,7 @@ EmailEvents
           @'["Campaign"]'
         )
 | extend SenderFromAddress_IPv4 = strcat(SenderFromAddress, ", ", SenderIPv4)
-| project Timestamp, NetworkMessageId, Subject, SenderFromAddress_IPv4, RecipientEmailAddress, DeliveryLocation, EOP_detection.Phish
+| project Timestamp, NetworkMessageId, Subject, SenderFromAddress_IPv4, RecipientEmailAddress, DeliveryLocation, MDO_detection.Phish
 ```
 
 #### <Result>
