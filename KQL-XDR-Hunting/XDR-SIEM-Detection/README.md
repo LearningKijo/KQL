@@ -19,8 +19,9 @@ In this Identity KQL repository, I am delighted to share out-of-the-box ***XDR &
 > [!Note]
 > The idea behind creating this repository ***(Detection & Attack Techniques)*** stems from the sense of disappointment I've felt over time.
 > Despite the continuous sharing of excellent blogs, such as MSTIC and DART, there's a recurring concern that lists covering threat hunting queries, attacker TTPs, and similar aspects tend to fade away and get lost as time progresses.
-> Consequently, I've taken the initiative to create this repository as a meticulous effort to serve as a log where one can carefully revisit insights into threat hunting against various attacks, to the extent possible.
-> 
+> Therefore, I decided to create this repository like a detailed log. It's a place where you can go back and find useful insights on hunting for threats in different attacks whenever you need them.
+> This repository may not cover everything you expected, but I'll keep adding valuable insights. I hope it will be helpful for your needs.
+>
 > By Kijo Ninja
 
 #### Disclaimer
