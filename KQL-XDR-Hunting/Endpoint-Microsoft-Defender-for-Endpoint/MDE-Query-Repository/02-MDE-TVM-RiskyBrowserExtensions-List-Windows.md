@@ -3,7 +3,7 @@ The query displays all installed browser extensions categorized as 'Medium' or '
 
 #### Table name & Description
 - [DeviceInfo](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceinfo-table?view=o365-worldwide) : Machine information, including OS information
-- [DeviceTvmBrowserExtensions](https://learn.microsoft.com/en-us/microsoft-365/security/defender-vulnerability-management/tvm-browser-extensions?view=o365-worldwide#use-advanced-hunting) : Details about the browser extensions installed per device : 
+- [DeviceTvmBrowserExtensions](https://learn.microsoft.com/en-us/microsoft-365/security/defender-vulnerability-management/tvm-browser-extensions?view=o365-worldwide#use-advanced-hunting) : Details about the browser extensions installed per device 
 
 ```kusto
 let ChromeExtensions = DeviceTvmBrowserExtensions
