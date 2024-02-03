@@ -1,6 +1,10 @@
 # TVM : Risky Browser Extensions List for Windows Device
 The query displays all installed browser extensions categorized as 'Medium' or 'High' risk on devices.
 
+> [!Important]
+> To use this feature you'll require Microsoft Defender Vulnerability Management Standalone or if you're already a Microsoft Defender for Endpoint Plan 2 customer, the Defender Vulnerability Management add-on
+> : [Browser extensions assessment](https://learn.microsoft.com/en-us/microsoft-365/security/defender-vulnerability-management/tvm-browser-extensions?view=o365-worldwide#use-advanced-hunting)
+
 #### Table name & Description
 - [DeviceInfo](https://learn.microsoft.com/en-us/microsoft-365/security/defender/advanced-hunting-deviceinfo-table?view=o365-worldwide) : Machine information, including OS information
 - [DeviceTvmBrowserExtensions](https://learn.microsoft.com/en-us/microsoft-365/security/defender-vulnerability-management/tvm-browser-extensions?view=o365-worldwide#use-advanced-hunting) : Details about the browser extensions installed per device 
