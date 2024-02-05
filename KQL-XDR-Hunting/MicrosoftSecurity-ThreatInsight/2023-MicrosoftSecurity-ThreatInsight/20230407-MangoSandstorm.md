@@ -7,6 +7,8 @@ Microsoft has detected destructive operations by MERCURY, an Iranian-linked nati
 > 👉 April 7, 2023, [MERCURY and DEV-1084: Destructive attack on hybrid environment](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/) 
 
 ## Advanced hunting queries
+***Microsoft 365 Defender : To locate related activity, Microsoft 365 Defender customers can run the following advanced hunting queries:***
+
 Advanced Hunting Query to surface potential Mercury PowerShell script backdoor installation
 ```kusto
 DeviceFileEvents
