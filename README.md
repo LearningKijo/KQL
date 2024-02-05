@@ -22,6 +22,7 @@ Therefore, in this repository on KQL-XDR-Hunting, I will be sharing ***'out-of-t
 | :------------- | :------------- |
 | Detection      | [XDR-SIEM-Detection](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-SIEM-Detection) |
 | Detection      | [Microsoft Security Threat Insight 2023](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/MSSecurityThreatInsight2023.md) |
+| Detection      | [Microsoft Security Threat Insight 2024](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2024-MicrosoftSecurity-ThreatInsight/MSSecurityThreatInsight2024.md) |
 
 ## Usage 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/6fb7848e-439f-4871-84c6-70d8c3df6c80)
