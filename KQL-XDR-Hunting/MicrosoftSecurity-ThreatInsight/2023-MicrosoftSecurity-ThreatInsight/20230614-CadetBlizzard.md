@@ -4,6 +4,8 @@ Microsoft has identified a new Russian cyber threat group called Cadet Blizzard,
 > 👉 June 14, 2023, [Cadet Blizzard emerges as a novel and distinct Russian threat actor](https://www.microsoft.com/en-us/security/blog/2023/06/14/cadet-blizzard-emerges-as-a-novel-and-distinct-russian-threat-actor/)
 
 ## Advanced hunting queries
+***Microsoft 365 Defender : Microsoft 365 Defender customers can run the following query to find related activity in their networks:***
+
 Check for WMIExec Impacket activity with common Cadet Blizzard commands
 ```kusto
 DeviceProcessEvents
