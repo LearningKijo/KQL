@@ -1,9 +1,7 @@
 # Diamond Sleet supply chain compromise distributes a modified CyberLink installer
-The actor that Microsoft tracks as Diamond Sleet (formerly ZINC) is a North Korea-based activity group known to target media, defense, and information technology (IT) industries globally. 
-Diamond Sleet focuses on espionage, theft of personal and corporate data, financial gain, and corporate network destruction. 
-Diamond Sleet is known to use a variety of custom malware that is exclusive to the group. 
-Recent Diamond Sleet malware is described in Microsoft’s reporting of the group’s weaponization of open source software and exploitation of N-day vulnerabilities. 
-Diamond Sleet overlaps with activity tracked by other security companies as Temp.Hermit and Labyrinth Chollima.
+
+Microsoft Threat Intelligence has exposed a supply chain attack by North Korean threat actor Diamond Sleet (ZINC). The attack involved a modified installer of a legitimate application by CyberLink Corp., a multimedia software company. The installer, signed with a valid CyberLink Corp. certificate, downloads a second-stage payload, impacting over 100 devices across multiple countries. Diamond Sleet is attributed to this with high confidence, and the second-stage payload communicates with previously compromised infrastructure. Microsoft has taken steps to mitigate further risks, including informing CyberLink, notifying affected Microsoft Defender for Endpoint customers, reporting the attack to GitHub, and adding the malicious certificate to its disallowed list. Microsoft Defender for Endpoint detects this as Diamond Sleet activity, and Defender Antivirus labels the malware as Trojan:Win32/LambLoad. The blog may be updated with additional insights as the campaign progresses.
+> 👉 November 22, 2023, [Diamond Sleet supply chain compromise distributes a modified CyberLink installer](https://www.microsoft.com/en-us/security/blog/2023/11/22/diamond-sleet-supply-chain-compromise-distributes-a-modified-cyberlink-installer/)
 
 ## Advanced hunting queries
 **Microsoft Defender XDR**  
