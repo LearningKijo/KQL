@@ -1,16 +1,9 @@
 # Flax Typhoon using legitimate software to quietly access Taiwanese organizations
-Flax Typhoon has been active since mid-2021 and has targeted government agencies and education, critical manufacturing, and information technology organizations in Taiwan. 
-Some victims have also been observed elsewhere in Southeast Asia, as well as in North America and Africa. 
-Flax Typhoon focuses on persistence, lateral movement, and credential access. As with any observed nation-state actor activity, Microsoft has directly notified targeted or compromised customers, providing them with important information needed to secure their environments.
-
-Flax Typhoon is known to use the China Chopper web shell, Metasploit, Juicy Potato privilege escalation tool, Mimikatz, and SoftEther virtual private network (VPN) client. 
-However, Flax Typhoon primarily relies on living-off-the-land techniques and hands-on-keyboard activity. 
-Flax Typhoon achieves initial access by exploiting known vulnerabilities in public-facing servers and deploying web shells like China Chopper. 
-Following initial access, Flax Typhoon uses command-line tools to first establish persistent access over the remote desktop protocol, then deploy a VPN connection to actor-controlled network infrastructure, and finally collect credentials from compromised systems. 
-Flax Typhoon further uses this VPN access to scan for vulnerabilities on targeted systems and organizations from the compromised systems.
+Microsoft has identified a distinct pattern of malicious activity primarily affecting organizations in Taiwan, attributed to Flax Typhoon, a Chinese nation-state actor (overlapping with ETHEREAL PANDA). The campaign involves espionage and maintaining access across various industries. Although no final objectives have been observed, Microsoft highlights the concern for potential impact on customers. The blog aims to raise community awareness and enhance protection measures. The threat relies on valid accounts and living-off-the-land binaries, making detection and mitigation challenging. Recommendations include closing or changing compromised accounts, isolating and investigating compromised systems. Microsoft 365 Defender is equipped to detect such stealthy attacks, and the blog provides additional mitigation steps and best practices.
+> 👉 August 24, 2023, [Flax Typhoon using legitimate software to quietly access Taiwanese organizations](https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/)
 
 ## Advanced hunting queries
-Microsoft 365 Defender customers can run the following queries to find related activity in their networks:
+***Microsoft 365 Defender : Microsoft 365 Defender customers can run the following queries to find related activity in their networks:***
 
 Network activity with Flax Typhoon network infrastructure
 ```kusto
