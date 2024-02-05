@@ -13,30 +13,30 @@ I have seen a variety of valuable insights on nation-based threat actors from MS
 ## Blizzard
 | Date            | Name            | Microsoft Security Blog / KQL |
 |:----------------|:----------------|:------------------------------|
-| June 14         | Cadet Blizzard  | [Cadet Blizzard emerges as a novel and distinct Russian threat actor](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230614-CadetBlizzard.md) |
+| June 14         | Cadet Blizzard  | [Cadet Blizzard emerges as a novel and distinct Russian threat actor](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230614-CadetBlizzard.md) |
 
 ## Typhoon
 | Date            | Name            | Microsoft Security Blog / KQL |
 |:----------------|:----------------|:------------------------------|
-| May 24          | Volt Typhoon    | [Volt Typhoon targets US critical infrastructure with living-off-the-land techniques](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230525-VoltTyphoon.md) |
-| August 24       | Flax Typhoon | [Flax Typhoon using legitimate software to quietly access Taiwanese organizations](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230824-FlaxTyphoon.md) |
+| May 24          | Volt Typhoon    | [Volt Typhoon targets US critical infrastructure with living-off-the-land techniques](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230525-VoltTyphoon.md) |
+| August 24       | Flax Typhoon | [Flax Typhoon using legitimate software to quietly access Taiwanese organizations](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230824-FlaxTyphoon.md) |
 
 ## Sandstorm
 | Date            | Name            | Microsoft Security Blog / KQL |
 |:----------------|:----------------|:------------------------------|
-| April 7         | Mango Sandstorm | [MERCURY and DEV-1084: Destructive attack on hybrid environments](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230407-MangoSandstorm.md) |
-| April 18        | Mint Sandstorm | [Nation-state threat actor Mint Sandstorm refines tradecraft to attack high-value targets](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230418-MintSandstorm.md) |
+| April 7         | Mango Sandstorm | [MERCURY and DEV-1084: Destructive attack on hybrid environments](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230407-MangoSandstorm.md) |
+| April 18        | Mint Sandstorm | [Nation-state threat actor Mint Sandstorm refines tradecraft to attack high-value targets](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230418-MintSandstorm.md) |
 
 ## Sleet
 | Date            | Name            | Microsoft Security Blog / KQL |
 |:----------------|:----------------|:------------------------------|
-| October 18      | Diamond Sleet <br> Onyx Sleet | [Multiple North Korean threat actors exploiting the TeamCity CVE-2023-42793 vulnerability](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20231018-DiamondSleet-OnyxSleet.md)
-| November 22     | Diamond Sleet   | [Diamond Sleet supply chain compromise distributes a modified CyberLink installer](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20231122-DiamondSleet.md) |
+| October 18      | Diamond Sleet <br> Onyx Sleet | [Multiple North Korean threat actors exploiting the TeamCity CVE-2023-42793 vulnerability](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20231018-DiamondSleet-OnyxSleet.md)
+| November 22     | Diamond Sleet   | [Diamond Sleet supply chain compromise distributes a modified CyberLink installer](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight//20231122-DiamondSleet.md) |
 
 ## Storm
 | Date            | Name            | Microsoft Security Blog / KQL |
 |:----------------|:----------------|:------------------------------|
-| September 12    | Storm-0324   | [Malware distributor Storm-0324 facilitates ransomware access](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230912-Storm-0324.md) |
+| September 12    | Storm-0324   | [Malware distributor Storm-0324 facilitates ransomware access](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/20230912-Storm-0324.md) |
 
 ```
 Actor category 
