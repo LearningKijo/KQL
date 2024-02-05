@@ -1,6 +1,6 @@
 # Multiple North Korean threat actors exploiting the TeamCity CVE-2023-42793 vulnerability
-Since early October 2023, Microsoft has observed two North Korean nation-state threat actors – Diamond Sleet and Onyx Sleet – exploiting CVE-2023-42793, a remote-code execution vulnerability affecting multiple versions of JetBrains TeamCity server. 
-TeamCity is a continuous integration/continuous deployment (CI/CD) application used by organizations for DevOps and other software development activities.
+Since October 2023, Microsoft has identified two North Korean threat actors, Diamond Sleet and Onyx Sleet, exploiting a remote-code execution vulnerability in JetBrains TeamCity server used for DevOps. These actors pose a high risk due to past successful software supply chain attacks. JetBrains released an update, and Microsoft advises affected organizations to apply it. Despite exploiting the same vulnerability, the threat actors use unique tools and techniques. Microsoft suspects opportunistic compromises of vulnerable servers, with both actors deploying malware and employing methods for persistent access. The company actively notifies and supports affected customers to secure their environments.
+> 👉 October 18, 2023, [Multiple North Korean threat actors exploiting the TeamCity CVE-2023-42793 vulnerability](https://www.microsoft.com/en-us/security/blog/2023/10/18/multiple-north-korean-threat-actors-exploiting-the-teamcity-cve-2023-42793-vulnerability/)
 
 ## Advanced hunting queries
 Command and control using iexpress.exe or wksprt.exe
