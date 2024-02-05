@@ -16,8 +16,12 @@ Therefore, in this repository on KQL-XDR-Hunting, I will be sharing ***'out-of-t
 | Email          | [- Exchange Online Protection <br> - Microsoft Defender for Office 365](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365)  |
 | Identity       | [- Microsoft Entra ID (Azure AD) <br> - Microsoft Defender for Identity](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity)  |
 | App & Data     | TBD |
-| #Detection      | [MicrosoftSecurity-Threat-Insight](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/MicrosoftSecurity-Threat-Insight)|
-| #Detection      | [XDR-SIEM-Detection](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-SIEM-Detection)
+
+**LOGs** 
+| Category       | Links       |
+| :------------- | :------------- |
+| Detection      | [XDR-SIEM-Detection](https://github.com/LearningKijo/KQL/tree/main/KQL-XDR-Hunting/XDR-SIEM-Detection) |
+| Detection      | [Microsoft Security Threat Insight 2023](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/MicrosoftSecurity-ThreatInsight/2023-MicrosoftSecurity-ThreatInsight/MSSecurityThreatInsight2023.md) |
 
 ## Usage 
 ![image](https://github.com/LearningKijo/KQL/assets/120234772/6fb7848e-439f-4871-84c6-70d8c3df6c80)
