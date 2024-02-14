@@ -150,11 +150,9 @@ meaning every email has a different attachment name for the QR code with high le
 Emails with randomly named attachment names from the same sender to multiple recipients, typically more than 50, can potentially indicate a QR code phishing campaign.
 
 ***Campaign with randomly named attachments***
-```
+```kusto
 EmailAttachmentInfo
-| where has NonPrevalentSenders 
-| where Timestamp between (<emailStartTime> .. <emailEndTime>)
-| where SenderFromAddress in (nonPrevalentSenders)
+| where Timestamp > ago(7d)
 | where FileType in ("png", "jpg", "jpeg", "gif", "svg")
 | where isnotempty(FileName)
 | extend firstFourFileName = substring(FileName, 0, 4)
@@ -196,7 +194,7 @@ Monitoring these sign-in attempts can surface the identity compromises.
 - Sign-in attempts from untrusted devices with empty user agent, operating system or anomalous BrowserId can also be an indication of identity compromises from AiTM.
 - Defender Experts also recommend monitoring the sign-ins from known malicious IP addresses. Although the mode of delivery of the phishing campaigns differ (QR code, HTML attachment, URL), the sign-in infrastructure often remains the same. Monitoring the sign-in patterns of compromised users, and continuously scoping the sign-in attempts based on the known patterns can also surface the identity compromises from AiTM.
 
-```
+```kusto
 AADSignInEventsBeta
 | where Timestamp > ago(7d)
 | where IsManaged != 1
@@ -210,7 +208,7 @@ AADSignInEventsBeta
 | where isnotempty(AccountObjectId)
 | where isempty(DeviceName)
 | where isempty(AadDeviceId)
-| project Timestamp,IPAddress, AccountObjectId, ApplicationId, SessionId, RiskLevelDuringSignIn, BrowserId
+| project Timestamp,IPAddress, AccountObjectId, ApplicationId, SessionId, RiskLevelDuringSignIn
 ```
 
 #### Reference
