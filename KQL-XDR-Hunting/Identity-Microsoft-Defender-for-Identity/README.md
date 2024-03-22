@@ -10,9 +10,13 @@ In this Identity KQL repository, I am delighted to share out-of-the-box Identity
 
 | Product | KQL query |
 |:--------|:----------|
-| MDI     | [01-LDAP-Query-Activities-Endpoint.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/01-LDAP-Query-Activities-Endpoint.md) |
+| MDE     | [01-LDAP-Query-Activities-Endpoint.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/01-LDAP-Query-Activities-Endpoint.md) |
 | MDI     | [02-LDAP-Query-Activities-Identity.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/02-LDAP-Query-Activities-Identity.md) |
 | MDI     | [03-Last-PasswordReset-AccountDisabled-TimeList.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/03-Last-PasswordReset-AccountDisabled-TimeList.md) |
+| MDI     | [04-LMP-Activities.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/04-LMP-Activities.md) |
+| MDI     | [05-GroupMembershipChanges-Activities.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/05-GroupMembershipChanges-Activities.md) |
+| MDI     | [06-AccountLogin-Review.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/06-AccountLogin-Review.md) |
+| MDI     | [07-ServiceCreation-Review.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Identity-Microsoft-Defender-for-Identity/MDI-Query-Repository/07-ServiceCreation-Review.md) |
 
 ## Pinned Identity-related KQL queries contributors
 I want to be respectful of the excellent work done by others, and while I aim to avoid duplication, there may be slight overlaps. 
