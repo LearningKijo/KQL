@@ -24,6 +24,7 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDE     | Troubleshooting mode  | [01-MDE-TamperProtection-TSmode-AVver-DeviceList.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-MDE-TamperProtection-TSmode-AVver-DeviceList.md) |
 | MDE     | Vulnerability Management | [01-MDE-TVM-InstalledSoftware-List-Windows.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-MDE-TVM-InstalledSoftware-List-Windows.md) |
 | MDE     | Vulnerability Management | [02-MDE-TVM-RiskyBrowserExtensions-List-Windows.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/02-MDE-TVM-RiskyBrowserExtensions-List-Windows.md) |
+| MDE     | Exposure Management      | [01-ExposureManagement-DeviceExposureLevels .md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Endpoint-Microsoft-Defender-for-Endpoint/MDE-Query-Repository/01-ExposureManagement-DeviceExposureLevels%20.md) |
 
 ### X-plat - Linux & MacOS
 ***Update 2024 !!***
