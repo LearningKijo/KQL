@@ -22,8 +22,9 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDO/EOP | [11-Email-Weekly-DetectionTrend.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/11-Email-Weekly-DetectionTrend.md) |
 | MDO/EOP | [12-Email-MalwarePhishing-Detection-Trends.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/12-Email-MalwarePhishing-Detection-Trends.md)  | Visualize Targeted Email Accounts |
 | EOP     | [13-Email-Spam-Detection-Trend.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/13-Email-Spam-Detection-Trend.md)  | Visualize Targeted Email Accounts |
-
-
+| MDO     | [14-MDO-QRcode-VolumeInboundEmails.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/14-MDO-QRcode-VolumeInboundEmails.md) | from [MS blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/hunting-and-responding-to-qr-code-based-phishing-attacks-with/ba-p/4074730) |
+| MDO     | [15-MDO-QRcode-DeliveredEmail.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/15-MDO-QRcode-DeliveredEmail.md) | from [MS blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/hunting-and-responding-to-qr-code-based-phishing-attacks-with/ba-p/4074730) |
+| MDO     | [16-Emails-QRcode-SuspiciousKeywordsSubject.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/16-Emails-QRcode-SuspiciousKeywordsSubject.md) | from [MS blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/hunting-and-responding-to-qr-code-based-phishing-attacks-with/ba-p/4074730) |
 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
