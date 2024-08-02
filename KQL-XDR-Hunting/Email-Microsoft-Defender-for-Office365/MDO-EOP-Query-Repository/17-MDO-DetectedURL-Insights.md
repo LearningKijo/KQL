@@ -1,6 +1,11 @@
 #  URL & Domain Insights from MDO Alerts Detection
 This query displays URLs (domains) from Microsoft Defender for Office 365 detected alerts. You can also leverage this query as a function.
 
+Thanks to the Unified Security Operations Platform, there are now no boundaries for threat hunting. 
+You can use various tables across XDR and Sentinel. In the past, I’ve seen useful queries like ['Phishing Link Clicks in Network Traffic' from a blog](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/identifying-adversary-in-the-middle-aitm-phishing-attacks/ba-p/3991358). 
+However, due to the integration, SecurityAlert table no longer exists in Advanced Hunting. Even though we switched to using the AlertInfo and AlertEvidence tables, they use different columns and data types. 
+To leverage the great query, I rewrote it to fit this advanced hunting environment.
+
 #### Table name & Description
 - [AlertInfo](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-alertinfo-table?view=o365-worldwide) : Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization
 - [AlertEvidence](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-alertevidence-table) : Files, IP addresses, URLs, users, or devices associated with alerts
