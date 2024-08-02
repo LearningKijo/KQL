@@ -43,16 +43,15 @@ AlertInfo
 | mv-expand UPN
 | where isnotempty(URL)
 | where isnotempty(UPN)
-| extend URLtoString = tostring(URL)
-| extend Domain = parse_url(URLtoString).Host
-| project TimeGenerated, AlertId, UPN, URL, Domain
+| extend Url = tostring(URL)
+| extend Domain = parse_url(Url).Host
+| project TimeGenerated, AlertId, UPN, Url, Domain
 ```
 
 If you create the above query as a function, you can simplify it further and combine it with other tables, such as Sentinel-related network data.
 
 ```kusto
 <Function-Demo>
-| where TimeGenerated > ago(15d)
 | join kind= inner (CommonSecurityLog
 | where TimeGenerated > ago(15d)
 | where DeviceAction != "Block"
@@ -63,7 +62,7 @@ If you create the above query as a function, you can simplify it further and com
           Activity, DestinationHostName, DestinationIP, RequestURL=tostring(tolower(RequestURL)),
           MaliciousIP, Name = tostring(split(SourceUserName,"@")[0]), UPNSuffix =tostring(split(SourceUserName,"@")[1]),
           SourceUserName, IndicatorThreatType, ThreatSeverity,AdditionalExtensions, ThreatConfidence
-    ) on $left.URL == $right.RequestURL
+    ) on $left.Url == $right.RequestURL
 ```
 
 #### Reference 
