@@ -25,6 +25,6 @@ In this repository, I am excited to share email-based out-of-the-box queries rel
 | MDO     | [14-MDO-QRcode-VolumeInboundEmails.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/14-MDO-QRcode-VolumeInboundEmails.md) | from [MS blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/hunting-and-responding-to-qr-code-based-phishing-attacks-with/ba-p/4074730) |
 | MDO     | [15-MDO-QRcode-DeliveredEmail.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/15-MDO-QRcode-DeliveredEmail.md) | from [MS blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/hunting-and-responding-to-qr-code-based-phishing-attacks-with/ba-p/4074730) |
 | MDO     | [16-Emails-QRcode-SuspiciousKeywordsSubject.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/16-Emails-QRcode-SuspiciousKeywordsSubject.md) | from [MS blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/hunting-and-responding-to-qr-code-based-phishing-attacks-with/ba-p/4074730) |
-
+| MDO     | [17-MDO-DetectedURL-Insights.md](https://github.com/LearningKijo/KQL/blob/main/KQL-XDR-Hunting/Email-Microsoft-Defender-for-Office365/MDO-EOP-Query-Repository/17-MDO-DetectedURL-Insights.md) | 
 #### Disclaimer
 The views and opinions expressed herein are those of the author and do not necessarily reflect the views of company.
